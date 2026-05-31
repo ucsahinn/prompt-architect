@@ -4,7 +4,7 @@ Last updated: 2026-05-31
 
 ## Vague Excellence
 
-Bad: "Make this world-class."
+Bad: "Make this amazing."
 
 Fix: Define audience, use case, constraints, examples, quality bar, and verification.
 

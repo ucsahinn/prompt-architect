@@ -1,37 +1,69 @@
 # FAQ
 
-## Is this official OpenAI?
+## English
 
-No. This is an independent community/open-source Codex skill and prompt-engineering workflow package. It is not affiliated with, endorsed by, or sponsored by OpenAI.
+### Is this official OpenAI?
 
-## Do I need a build step?
+No. This is an independent community/open-source project. It is not affiliated with, endorsed by, or sponsored by OpenAI.
 
-No. v1.0.0 is a Markdown-based skill and knowledge system. There is no build step, package manager install, server, database, or runtime service.
+### Do I need a build step?
 
-## Does it call external APIs?
+No. The project is a Markdown-based Codex skill package and Prompt Lab knowledge base.
 
-No. The repository itself does not call external APIs. It contains prompt templates, skill instructions, examples, rubrics, source notes, and workflow documents. Any external research or API use depends on how a future Codex session is configured and what the user authorizes.
+### Does it call external APIs?
 
-## Can I use it in any Codex project?
+No. The repository itself does not call external APIs. Future Codex sessions may use tools only if the user and environment allow them.
 
-Yes. Copy `.codex/skills/codex-enterprise-prompt-architect/` into a Codex project and ask Codex to use the skill for prompt generation, prompt rewrites, prompt audits, or Codex workflow design.
+### Can I use it in any Codex project?
 
-## Should I use Goal or no Goal?
+Yes. Copy `.codex/skills/codex-enterprise-prompt-architect/` into the project and ask Codex to use the skill.
 
-Use a Goal when you want a concise high-level objective plus a full first-message prompt. Use no Goal when strict control matters, especially for PLAN MODE ONLY prompts where Codex must inspect and plan before editing.
+### Should I use Goal or no Goal?
 
-## Why plan-only?
+Use Goal when a persistent high-level objective is helpful. Use no-Goal `PLAN MODE ONLY` when Codex must inspect and plan before editing.
 
-Plan-only prompts reduce premature execution and help Codex inspect the repository, identify affected files, surface risks, and wait for approval before making changes.
+### Why plan-only?
 
-## Does it store secrets?
+Plan-only prompts reduce premature execution. They make Codex inspect the repo, identify affected files, surface risks, and wait for approval.
 
-No secrets should be stored in this repository. Generated prompts should describe security constraints without including real credentials, private keys, tokens, cookies, or private user data.
+### Does it store secrets?
 
-## Can I customize the templates?
+No. Do not store real secrets, tokens, credentials, private keys, cookies, customer data, or private prompts in this repository.
 
-Yes. You can edit the skill files under `.codex/skills/codex-enterprise-prompt-architect/` and the deeper templates under `knowledge/templates/`. Keep changes source-backed, scoped, and clear.
+### Can I customize the templates?
 
-## How do I contribute?
+Yes. Edit the skill files or `knowledge/templates/`. Keep changes scoped, clear, and safe.
 
-See `CONTRIBUTING.md`. Useful contributions include stronger Codex prompt patterns, better evaluation examples, real failure-derived revisions, clearer docs, and source-backed improvements to the knowledge base.
+## Türkçe
+
+### Bu resmi bir OpenAI projesi mi?
+
+Hayır. Bağımsız bir topluluk/açık kaynak projesidir. OpenAI ile bağlı, onaylı veya sponsorlu değildir.
+
+### Build gerekir mi?
+
+Hayır. Proje Markdown tabanlı bir Codex skill paketi ve Prompt Lab bilgi tabanıdır.
+
+### Dış API çağırır mı?
+
+Hayır. Repo kendi başına dış API çağırmaz. Gelecekteki Codex oturumlarında tool kullanımı, kullanıcının iznine ve ortama bağlıdır.
+
+### Her Codex projesinde kullanılabilir mi?
+
+Evet. `.codex/skills/codex-enterprise-prompt-architect/` klasörünü projeye kopyalayıp Codex'ten bu skill'i kullanmasını isteyin.
+
+### Goal mı, no-Goal mı kullanmalıyım?
+
+Kalıcı üst seviye hedef istiyorsanız Goal kullanın. Codex'in önce sadece inceleme ve plan yapmasını istiyorsanız no-Goal `PLAN MODE ONLY` kullanın.
+
+### Neden plan-only?
+
+Plan-only promptlar erken execute riskini azaltır. Codex önce repo durumunu inceler, ilgili dosyaları ve riskleri çıkarır, sonra onay bekler.
+
+### Secret saklar mı?
+
+Hayır. Bu repoda gerçek secret, token, credential, private key, cookie, müşteri verisi veya private prompt saklamayın.
+
+### Template'leri değiştirebilir miyim?
+
+Evet. Skill dosyalarını veya `knowledge/templates/` altındaki template'leri düzenleyebilirsiniz. Değişiklikleri kapsamlı, açık ve güvenli tutun.

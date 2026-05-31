@@ -1,22 +1,44 @@
 # Roadmap
 
-This roadmap is intentionally practical. The project should stay focused on Codex prompt generation and Codex workflow quality.
+The project should stay focused on Codex prompt generation and Codex workflow quality.
 
-## Planned Improvements
+## Planned
 
-- Add more real failure-derived Codex prompt revisions.
-- Add more repository-specific `AGENTS.md` examples.
-- Expand prompt evaluation examples with before/after scoring.
-- Improve prompt ledger conventions for teams.
-- Add more security-sensitive prompt patterns for auth, secrets, and zero-knowledge applications.
-- Add more browser QA prompt examples for complex UI flows.
-- Improve packaging if Codex skill mechanics evolve.
-- Accept community-contributed prompt patterns with source-backed rationale.
+- More real failure-derived Codex prompt revisions.
+- More repository-specific `AGENTS.md` examples.
+- More prompt evaluation examples with before/after scoring.
+- Clearer prompt ledger conventions for teams.
+- More security-sensitive prompt patterns for auth, secrets, and zero-knowledge applications.
+- More browser QA prompt examples for complex UI flows.
+- Packaging improvements if Codex skill mechanics evolve.
+- Community-contributed prompt patterns with source-backed rationale.
 
-## Not Planned For v1.x
+## Not Planned
 
 - No unrelated application code.
 - No hosted service.
-- No package registry release unless Codex skill distribution mechanics require it.
+- No package registry release unless Codex skill distribution changes.
 - No scraping of private, paid, or access-restricted content.
-- No unsupported claims about guaranteed model behavior.
+- No guarantee language about model behavior or security.
+
+## Türkçe
+
+Proje Codex prompt üretimi ve Codex workflow kalitesi odağında kalmalıdır.
+
+Planlanan iyileştirmeler:
+
+- Gerçek hata örneklerinden türetilmiş daha fazla Codex prompt revizyonu.
+- Repo-specific `AGENTS.md` örnekleri.
+- Önce/sonra skorlu prompt evaluation örnekleri.
+- Takımlar için daha net prompt ledger kuralları.
+- Auth, secret ve zero-knowledge uygulamalar için daha fazla güvenlik duyarlı pattern.
+- Karmaşık UI akışları için daha fazla browser QA örneği.
+- Codex skill mekanikleri değişirse daha iyi paketleme.
+
+Planlanmayanlar:
+
+- Alakasız uygulama kodu.
+- Hosted servis.
+- Codex skill dağıtım modeli gerektirmedikçe package registry yayını.
+- Private, paid veya erişim kısıtlı içerik scrape etmek.
+- Model davranışı veya güvenlik için garanti dili.

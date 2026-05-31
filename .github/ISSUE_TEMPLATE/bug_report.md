@@ -6,11 +6,11 @@ labels: bug
 assignees: ""
 ---
 
-## Summary
+## Summary / Özet
 
-Describe the issue clearly.
+Describe the issue clearly. Sorunu net anlatın.
 
-## Affected Area
+## Affected Area / Etkilenen Alan
 
 - [ ] Skill package
 - [ ] README/docs
@@ -18,32 +18,35 @@ Describe the issue clearly.
 - [ ] Response mode
 - [ ] Prompt quality rubric
 - [ ] Generated prompt example
-- [ ] Other
+- [ ] Other / Diğer
 
-## Steps To Reproduce
+## Steps To Reproduce / Tekrar Üretme Adımları
 
 1.
 2.
 3.
 
-## Expected Behavior
+## Expected Behavior / Beklenen Davranış
 
-What should happen?
+What should happen? Ne olmalıydı?
 
-## Actual Behavior
+## Actual Behavior / Mevcut Davranış
 
-What happened instead?
+What happened instead? Ne oldu?
 
-## Example Prompt Or File
+## Example Prompt Or File / Örnek Prompt veya Dosya
 
 Include a minimal example. Do not include secrets, private data, tokens, credentials, or proprietary content.
 
-## Environment
+Kısa bir örnek ekleyin. Secret, private data, token, credential veya proprietary içerik eklemeyin.
+
+## Environment / Ortam
 
 - Codex environment:
 - Relevant file path:
 - Repository version or commit:
 
-## Safety Check
+## Safety Check / Güvenlik Kontrolü
 
 - [ ] I removed secrets, tokens, private keys, cookies, and private user data from this report.
+- [ ] Bu rapordan secret, token, private key, cookie ve private user data kaldırdım.

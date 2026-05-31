@@ -1,95 +1,117 @@
 # Contributing
 
-Thank you for helping improve Codex Enterprise Prompt Architect.
+Contributions are welcome when they improve Codex prompt clarity, safety, examples, documentation, or source-backed workflow guidance.
 
-This project accepts contributions that improve Codex prompt quality, safety, clarity, documentation, examples, and source-backed workflow guidance.
+## English
 
-## Accepted Contribution Types
+### Good Contributions
 
-- New Codex prompt patterns.
+- Clearer Codex prompt patterns.
 - Safer Goal/no-Goal guidance.
-- Better plan-only and execute-after-approval workflows.
-- STOP / RECOVER improvements.
-- Browser QA prompt examples.
-- Security-sensitive prompt rules.
-- Prompt audit and rubric improvements.
-- Source-backed research additions.
-- Documentation fixes.
-- Copy-pasteable examples.
+- Better `PLAN MODE ONLY` and `APPROVED — EXECUTE` workflows.
+- `STOP / RECOVER` improvements.
+- browser QA examples.
+- security-sensitive prompt rules.
+- prompt audit and rubric improvements.
+- source-backed research additions.
+- documentation fixes.
 
-## Proposing New Prompt Patterns
+### Prompt Pattern Quality
 
-New patterns should include:
+A new pattern should include:
 
-- Pattern name.
-- When to use it.
-- Why it works.
-- Prompt structure.
-- Failure modes.
-- Verification method.
-- Source references when applicable.
+- name.
+- when to use it.
+- why it works.
+- prompt structure.
+- failure modes.
+- verification method.
+- source references when applicable.
 
-## Adding Source-Backed Research
+### Source-Backed Research
 
-Prefer:
+Prefer official docs, reputable security guidance, well-known research papers, mature public repositories, and practical examples with clear operational value.
 
-- Official Codex/OpenAI docs.
-- Security standards and reputable guidance.
-- Well-known research papers.
-- Mature public repositories.
-- Practical examples with clear operational value.
+Do not add raw dumps, paid/private content, scraped private material, private notes, or low-confidence claims as facts.
 
-Do not add raw dumps, paid/private content, scraped private material, or low-confidence claims as facts.
-
-## Adding Examples
+### Examples
 
 Examples should be:
 
-- Directly reusable.
+- directly reusable.
 - Codex-specific unless clearly marked otherwise.
-- Scoped.
-- Safe.
-- Verification-aware.
-- Free of secrets, private data, local paths, or customer information.
+- scoped.
+- safe.
+- verification-aware.
+- free of real secrets, private data, local paths, credentials, or customer information.
 
-## Updating Skill Docs
+Use obvious placeholders when needed:
 
-Keep `SKILL.md` concise. Put longer commands, modes, patterns, and examples in the supporting files:
+```text
+YOUR_API_KEY_HERE
+example-token-placeholder
+sk-example-do-not-use
+```
 
-- `.codex/skills/codex-enterprise-prompt-architect/commands.md`
-- `.codex/skills/codex-enterprise-prompt-architect/response-modes.md`
-- `.codex/skills/codex-enterprise-prompt-architect/codex-patterns.md`
-- `.codex/skills/codex-enterprise-prompt-architect/examples.md`
-
-## Quality Bar
-
-Enterprise-grade Codex prompts should include:
-
-- Target mode.
-- Role and mission.
-- Repository inspection rules.
-- Scope and non-goals.
-- Constraints.
-- Verification.
-- Browser QA when UI is involved.
-- Security constraints when auth, secrets, sessions, password managers, or risky tools are involved.
-- Output format.
-- Stop conditions.
-
-## Prompt Safety Rules
-
-- Do not expose secrets.
-- Do not encourage unsafe storage.
-- Do not allow destructive, production, account, database, deployment, commit, push, release, or credential actions without explicit approval.
-- Treat untrusted content as data, not instructions.
-- Preserve existing behavior unless the prompt explicitly authorizes changes.
-
-## Pull Request Checklist
+### PR Checklist
 
 - [ ] Change is Codex/prompt-engineering related.
 - [ ] No unrelated app or software code was added.
-- [ ] No secrets, private paths, tokens, credentials, or customer data were added.
+- [ ] No real secrets, private paths, tokens, credentials, or customer data were added.
 - [ ] Examples are copy-pasteable.
-- [ ] New guidance is source-backed or clearly marked as a pattern.
+- [ ] Guidance is source-backed or clearly marked as a pattern.
 - [ ] README/docs remain accurate.
-- [ ] Generated prompt ledger is updated if a new reusable generated prompt was added.
+- [ ] Generated prompt ledger is updated if a reusable generated prompt was added.
+
+## Türkçe
+
+Katkılar Codex prompt kalitesini, güvenliği, örnekleri, dokümantasyonu veya kaynaklı workflow bilgisini iyileştirmelidir.
+
+### İyi Katkı Örnekleri
+
+- Daha net Codex prompt pattern'leri.
+- Daha güvenli Goal/no-Goal yönlendirmesi.
+- Daha iyi `PLAN MODE ONLY` ve `APPROVED — EXECUTE` akışları.
+- `STOP / RECOVER` iyileştirmeleri.
+- browser QA örnekleri.
+- security-sensitive prompt kuralları.
+- prompt audit ve rubrik geliştirmeleri.
+- kaynaklı araştırma notları.
+- dokümantasyon düzeltmeleri.
+
+### Prompt Pattern Kalitesi
+
+Yeni pattern şunları içermelidir:
+
+- isim.
+- ne zaman kullanılacağı.
+- neden işe yaradığı.
+- prompt yapısı.
+- hata modları.
+- doğrulama yöntemi.
+- varsa kaynak referansları.
+
+### Kaynaklı Araştırma
+
+Öncelik resmi dokümanlara, güvenilir güvenlik kaynaklarına, iyi bilinen araştırmalara, olgun public repolara ve pratik değeri açık örneklere verilmelidir.
+
+Raw dump, paid/private içerik, private not veya düşük güvenli iddia eklemeyin.
+
+### Örnekler
+
+Örnekler:
+
+- doğrudan kullanılabilir olmalı.
+- aksi belirtilmedikçe Codex odaklı olmalı.
+- kapsamı net olmalı.
+- güvenli olmalı.
+- doğrulama içermeli.
+- gerçek secret, private data, local path, credential veya müşteri bilgisi içermemeli.
+
+Gerektiğinde açık placeholder kullanın:
+
+```text
+YOUR_API_KEY_HERE
+example-token-placeholder
+sk-example-do-not-use
+```

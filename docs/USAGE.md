@@ -1,105 +1,119 @@
 # Usage
 
-Use this project by asking Codex to generate, audit, or rewrite Codex prompts through the formal skill:
+This page shows the main ways to use Codex Enterprise Prompt Architect. English and Turkish examples are included because many real Codex workflows mix both.
+
+Skill entrypoint:
 
 ```text
 .codex/skills/codex-enterprise-prompt-architect/SKILL.md
 ```
 
-## Turkish Examples
-
-```text
-Codex icin goal + full prompt uret. Konu: mevcut uygulamada dashboard premiumlastirma, navbar duzeltme, tema uyumu ve browser QA.
-```
-
-```text
-Goal kullanmadan plan-only Codex promptu uret. Onay almadan dosya degistirmesin.
-```
-
-```text
-Yorum yapma, sadece prompt ver. Codex icin plan-only prompt uret: mevcut dashboard premiumlastirma, update center sadelestirme, navbar responsive duzeltme, tema token uyumu, browser QA.
-```
-
-```text
-Codex erken execute etti, STOP / RECOVER promptu uret. Butun dosya degisikliklerini dursun, mevcut durumu raporlasin, onaysiz devam etmesin.
-```
-
-```text
-Bu Codex promptunu test et ve skorla. Scope creep, premature execution, browser QA, security constraints ve final report eksiklerini bul.
-```
-
-## English Examples
-
-```text
-Generate a Codex Goal + Full Prompt for improving an existing password manager dashboard. Include security constraints and browser QA.
-```
-
-```text
-Create a no-Goal PLAN MODE ONLY Codex prompt. Codex must inspect first, produce a plan, and wait for approval before editing files.
-```
-
-```text
-Only output the final prompt. No commentary. Build a Codex prompt for responsive navbar cleanup, theme token consistency, and browser QA.
-```
-
-```text
-Create an APPROVED - EXECUTE prompt that continues from the approved plan, preserves existing behavior, runs tests, and reports changed files.
-```
-
-```text
-Audit this Codex prompt using the rubric and revise it until it meets the enterprise bar.
-```
-
-## Response Modes
-
-Use direct mode language when output shape matters:
-
-- `PROMPT_ONLY`: final prompt only, no explanation.
-- `GOAL_PLUS_PROMPT`: short Goal plus full prompt.
-- `PLAN_ONLY`: inspection and plan only, no edits.
-- `EXECUTE_AFTER_APPROVAL`: planning prompt plus explicit approval execution prompt.
-- `PROMPT_AUDIT`: score, findings, revision notes.
-- `PROMPT_REWRITE`: preserve intent and rewrite stronger.
-- `STOP_RECOVER`: halt premature execution and recover control.
-
-## Common Workflows
+## English
 
 ### Goal + Full Prompt
 
-Use when you want a Codex Goal and a detailed first-message prompt:
+Use when you want a short Codex Goal plus a detailed first-message prompt.
 
 ```text
-Codex icin goal + full prompt uret: [task].
+Generate a Codex Goal + Full Prompt for improving an existing dashboard. Include browser QA, verification, final report format, and stop conditions.
 ```
 
-### No-Goal PLAN MODE ONLY
+### no-Goal PLAN MODE ONLY
 
-Use when strict control matters and you do not want Codex to start editing:
+Use when Codex must inspect and plan before any edits.
 
 ```text
-Goal kullanmadan plan-only Codex promptu uret: [task]. Onay almadan execute etmesin.
+Create a no-Goal PLAN MODE ONLY Codex prompt for fixing an auth/session bug. Codex must inspect the repository first, produce a plan, and wait for approval before editing files.
 ```
 
-### Execute After Approval
+### PROMPT_ONLY
 
-Use for risky implementation tasks:
+Use when you want no commentary around the generated prompt.
 
 ```text
-Plan-only prompt + APPROVED - EXECUTE prompt uret. Codex once plan sunsun, sonra sadece onaydan sonra uygulasin.
+Only output the final prompt. No commentary. Create a no-Goal PLAN MODE ONLY Codex prompt for dashboard polish, theme consistency, and browser QA.
+```
+
+### APPROVED — EXECUTE
+
+Use after a plan has been reviewed.
+
+```text
+Create an APPROVED — EXECUTE prompt that follows only the approved plan, preserves existing behavior, runs verification, and reports changed files.
 ```
 
 ### STOP / RECOVER
 
-Use when Codex starts editing too early:
+Use when Codex starts editing too early or leaves scope.
 
 ```text
-Codex erken execute etti. STOP / RECOVER promptu uret.
+Codex started editing before approval. Create a STOP / RECOVER prompt that stops work, asks for changed files and commands run, avoids automatic revert, and returns to PLAN MODE ONLY.
 ```
 
 ### Prompt Audit
 
-Use to test a Codex prompt:
+Use to evaluate a Codex prompt before pasting it into a risky repo.
 
 ```text
-Bu Codex promptunu test et ve skorla: [prompt].
+Audit this Codex prompt. Score execution control, scope control, security constraints, browser QA, verification, output format, and stop conditions: [prompt]
 ```
+
+## Türkçe
+
+### Goal + Full Prompt
+
+Kısa Codex Goal ve detaylı ilk mesaj promptu istediğinizde kullanın.
+
+```text
+Codex için goal + full prompt üret. Konu: mevcut dashboard iyileştirme, navbar düzeltme, tema uyumu ve browser QA.
+```
+
+### no-Goal PLAN MODE ONLY
+
+Codex'in dosya değiştirmeden önce sadece inceleme ve plan yapmasını istediğinizde kullanın.
+
+```text
+Goal kullanmadan plan-only Codex promptu üret. Codex önce repo incelemesi yapsın, plan sunsun ve onay almadan dosya değiştirmesin.
+```
+
+### PROMPT_ONLY
+
+Yalnızca prompt çıktısı istediğinizde kullanın.
+
+```text
+Yorum yapma, sadece prompt ver. Codex için plan-only prompt üret: mevcut dashboard premiumlaştırma, tema uyumu ve browser QA.
+```
+
+### APPROVED — EXECUTE
+
+Plan onaylandıktan sonra execution talimatı üretmek için kullanın.
+
+```text
+Bu plan için APPROVED — EXECUTE promptu üret. Codex sadece onaylanan planı uygulasın, kapsamı genişletmesin, doğrulama yapsın ve değişen dosyaları raporlasın.
+```
+
+### STOP / RECOVER
+
+Codex erken execute ettiğinde veya kapsam dışına çıktığında kullanın.
+
+```text
+Codex erken execute etti. STOP / RECOVER promptu üret. Değişen dosyaları ve çalıştırılan komutları raporlasın, otomatik revert yapmasın, PLAN MODE ONLY'ye dönsün.
+```
+
+### Prompt Audit
+
+Codex promptunu kullanmadan önce kontrol etmek için kullanın.
+
+```text
+Bu Codex promptunu test et ve skorla. Scope creep, erken execute, security constraints, browser QA, verification, output format ve stop conditions açısından değerlendir: [prompt]
+```
+
+## Choosing The Mode
+
+- Use `PROMPT_ONLY` when the user says "only prompt", "sadece prompt ver", "yorum yapma", or similar.
+- Use Goal + Full Prompt when a persistent high-level goal is useful.
+- Use no-Goal `PLAN MODE ONLY` when strict control matters.
+- Use `APPROVED — EXECUTE` only after reviewing a plan.
+- Use `STOP / RECOVER` when Codex starts editing too early.
+- Add browser QA for UI work.
+- Add security constraints for auth, secrets, password managers, databases, production-adjacent work, and risky tools.

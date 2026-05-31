@@ -1,57 +1,37 @@
-# Release Notes: v1.0.0
+# Release Notes: v1.0.1
 
-Codex Enterprise Prompt Architect v1.0.0 is the first public release of this Codex-focused prompt-generation skill and Prompt Lab knowledge system.
+Codex Enterprise Prompt Architect v1.0.1 is a documentation and public-polish release. It keeps the existing skill package and knowledge base intact while making the repository easier to read in English and Turkish.
 
 ## Highlights
 
-- Formal Codex skill package with `SKILL.md` entrypoint.
-- Reusable command, response-mode, pattern, and example references.
-- Goal vs no-Goal guidance for Codex work.
-- Strict PLAN MODE ONLY patterns.
-- Execute-after-approval prompts.
-- STOP / RECOVER prompts for premature execution.
-- Browser QA prompt rules for UI work.
-- Security-sensitive prompt rules for auth, secrets, password managers, and risky tool use.
-- Prompt quality rubric and Codex prompt evaluation workflow.
-- Generated prompt ledger.
+- English-first README with a clearer first screen.
+- Full Turkish README: `README.tr.md`.
+- Bilingual usage, install, examples, FAQ, security, and contribution guidance.
+- Cleaner public examples for `PROMPT_ONLY`, Goal + Full Prompt, no-Goal `PLAN MODE ONLY`, `APPROVED — EXECUTE`, `STOP / RECOVER`, browser QA, and security-sensitive prompts.
+- Calmer wording across the public docs and skill package.
+- Naming consistency pass for core workflow terms.
+- Public safety scan for local paths, credentials, realistic tokens, private keys, and private notes.
 
-## Included Files
+## Türkçe Özet
 
-- `.codex/skills/codex-enterprise-prompt-architect/SKILL.md`
-- `.codex/skills/codex-enterprise-prompt-architect/commands.md`
-- `.codex/skills/codex-enterprise-prompt-architect/response-modes.md`
-- `.codex/skills/codex-enterprise-prompt-architect/codex-patterns.md`
-- `.codex/skills/codex-enterprise-prompt-architect/examples.md`
-- `knowledge/distilled/`
-- `knowledge/templates/`
-- `knowledge/sources/`
-- `knowledge/outputs/`
-- `docs/`
+v1.0.1, dokümantasyon ve public polish odaklı bir sürümdür. Mevcut skill paketi ve knowledge base korunmuştur.
 
-## Usage
+Öne çıkanlar:
 
-Ask Codex:
-
-```text
-Use the codex-enterprise-prompt-architect skill to create a Codex prompt for: [task]
-```
-
-For prompt-only output:
-
-```text
-Yorum yapma, sadece prompt ver: [Codex prompt request]
-```
-
-For strict planning:
-
-```text
-Goal kullanmadan plan-only Codex promptu uret: [task]
-```
+- Daha net, English-first README.
+- Tam Türkçe README: `README.tr.md`.
+- Kullanım, kurulum, örnekler, FAQ, güvenlik ve katkı dokümanlarında Türkçe + İngilizce anlatım.
+- `PROMPT_ONLY`, Goal + Full Prompt, no-Goal `PLAN MODE ONLY`, `APPROVED — EXECUTE`, `STOP / RECOVER`, browser QA ve security-sensitive prompt örneklerinde daha temiz anlatım.
+- Public repo için daha sakin, daha insan diliyle yazılmış dokümantasyon.
+- Local path, credential, gerçek token, private key ve private note taraması.
 
 ## Known Limitations
 
 - This project is independent and not affiliated with OpenAI.
-- It does not enforce runtime security; it generates safer prompt instructions.
+- It does not enforce runtime security by itself; it provides safer prompt instructions.
 - It does not install through npm, pip, or a package manager.
 - Prompt quality still depends on the user's project context and review.
-- Examples should be adapted before use in high-risk repositories.
+
+## Previous Release
+
+v1.0.0 introduced the formal Codex skill package, Prompt Lab knowledge base, response modes, workflow patterns, examples, prompt quality rubric, generated prompt ledger, and public repository documentation.

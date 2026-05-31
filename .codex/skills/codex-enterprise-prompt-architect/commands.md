@@ -1,143 +1,121 @@
 # Commands
 
-Use these commands as natural shortcuts for this skill.
+Short commands for Codex Enterprise Prompt Architect.
 
-## Goal + Full Prompt
+## Slash-Style Commands
 
 ```text
 /codex-prompt goal-plus-full
-Codex icin goal + full prompt uret: [gorev]. Context: [context]. Must not: [constraints].
 ```
 
-Outputs:
-
-- Short Goal.
-- Full Prompt.
-- APPROVED - EXECUTE prompt if relevant.
-- Verification and stop conditions.
-
-## Plan-Only
+Creates a short Codex Goal plus a Full Prompt.
 
 ```text
 /codex-prompt plan-only
-Goal kullanmadan plan-only Codex promptu uret: [gorev]. Onay almadan execute etmesin.
 ```
 
-Outputs:
-
-- No-goal recommendation.
-- PLAN MODE ONLY prompt.
-- Approval phrase.
-- Verification checklist.
-- Stop conditions.
-
-## Execute After Approval
+Creates a no-Goal `PLAN MODE ONLY` prompt.
 
 ```text
 /codex-prompt execute-after-approval
-Codex once plan yapsin, ben APPROVED - EXECUTE yazmadan dosya degistirmesin: [gorev].
 ```
 
-Outputs:
-
-- Plan-only phase.
-- APPROVED - EXECUTE phase.
-- Final report format.
-- Stop conditions.
-
-## Stop / Recover
+Creates a plan prompt plus an `APPROVED — EXECUTE` prompt.
 
 ```text
 /codex-prompt stop-recover
-Codex plan-only iken edit yapmaya basladi. Durdurma/recover promptu uret; revert yapmasin, once ne degistirdigini raporlasin.
 ```
 
-Outputs:
-
-- STOP command.
-- Changed-file report request.
-- Command report request.
-- No-revert rule.
-- Recovery plan request.
-
-## UI/UX
+Creates a `STOP / RECOVER` prompt for premature execution.
 
 ```text
 /codex-prompt ui-ux
-Mevcut dashboard icin premium UI promptu uret. Tema tokenlari, responsive navbar, icon tutarliligi ve browser QA zorunlu olsun.
 ```
 
-Outputs:
-
-- Codex UI/UX prompt.
-- Browser QA checklist.
-- Verification plan.
-- Stop conditions.
-
-## Security
+Creates a UI/UX prompt with browser QA.
 
 ```text
 /codex-prompt security
-Password manager icin security-sensitive Codex promptu uret. Master password, derived key ve plaintext secret loglanmasin veya saklanmasin.
 ```
 
-Outputs:
-
-- Security-sensitive Codex prompt.
-- Secret-handling rules.
-- Verification plan.
-- Stop conditions.
-
-## Audit
+Creates a security-sensitive Codex prompt.
 
 ```text
 /codex-prompt audit
-Bu Codex promptunu test et ve skorla: [prompt]
 ```
 
-Outputs:
-
-- Rubric score.
-- Red flags.
-- Required fixes.
-- Ship/revise/reject decision.
-
-## PROMPT_ONLY
+Scores and reviews a Codex prompt.
 
 ```text
 /codex-prompt prompt-only
-Yorum yapma, sadece prompt ver. Codex icin plan-only prompt uret: [gorev].
 ```
 
-Outputs:
+Returns only the final prompt.
 
-- Final prompt only.
-- No commentary.
-- No explanation.
-- No suggestions.
-
-## Natural-Language Triggers
+## English Requests
 
 ```text
-Codex icin goal + full prompt uret: [gorev]
+Generate a Codex Goal + Full Prompt for: [task]
 ```
 
 ```text
-Goal kullanmadan plan-only Codex promptu uret: [gorev]
+Create a no-Goal PLAN MODE ONLY Codex prompt for: [task]
 ```
 
 ```text
-Bu Codex promptunu scope creep'e karsi guclendir: [prompt]
+Create an APPROVED — EXECUTE prompt for this approved plan: [plan]
 ```
 
 ```text
-Bu Codex promptuna browser QA ekle: [prompt]
+Codex started editing too early. Create a STOP / RECOVER prompt.
 ```
 
 ```text
-Bu Codex promptuna security constraints ekle: [prompt]
+Harden this Codex prompt against scope creep and premature execution: [prompt]
 ```
 
 ```text
-Bu daginik talimatlari Codex enterprise promptuna cevir, yorum yapma: [talimatlar]
+Add browser QA and final report rules to this Codex prompt: [prompt]
+```
+
+```text
+Add security constraints for auth, sessions, and secrets to this Codex prompt: [prompt]
+```
+
+```text
+Only output the final prompt. No commentary. Create a Codex prompt for: [task]
+```
+
+## Türkçe İstekler
+
+```text
+Codex için goal + full prompt üret: [görev]
+```
+
+```text
+Goal kullanmadan plan-only Codex promptu üret: [görev]
+```
+
+```text
+Bu onaylanan plan için APPROVED — EXECUTE promptu üret: [plan]
+```
+
+```text
+Codex erken execute etti. STOP / RECOVER promptu üret.
+```
+
+```text
+Bu Codex promptunu scope creep ve erken execute riskine karşı güçlendir: [prompt]
+```
+
+```text
+Bu Codex promptuna browser QA ve final report kuralları ekle: [prompt]
+```
+
+```text
+Bu Codex promptuna auth, session ve secret için security constraints ekle: [prompt]
+```
+
+```text
+Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 ```

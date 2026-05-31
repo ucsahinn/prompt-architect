@@ -67,7 +67,7 @@ Decision:
 - Do not broaden into other agent tools unless the user asks or the comparison gives a direct Codex lesson.
 
 Reason:
-- The workspace's highest-value output is enterprise-grade Codex prompts and Codex workflow control.
+- The workspace's highest-value output is review-ready Codex prompts and Codex workflow control.
 
 ## 2026-05-31 - Strict Plan Control Prefers No-Goal First Message
 

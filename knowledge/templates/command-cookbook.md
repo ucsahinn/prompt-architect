@@ -133,7 +133,7 @@ Compress this prompt while preserving all requirements: [prompt]
 ```
 
 ```text
-Expand this rough prompt into an enterprise-grade prompt: [prompt]
+Expand this rough prompt into a review-ready Codex prompt: [prompt]
 ```
 
 ```text

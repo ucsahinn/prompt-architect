@@ -1,196 +1,101 @@
 # Response Modes
 
+Use these modes to decide what the final answer should contain.
+
 ## PROMPT_ONLY
 
-When to use:
+Use when the user says "only prompt", "sadece prompt ver", "yorum yapma", "ekleme yapma", or similar.
 
-- User says `sadece prompt ver`, `yorum yapma`, `ekleme yapma`, `only prompt`, or similar.
+Output:
 
-What to output:
+- only the final prompt.
 
-- Only the final prompt.
+Do not output:
 
-What not to output:
+- commentary.
+- explanation.
+- source summary.
+- extra suggestions.
 
-- No commentary.
-- No explanation.
-- No source summary.
-- No extra suggestions.
-
-Required sections:
-
-- Only the sections required by the requested prompt type.
-
-Stop condition:
-
-- Stop after the prompt.
+Stop after the prompt.
 
 ## GOAL_PLUS_PROMPT
 
-When to use:
+Use when the user asks for "goal + prompt" or asks for a Codex prompt without a stricter mode.
 
-- User asks for goal + prompt.
-- User asks for a Codex prompt without specifying mode and plan-only is not safer.
+Output:
 
-What to output:
-
-- Short optional Goal.
+- short Goal or no-Goal recommendation.
 - Full Prompt.
-- APPROVED - EXECUTE prompt if relevant.
+- `APPROVED — EXECUTE` prompt when implementation may follow.
+- verification and stop conditions.
 
-What not to output:
-
-- No unrelated alternatives.
-- No long explanation before the prompt.
-
-Required sections:
-
-- Short Goal or no-goal recommendation.
-- Full Prompt.
-- Verification.
-- Stop Conditions.
-
-Stop condition:
-
-- Switch to PLAN_ONLY or EXECUTE_AFTER_APPROVAL if risk is high.
+Switch to `PLAN_ONLY` or `EXECUTE_AFTER_APPROVAL` if the work is risky.
 
 ## PLAN_ONLY
 
-When to use:
+Use for planning-only, broad, risky, multi-file, UI-heavy, security-sensitive, or production-adjacent work.
 
-- User requests planning only.
-- Work is risky, broad, ambiguous, multi-file, UI-heavy, security-sensitive, or production-adjacent.
+Output:
 
-What to output:
+- a Codex prompt that inspects, plans, and stops before edits.
+- approval phrase.
+- verification plan.
+- stop conditions.
 
-- A Codex prompt that inspects, plans, and stops before edits.
-
-What not to output:
-
-- No execution authorization.
-- No edit instruction.
-
-Required sections:
-
-- Goal.
-- Repository inspection rules.
-- Planning deliverables.
-- Approval phrase.
-- Verification plan.
-- Stop conditions.
-
-Stop condition:
-
-- Target Codex session must stop before file edits, destructive actions, commits, pushes, deployments, or releases.
+Do not authorize edits, dependency changes, destructive commands, commits, pushes, deploys, or releases.
 
 ## EXECUTE_AFTER_APPROVAL
 
-When to use:
+Use when the user wants implementation instructions only after a human approval gate.
 
-- The user wants implementation instructions but only after a human approval gate.
+Output:
 
-What to output:
+- plan-only phase.
+- exact approval phrase.
+- `APPROVED — EXECUTE` phase.
+- verification.
+- final report format.
+- stop conditions.
 
-- Phase 1 plan-only prompt.
-- Phase 2 APPROVED - EXECUTE prompt.
-
-What not to output:
-
-- No direct execution before approval.
-
-Required sections:
-
-- Plan phase.
-- Approval phrase.
-- Execution phase.
-- Verification.
-- Final report format.
-- Stop conditions.
-
-Stop condition:
-
-- Stop before phase 2 unless the exact approval phrase is provided.
+Stop before phase 2 unless the approval phrase is present.
 
 ## PROMPT_AUDIT
 
-When to use:
+Use when the user asks to review, score, test, or evaluate a Codex prompt.
 
-- User asks to review, score, test, or evaluate a Codex prompt.
+Output:
 
-What to output:
+- score table.
+- findings.
+- required fixes.
+- final decision: ship, revise, or reject.
 
-- Rubric scores.
-- Red flags.
-- Required fixes.
-- Final decision: ship, revise, or reject.
-
-What not to output:
-
-- No rewrite unless requested.
-- No unrelated prompt expansion.
-
-Required sections:
-
-- Score table.
-- Findings.
-- Minimum fixes.
-- Decision.
-
-Stop condition:
-
-- Stop before rewriting if the user asked only for audit.
+Do not rewrite unless requested.
 
 ## PROMPT_REWRITE
 
-When to use:
+Use when the user asks to improve, harden, compress, expand, or rewrite a prompt.
 
-- User asks to improve, harden, compress, expand, or rewrite a Codex prompt.
+Output:
 
-What to output:
+- revised prompt.
+- preserve the user's original intent.
+- add missing structure, constraints, verification, and stop conditions.
 
-- Revised prompt preserving the user's intent.
-
-What not to output:
-
-- No invented goals.
-- No unrelated features.
-- No weakened constraints.
-
-Required sections:
-
-- Same prompt type as requested, with missing professional structure added.
-
-Stop condition:
-
-- Stop if missing context would materially change the user's intent.
+Do not invent unrelated goals or weaken constraints.
 
 ## STOP_RECOVER
 
-When to use:
+Use when Codex started editing too early, left scope, or ran commands before approval.
 
-- Codex started editing too early.
-- Codex left approved scope.
-- Codex ran commands before approval.
+Output:
 
-What to output:
+- stop command.
+- changed files report request.
+- commands run report request.
+- background process check.
+- no-revert-without-approval rule.
+- recovery plan request.
 
-- STOP / RECOVER prompt.
-
-What not to output:
-
-- No automatic revert instruction.
-- No blame or commentary.
-- No new implementation scope.
-
-Required sections:
-
-- Stop command.
-- Changed files report request.
-- Commands run report request.
-- Background process check.
-- No-revert-without-approval rule.
-- Recovery plan request.
-
-Stop condition:
-
-- Target Codex session must stop and wait for approval.
+The target Codex session must stop and wait.

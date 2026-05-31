@@ -1,55 +1,103 @@
 # Examples
 
-These examples are request patterns you can give to Codex when using the Codex Enterprise Prompt Architect skill.
+These are copy-pasteable requests for Codex Enterprise Prompt Architect. Replace bracketed text with your project context.
 
-## 1. PROMPT_ONLY Codex Prompt Request
+## English Examples
 
-```text
-Yorum yapma, sadece prompt ver. Codex icin plan-only prompt uret: mevcut dashboard premiumlastirma, navbar duzeltme, tema token uyumu ve browser QA. Codex onay almadan execute etmesin.
-```
-
-## 2. Goal + Full Prompt Request
+### 1. PROMPT_ONLY
 
 ```text
-Codex icin Goal + Full Prompt uret. Konu: mevcut SaaS dashboardunda overview widgetlarini iyilestirme, navbar responsive davranisini duzeltme, tema tutarliligini saglama ve browser QA ekleme.
+Only output the final prompt. No commentary. Create a no-Goal PLAN MODE ONLY Codex prompt for dashboard polish, responsive navbar fixes, theme consistency, and browser QA.
 ```
 
-## 3. No-Goal Plan-Only Request
+### 2. Goal + Full Prompt
 
 ```text
-Goal kullanmadan plan-only Codex promptu uret. Codex once repository inspect etsin, ilgili dosyalari listeleyip plan sunsun, riskleri belirtsin ve onay almadan dosya degistirmesin.
+Generate a Codex Goal + Full Prompt for improving an existing SaaS dashboard. Include scope limits, browser QA, verification, final report format, and stop conditions.
 ```
 
-## 4. Execute-After-Approval Request
+### 3. no-Goal PLAN MODE ONLY
 
 ```text
-Codex icin execute-after-approval prompt paketi uret. Once PLAN MODE ONLY promptu, sonra kullanicinin "APPROVED - EXECUTE" yazmasiyla calisacak execution promptu ver. UI degisiklikleri browser QA gerektirsin.
+Create a no-Goal PLAN MODE ONLY Codex prompt. Codex must inspect the repository, list relevant files, produce a phased plan, identify risks, and wait for approval before editing.
 ```
 
-## 5. STOP / RECOVER Request
+### 4. APPROVED — EXECUTE
 
 ```text
-Codex erken execute etti. STOP / RECOVER promptu uret: tum edits dursun, degisen dosyalari raporlasin, geri alma onermeden once kullanicidan onay istesin, yeni plana gecmeden beklesin.
+Create an APPROVED — EXECUTE prompt for this approved plan: [plan]. Codex must follow only the approved plan, preserve current behavior, run verification, and stop if new facts expand scope.
 ```
 
-## 6. UI/UX Browser QA Request
+### 5. STOP / RECOVER
 
 ```text
-Codex icin UI/UX implementation promptu uret. Mevcut layout korunacak, dashboard premiumlastirilacak, icon sistemi tutarli olacak, theme token disina cikilmayacak, desktop ve mobile browser QA zorunlu olacak.
+Codex started editing before approval. Create a STOP / RECOVER prompt. It must stop work, report changed files and commands run, avoid automatic revert, switch back to PLAN MODE ONLY, and wait.
 ```
 
-## 7. Security-Sensitive Auth/Secrets Request
+### 6. UI/UX + browser QA
 
 ```text
-Codex icin security-sensitive prompt uret. Konu: password manager app login refresh bug, secret leak check restorasyonu ve secret action iyilestirmeleri. Zero-knowledge model korunacak, secret plaintext loglanmayacak, auth/session davranisi test edilecek.
+Create a Codex UI/UX implementation prompt for an existing app. Scope: dashboard polish, navbar layout, icon consistency, theme tokens, responsive behavior, accessibility, and browser QA. No unrelated redesigns.
 ```
 
-## 8. Prompt Audit Request
+### 7. Security-sensitive auth/secrets
 
 ```text
-Bu Codex promptunu test et ve skorla. Scope creep, premature execution, verification, browser QA, security constraints, output format ve stop conditions eksiklerini bul. Enterprise barin altindaysa revize et.
+Create a security-sensitive Codex prompt for an existing password manager. Scope: session refresh bug, secret action UX, and leak-check flow. Do not allow plaintext secrets, master passwords, derived keys, cookies, or credentials in logs, screenshots, storage, or final reports.
 ```
 
-## Copy-Paste PROMPT_ONLY Output Shape
+### 8. Prompt audit
 
-When the user says "sadece prompt ver", the response should contain only the generated prompt. Do not include source summaries, commentary, or suggestions unless explicitly requested.
+```text
+Audit this Codex prompt. Score execution control, scope control, security constraints, browser QA, verification, output format, and stop conditions. Revise only if needed: [prompt]
+```
+
+## Türkçe Örnekler
+
+### 1. PROMPT_ONLY
+
+```text
+Yorum yapma, sadece prompt ver. Codex için plan-only prompt üret: mevcut dashboard premiumlaştırma, navbar düzeltme, tema uyumu ve browser QA. Codex onay almadan execute etmesin.
+```
+
+### 2. Goal + Full Prompt
+
+```text
+Codex için goal + full prompt üret. Konu: mevcut SaaS dashboardunda overview widget'larını iyileştirme, navbar responsive davranışını düzeltme, tema tutarlılığını sağlama ve browser QA ekleme.
+```
+
+### 3. no-Goal PLAN MODE ONLY
+
+```text
+Goal kullanmadan plan-only Codex promptu üret. Codex önce repository inspect etsin, ilgili dosyaları listeleyip plan sunsun, riskleri belirtsin ve onay almadan dosya değiştirmesin.
+```
+
+### 4. APPROVED — EXECUTE
+
+```text
+Bu onaylanan plan için APPROVED — EXECUTE promptu üret: [plan]. Codex sadece onaylanan planı uygulasın, mevcut davranışı korusun, doğrulama çalıştırsın ve kapsam genişlerse dursun.
+```
+
+### 5. STOP / RECOVER
+
+```text
+Codex erken execute etti. STOP / RECOVER promptu üret: tüm işleri durdursun, değişen dosyaları ve çalıştırılan komutları raporlasın, otomatik revert yapmasın, PLAN MODE ONLY'ye dönüp onay beklesin.
+```
+
+### 6. UI/UX + browser QA
+
+```text
+Mevcut uygulama için UI/UX Codex promptu üret. Kapsam: dashboard iyileştirme, navbar layout, icon tutarlılığı, tema tokenları, responsive davranış, erişilebilirlik ve browser QA. Alakasız redesign yapmasın.
+```
+
+### 7. Güvenlik duyarlı auth/secrets
+
+```text
+Mevcut password manager için security-sensitive Codex promptu üret. Kapsam: session refresh bug, secret action UX ve leak-check flow. Plaintext secret, master password, derived key, cookie veya credential loglara, screenshotlara, storage'a veya final rapora girmesin.
+```
+
+### 8. Prompt audit
+
+```text
+Bu Codex promptunu test et ve skorla. Execution control, scope control, security constraints, browser QA, verification, output format ve stop conditions açısından değerlendir. Gerekirse revize et: [prompt]
+```

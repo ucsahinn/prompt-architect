@@ -1,69 +1,85 @@
 # Skill Structure
 
-The formal Codex skill package lives at:
+## English
+
+The formal Codex skill package lives here:
 
 ```text
 .codex/skills/codex-enterprise-prompt-architect/
 ```
 
-## Entrypoint
+Entrypoint:
 
 ```text
 .codex/skills/codex-enterprise-prompt-architect/SKILL.md
 ```
 
-`SKILL.md` is the compact operating entrypoint. It explains when to use the skill, when not to use it, default Codex behavior, response modes, Goal vs no-Goal guidance, PLAN MODE ONLY, approval-gated execution, STOP / RECOVER, security rules, UI/UX rules, browser QA, prompt scoring, ledger behavior, and stop conditions.
+Supporting files:
 
-## Supporting Files
+- `commands.md` - short slash-style and natural-language commands.
+- `response-modes.md` - `PROMPT_ONLY`, Goal + Full Prompt, `PLAN MODE ONLY`, `APPROVED — EXECUTE`, audit, rewrite, and `STOP / RECOVER` modes.
+- `codex-patterns.md` - reusable Codex workflow patterns.
+- `examples.md` - complete examples.
 
-```text
-.codex/skills/codex-enterprise-prompt-architect/commands.md
-.codex/skills/codex-enterprise-prompt-architect/response-modes.md
-.codex/skills/codex-enterprise-prompt-architect/codex-patterns.md
-.codex/skills/codex-enterprise-prompt-architect/examples.md
-```
-
-- `commands.md`: short natural-language and slash-style commands, including Turkish examples.
-- `response-modes.md`: strict output modes such as `PROMPT_ONLY`, `GOAL_PLUS_PROMPT`, `PLAN_ONLY`, and `STOP_RECOVER`.
-- `codex-patterns.md`: reusable Codex workflows for plan-only control, approval-gated execution, browser QA, security-sensitive apps, and final reporting.
-- `examples.md`: complete reusable prompt examples.
-
-## Compatibility Shims
-
-Older flat skill-style files are kept for compatibility:
+Compatibility shims are kept at:
 
 ```text
 .codex/skills/codex-enterprise-prompt-architect.md
 .codex/skills/codex-enterprise-prompt-architect-commands.md
 ```
 
-They point users and future Codex sessions to the formal skill directory.
+The deeper Prompt Lab knowledge base lives under `knowledge/`:
 
-## Knowledge Base Relationship
+- `knowledge/distilled/` - playbooks, rubrics, workflow rules.
+- `knowledge/templates/` - prompt templates and output formats.
+- `knowledge/sources/` - source-backed research notes.
+- `knowledge/outputs/` - generated prompts and prompt tests.
+- `knowledge/logs/` - research, decisions, and changelog notes.
 
-The `knowledge/` folder is the deeper Prompt Lab source of truth:
-
-```text
-knowledge/
-  distilled/
-  templates/
-  sources/
-  outputs/
-  logs/
-```
-
-- `knowledge/distilled/`: reusable playbooks, rubrics, workflow rules, and Codex patterns.
-- `knowledge/templates/`: prompt templates, command cookbook, output formats, and evaluation templates.
-- `knowledge/sources/`: source-backed notes from official docs, papers, repositories, and practitioner guidance.
-- `knowledge/outputs/`: generated prompts and test prompt packages.
-- `knowledge/logs/`: research, decision, and changelog notes.
-
-## Prompt Ledger
-
-Generated prompts should be logged in:
+Reusable generated prompts are logged in:
 
 ```text
 knowledge/outputs/generated-prompts.md
 ```
 
-The ledger records the date, request summary, target agent, prompt type, knowledge used, final prompt location, quality notes, and follow-up needs.
+## Türkçe
+
+Formal Codex skill paketi burada bulunur:
+
+```text
+.codex/skills/codex-enterprise-prompt-architect/
+```
+
+Entrypoint:
+
+```text
+.codex/skills/codex-enterprise-prompt-architect/SKILL.md
+```
+
+Destek dosyaları:
+
+- `commands.md` - kısa slash-style ve doğal dil komutları.
+- `response-modes.md` - `PROMPT_ONLY`, Goal + Full Prompt, `PLAN MODE ONLY`, `APPROVED — EXECUTE`, audit, rewrite ve `STOP / RECOVER` modları.
+- `codex-patterns.md` - tekrar kullanılabilir Codex workflow pattern'leri.
+- `examples.md` - tam örnekler.
+
+Geriye dönük uyumluluk için eski shim dosyaları korunur:
+
+```text
+.codex/skills/codex-enterprise-prompt-architect.md
+.codex/skills/codex-enterprise-prompt-architect-commands.md
+```
+
+Daha derin Prompt Lab bilgi tabanı `knowledge/` altındadır:
+
+- `knowledge/distilled/` - playbook, rubrik ve workflow kuralları.
+- `knowledge/templates/` - prompt template'leri ve output formatları.
+- `knowledge/sources/` - kaynaklı araştırma notları.
+- `knowledge/outputs/` - üretilmiş promptlar ve prompt testleri.
+- `knowledge/logs/` - araştırma, karar ve changelog notları.
+
+Tekrar kullanılabilir promptlar şu ledgere eklenir:
+
+```text
+knowledge/outputs/generated-prompts.md
+```

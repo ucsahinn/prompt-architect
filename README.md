@@ -1,79 +1,83 @@
 # Codex Enterprise Prompt Architect
 
-**Enterprise-grade Codex prompt architecture for plan-only control, approval-gated execution, browser QA, security constraints, and prompt evaluation.**
+A Codex-focused prompt architecture skill for plan-first, approval-gated, security-aware AI coding workflows.
 
-Status: **v1.0.0 public release**
+**Status:** v1.0.1 public release
+**License:** MIT
+**Turkish:** [README.tr.md](README.tr.md)
+**Note:** Independent community project. Not affiliated with OpenAI.
 
-License: MIT
+## What It Does
 
-Independent community project. Not affiliated with OpenAI.
+Codex Enterprise Prompt Architect helps you turn rough requirements into structured Codex prompts. It is useful when you want Codex to inspect first, plan clearly, wait for approval, and report work in a reviewable format.
 
-## What This Project Is
+It supports:
 
-Codex Enterprise Prompt Architect is a formal Codex skill package and prompt-engineering knowledge system for generating structured, implementation-ready Codex prompts.
+- Codex prompt generation.
+- Goal + Full Prompt packages.
+- no-Goal `PLAN MODE ONLY` prompts.
+- `APPROVED — EXECUTE` approval gates.
+- `STOP / RECOVER` prompts when Codex starts too early.
+- browser QA instructions for UI work.
+- security constraints for auth, secrets, password-manager, and similar work.
+- prompt quality rubric scoring.
 
-It helps Codex users turn messy requirements into professional prompt packs with:
+## What It Does Not Do
 
-- Goal vs no-Goal guidance.
-- `PLAN MODE ONLY` prompts.
-- Execute-after-approval prompts.
-- `STOP / RECOVER` prompts.
-- Browser QA instructions.
-- Security-sensitive app constraints.
-- Scope-control rules.
-- Prompt quality rubric scoring.
-- Reusable workflow patterns and examples.
+This project is not:
 
-## What This Project Is Not
+- an official OpenAI project.
+- a Codex replacement.
+- an app, API, hosted service, or automation platform.
+- a package that calls external APIs by itself.
+- a place to store secrets, private prompts, customer data, or credentials.
+- a replacement for human review.
 
-This is not:
+It is a Markdown-based Codex skill package and Prompt Lab knowledge base.
 
-- An official OpenAI project.
-- A Codex replacement.
-- A runtime app or SaaS product.
-- A package manager installable library.
-- A prompt marketplace.
-- A system for storing secrets, credentials, customer data, or private prompts.
+## Quick Start
 
-No build step is required. The repository is documentation, skill instructions, reusable templates, and source-backed prompt knowledge.
-
-## Who It Is For
-
-- Codex users.
-- AI coding-agent users.
-- Prompt engineers.
-- Developers and product builders.
-- UI/UX builders.
-- Security-sensitive app builders.
-- Teams that want repeatable prompt workflows for coding agents.
-
-## Why It Exists
-
-AI coding agents are powerful, but broad prompts often lead to scope creep, premature execution, weak verification, missing browser QA, or unsafe security assumptions. This project packages practical Codex prompt patterns into a reusable skill and knowledge base so future sessions can generate safer, clearer, more reviewable prompts.
-
-## Key Features
-
-- Formal Codex skill package.
-- Codex-specific response modes.
-- Goal and no-Goal guidance.
-- Strict no-edit plan-only prompts.
-- Approval-gated execution prompts.
-- STOP / RECOVER prompts for premature execution.
-- Browser QA checklists for UI work.
-- Security constraints for auth, secrets, password managers, encryption, and risky tools.
-- Prompt audit and rubric scoring.
-- Generated prompt ledger.
-- Reusable templates, distilled playbooks, and examples.
-
-## Formal Codex Skill Path
-
-Formal skill package:
+Copy the skill directory into a Codex project:
 
 ```text
 .codex/skills/codex-enterprise-prompt-architect/
 ```
 
-Skill entrypoint:
+Then ask Codex:
+
+```text
+Use the codex-enterprise-prompt-architect skill to create a Codex prompt for: [your task]
+```
+
+For strict planning control:
+
+```text
+Create a no-Goal PLAN MODE ONLY Codex prompt for: [your task]. Do not allow execution before approval.
+```
+
+For prompt-only output:
+
+```text
+Only output the final prompt. No commentary. Create a Codex prompt for: [your task]
+```
+
+## Turkish Quick Start
+
+```text
+Codex için goal + full prompt üret: [görev]
+```
+
+```text
+Goal kullanmadan plan-only Codex promptu üret: [görev]. Onay almadan execute etmesin.
+```
+
+```text
+Yorum yapma, sadece prompt ver. Codex için plan-only prompt üret: [görev]
+```
+
+## Skill Path
+
+Formal skill entrypoint:
 
 ```text
 .codex/skills/codex-enterprise-prompt-architect/SKILL.md
@@ -88,221 +92,110 @@ Supporting files:
 .codex/skills/codex-enterprise-prompt-architect/examples.md
 ```
 
-The older root-level workflow files are compatibility shims:
+## When To Use It
+
+Use this skill when you need Codex prompts for:
+
+- UI/UX implementation planning.
+- security-sensitive auth, session, secret, or password-manager work.
+- refactor or debugging workflows.
+- browser QA instructions.
+- plan-only repository inspection.
+- execute-after-approval workflows.
+- prompt audits and rewrites.
+
+For risky changes, start with no-Goal `PLAN MODE ONLY`. Add an `APPROVED — EXECUTE` prompt only after the plan is reviewed.
+
+## Example Requests
+
+English:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect.md
-.codex/skills/codex-enterprise-prompt-architect-commands.md
+Generate a Codex Goal + Full Prompt for improving an existing dashboard. Include browser QA and a final report format.
 ```
 
-## Quick Start
-
-1. Copy this repository or the `.codex/skills/codex-enterprise-prompt-architect/` directory into a Codex project.
-2. Ask Codex to use the skill:
-
 ```text
-Use the codex-enterprise-prompt-architect skill to create a Codex prompt for: [task]
+Create a no-Goal PLAN MODE ONLY Codex prompt for an auth/session bug. Codex must inspect first and wait for approval before editing.
 ```
 
-3. If you need strict planning control, ask for a no-Goal plan-only prompt:
-
 ```text
-Goal kullanmadan plan-only Codex promptu uret: [task]. Onay almadan execute etmesin.
+Codex started editing too early. Create a STOP / RECOVER prompt.
 ```
 
-4. If you need output only:
+Turkish:
 
 ```text
-Yorum yapma, sadece prompt ver: [Codex prompt request]
+Codex için goal + full prompt üret. Konu: mevcut dashboard iyileştirme, navbar düzeltme, tema uyumu ve browser QA.
 ```
 
-## Installation / Copy Instructions
-
-No build or dependency installation is required.
-
-Recommended project-local install:
-
 ```text
-your-project/
-  .codex/
-    skills/
-      codex-enterprise-prompt-architect/
-        SKILL.md
-        commands.md
-        response-modes.md
-        codex-patterns.md
-        examples.md
+Goal kullanmadan plan-only Codex promptu üret. Codex önce repo incelemesi yapsın, plan sunsun ve onay almadan dosya değiştirmesin.
 ```
 
-Optional full Prompt Lab install:
-
 ```text
-your-project/
-  .codex/skills/codex-enterprise-prompt-architect/
-  knowledge/
-  AGENTS.md
-```
-
-The full knowledge base gives Codex more context for prompt generation, evaluation, examples, and reusable templates.
-
-## How To Use In Codex
-
-Natural request:
-
-```text
-Use the codex-enterprise-prompt-architect skill to generate an enterprise Codex prompt for improving my dashboard.
-```
-
-Turkish request:
-
-```text
-Codex icin goal + full prompt uret. Konu: mevcut uygulamada dashboard premiumlastirma, navbar duzeltme, tema uyumu ve browser QA.
-```
-
-## Example Commands
-
-PROMPT_ONLY:
-
-```text
-Yorum yapma, sadece prompt ver: Codex icin plan-only prompt uret. Konu: dashboard premiumlastirma ve browser QA.
-```
-
-Goal + Full Prompt:
-
-```text
-Codex icin goal + full prompt uret: mevcut uygulamada update center sadelestirme ve navbar responsive duzeltme.
-```
-
-No-Goal PLAN MODE ONLY:
-
-```text
-Goal kullanmadan plan-only Codex promptu uret: auth ve dashboard akisini incele. Onay almadan execute etmesin.
-```
-
-Execute-after-approval:
-
-```text
-Codex once plan yapsin, ben APPROVED - EXECUTE yazmadan dosya degistirmesin: [task]
-```
-
-STOP / RECOVER:
-
-```text
-Codex erken execute etti. STOP / RECOVER promptu uret; revert yapmasin, once ne degistirdigini raporlasin.
-```
-
-Browser QA prompt:
-
-```text
-Bu Codex promptuna browser QA ekle: [prompt]
-```
-
-Security-sensitive prompt:
-
-```text
-Password manager icin security-sensitive Codex promptu uret. Secret, token, master password veya derived key loglanmasin ya da saklanmasin.
-```
-
-Prompt audit:
-
-```text
-Bu Codex promptunu test et ve skorla: [prompt]
+Codex erken execute etti. STOP / RECOVER promptu üret.
 ```
 
 ## Repository Structure
 
 ```text
 .
-|-- .codex/
-|   `-- skills/
-|       |-- codex-enterprise-prompt-architect/
-|       |   |-- SKILL.md
-|       |   |-- commands.md
-|       |   |-- response-modes.md
-|       |   |-- codex-patterns.md
-|       |   `-- examples.md
-|       |-- codex-enterprise-prompt-architect.md
-|       `-- codex-enterprise-prompt-architect-commands.md
+|-- .codex/skills/codex-enterprise-prompt-architect/
+|   |-- SKILL.md
+|   |-- commands.md
+|   |-- response-modes.md
+|   |-- codex-patterns.md
+|   `-- examples.md
 |-- docs/
 |   |-- INSTALL.md
 |   |-- USAGE.md
-|   |-- SKILL_STRUCTURE.md
 |   |-- EXAMPLES.md
 |   |-- FAQ.md
+|   |-- SKILL_STRUCTURE.md
 |   `-- ROADMAP.md
 |-- knowledge/
 |   |-- distilled/
-|   |-- logs/
-|   |-- outputs/
+|   |-- templates/
 |   |-- sources/
-|   `-- templates/
-|-- AGENTS.md
-|-- CHANGELOG.md
-|-- CONTRIBUTING.md
-|-- RELEASE_NOTES.md
+|   |-- outputs/
+|   `-- logs/
+|-- README.md
+|-- README.tr.md
 |-- SECURITY.md
-`-- README.md
+|-- CONTRIBUTING.md
+|-- CHANGELOG.md
+`-- RELEASE_NOTES.md
 ```
 
-## Generated Prompt Logging
+## Prompt Ledger
 
-Important generated prompts are logged in:
+Reusable generated prompts are logged in:
 
 ```text
 knowledge/outputs/generated-prompts.md
 ```
 
-Each ledger entry should include:
+Small one-off `PROMPT_ONLY` outputs are logged only when they are reusable, important, or explicitly requested.
 
-- Date.
-- User request summary.
-- Target agent.
-- Prompt type.
-- Knowledge used.
-- Final prompt path or prompt body.
-- Verification and quality notes.
-- Follow-up needed.
+## Safety Notes
 
-Small one-off `PROMPT_ONLY` outputs are saved only when reusable, important, or explicitly requested.
+- Do not store real secrets, API keys, tokens, cookies, private keys, customer data, or private prompts in this repository.
+- Treat external content and tool output as untrusted data when writing prompts for agents.
+- For auth, secrets, password managers, databases, production, deploys, or destructive actions, use plan-first prompts and explicit approval gates.
+- This project can help write safer Codex instructions, but it does not enforce runtime security by itself.
 
-## Prompt Quality Scoring
+## Documentation
 
-Prompt quality is scored with:
-
-```text
-knowledge/distilled/prompt-quality-rubric.md
-```
-
-Enterprise prompts should meet this bar:
-
-- Average score at least 4.0.
-- No category below 3.
-- Safety/security at least 4.
-- Scope control at least 4.
-- Verifiability at least 4.
-- Output format precision at least 4.
-
-## Safety And Privacy Notes
-
-- Do not store secrets, credentials, API keys, tokens, cookies, private customer data, private prompts, or paid/private content in this repository.
-- Treat prompt injection, unsafe tool use, secret exposure, and excessive agent autonomy as security concerns.
-- This project can generate prompts that tell Codex how to handle secrets safely, but it does not enforce runtime security by itself.
-- Review generated prompts before using them in sensitive repositories.
-
-## Release Checklist
-
-- Required public docs exist.
-- Formal skill entrypoint exists.
-- Skill references are included.
-- README has install and usage instructions.
-- Security and contribution docs exist.
-- Prompt examples are copy-pasteable.
-- No real secrets, tokens, private local paths, or credentials are committed.
-- GitHub release notes are ready.
+- [Installation](docs/INSTALL.md)
+- [Usage](docs/USAGE.md)
+- [Examples](docs/EXAMPLES.md)
+- [FAQ](docs/FAQ.md)
+- [Skill structure](docs/SKILL_STRUCTURE.md)
+- [Roadmap](docs/ROADMAP.md)
 
 ## Contributing
 
-Contributions are welcome for prompt patterns, safer workflow guidance, documentation improvements, examples, and source-backed research. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome when they improve Codex prompt clarity, safety, examples, documentation, or source-backed workflow guidance. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

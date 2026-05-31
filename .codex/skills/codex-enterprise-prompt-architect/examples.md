@@ -1,5 +1,7 @@
 # Examples
 
+These examples are prompt outputs or user requests that can be reused directly.
+
 ## 1. PROMPT_ONLY Codex Prompt
 
 ```text
@@ -10,7 +12,7 @@ Work in PLAN MODE ONLY.
 Do not edit, create, delete, rename, move, format, commit, push, deploy, publish, install dependencies, run destructive commands, or start implementation.
 
 Goal:
-Inspect the existing app and plan dashboard premiumization, navbar fixes, theme consistency improvements, and browser QA.
+Inspect the existing app and plan dashboard improvements, navbar fixes, theme consistency, and browser QA.
 
 Repository Inspection Rules:
 - Read AGENTS.md, README files, design docs, package scripts, and relevant frontend files first.
@@ -20,12 +22,12 @@ Repository Inspection Rules:
 Output:
 1. Repository findings.
 2. File-level plan.
-3. Browser QA checklist.
+3. browser QA checklist.
 4. Verification plan.
 5. Stop conditions.
 
 Approval phrase:
-APPROVED - EXECUTE
+APPROVED — EXECUTE
 
 Stop after the plan.
 ```
@@ -56,7 +58,7 @@ In scope:
 - Dashboard hierarchy and widget polish.
 - Navbar responsive behavior.
 - Theme token consistency.
-- Browser QA.
+- browser QA.
 
 Out of scope:
 - Backend changes.
@@ -64,7 +66,7 @@ Out of scope:
 - Commits, pushes, deploys, releases, destructive commands.
 
 Execution Mode:
-Plan first. Do not edit until the user writes: APPROVED - EXECUTE.
+Plan first. Do not edit until the user writes: APPROVED — EXECUTE.
 
 Verification:
 - Discover and run project-specific lint/typecheck/test/build commands after approval.
@@ -82,7 +84,7 @@ Stop Conditions:
 - Stop before scope expansion, dependency additions, destructive commands, commits, pushes, deploys, or releases.
 ```
 
-## 3. Plan-Only Codex Prompt
+## 3. no-Goal PLAN MODE ONLY Prompt
 
 ```text
 You are Codex acting as a senior engineer.
@@ -107,7 +109,7 @@ Required Output:
 5. Risks and stop conditions.
 
 Approval phrase:
-APPROVED - EXECUTE
+APPROVED — EXECUTE
 
 Stop after the plan.
 ```
@@ -155,12 +157,26 @@ Required Output:
 1. Repository findings.
 2. Security and zero-knowledge boundary map.
 3. UI/UX improvement plan.
-4. Browser QA checklist.
+4. browser QA checklist.
 5. Verification plan.
 6. Stop conditions.
 
 Approval phrase:
-APPROVED - EXECUTE
+APPROVED — EXECUTE
 
 Stop after the plan.
+```
+
+## 6. Türkçe User Request Examples
+
+```text
+Yorum yapma, sadece prompt ver. Codex için plan-only prompt üret: dashboard iyileştirme, navbar düzeltme, tema uyumu ve browser QA.
+```
+
+```text
+Codex için goal + full prompt üret. Riskli değişikliklerde APPROVED — EXECUTE olmadan dosya düzenlemesin.
+```
+
+```text
+Codex erken execute etti. STOP / RECOVER promptu üret; otomatik revert yapmasın, önce ne değiştirdiğini raporlasın.
 ```

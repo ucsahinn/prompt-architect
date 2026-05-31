@@ -6,40 +6,50 @@ labels: prompt-request
 assignees: ""
 ---
 
-## Target Mode
+## Target Mode / Hedef Mod
 
 - [ ] PROMPT_ONLY
 - [ ] Goal + Full Prompt
-- [ ] No-Goal PLAN MODE ONLY
-- [ ] Execute after approval
+- [ ] no-Goal PLAN MODE ONLY
+- [ ] APPROVED — EXECUTE
 - [ ] STOP / RECOVER
 - [ ] Prompt audit
 - [ ] Prompt rewrite
 
-## User Goal
+## User Goal / Kullanıcı Hedefi
 
 What should the Codex prompt help accomplish?
 
-## Project Context
+Codex promptu neyi başarmaya yardımcı olmalı?
+
+## Project Context / Proje Bağlamı
 
 Describe the app, repo, feature, or workflow. Do not include private code or secrets.
 
-## Must-Have Requirements
+Uygulama, repo, özellik veya workflow bağlamını anlatın. Private code veya secret eklemeyin.
+
+## Must-Have Requirements / Zorunlu Gereksinimler
 
 -
 
-## Must-Not-Do Constraints
+## Must-Not-Do Constraints / Yapılmaması Gerekenler
 
 -
 
-## Security Or Privacy Constraints
+## Security Or Privacy Constraints / Güvenlik ve Gizlilik Sınırları
 
 List auth, secrets, user data, compliance, or safety constraints.
 
-## Verification Requirements
+Auth, secret, user data, compliance veya güvenlik sınırlarını yazın.
+
+## Verification Requirements / Doğrulama Gereksinimleri
 
 List tests, builds, lint, typecheck, browser QA, screenshots, or final report requirements.
 
-## Desired Output Format
+Test, build, lint, typecheck, browser QA, screenshot veya final rapor gereksinimlerini yazın.
+
+## Desired Output Format / İstenen Çıktı Formatı
 
 Describe the exact prompt output you want.
+
+İstediğiniz prompt çıktısını net yazın.

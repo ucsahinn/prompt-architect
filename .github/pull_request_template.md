@@ -1,8 +1,8 @@
-## Summary
+## Summary / Özet
 
-What changed and why?
+What changed and why? Ne değişti ve neden?
 
-## Change Type
+## Change Type / Değişiklik Türü
 
 - [ ] Documentation
 - [ ] Skill package
@@ -10,9 +10,9 @@ What changed and why?
 - [ ] Prompt example
 - [ ] Knowledge source note
 - [ ] Rubric/evaluation workflow
-- [ ] Other
+- [ ] Other / Diğer
 
-## Quality Checklist
+## Quality Checklist / Kalite Kontrolü
 
 - [ ] Change is Codex prompt-generation focused.
 - [ ] No unrelated software or app code was added.
@@ -24,10 +24,12 @@ What changed and why?
 - [ ] UI examples include browser QA where relevant.
 - [ ] Documentation links and paths are correct.
 
-## Verification
+## Verification / Doğrulama
 
 List checks run, such as `rg --files`, secret/path scans, markdown review, or prompt rubric scoring.
 
-## Notes
+Çalıştırılan kontrolleri yazın: `rg --files`, secret/path scan, markdown review veya prompt rubric scoring gibi.
 
-Anything reviewers should know?
+## Notes / Notlar
+
+Anything reviewers should know? Reviewer'ların bilmesi gereken bir şey var mı?
