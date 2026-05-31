@@ -4,6 +4,14 @@
 
 [English](README.md) | [Türkçe](README.tr.md)
 
+[![Release](https://img.shields.io/github/v/release/ucsahinn/codex-enterprise-prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)
+[![Security Policy](https://img.shields.io/badge/security-policy-b91c1c)](SECURITY.md)
+[![Docs](https://img.shields.io/badge/docs-ready-2563eb)](docs/USAGE.md)
+[![Public Safe](https://img.shields.io/badge/public--safe-checklist-7c3aed)](docs/PUBLIC_REPO_CHECKLIST.md)
+
+![Codex Enterprise Prompt Architect workflow banner](assets/banner.svg)
+
 - **Status:** v1.0.2 public release
 - **License:** MIT
 - **Project type:** Markdown-based Codex skill package and Prompt Lab knowledge base
@@ -24,6 +32,31 @@ This repository packages those patterns as:
 - prompt evaluation rubrics,
 - source-backed notes for AI coding-agent workflows.
 
+## Start Fast
+
+| I want to... | Use this |
+| --- | --- |
+| Generate a safe Codex prompt | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
+| Keep Codex from editing too early | [no-Goal PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
+| Approve a scoped implementation | [APPROVED - EXECUTE](docs/USAGE.md#approved--execute) |
+| Stop an agent that left scope | [STOP / RECOVER](docs/USAGE.md#stop--recover) |
+| Check public repo safety | [Public repo checklist](docs/PUBLIC_REPO_CHECKLIST.md) |
+| Review leak-prevention rules | [Security model](docs/SECURITY_MODEL.md) |
+
+![Codex workflow overview](assets/workflow-overview.svg)
+
+## What You Get
+
+| Capability | What it gives you |
+| --- | --- |
+| Goal + Full Prompt | A short objective plus a complete first-message prompt. |
+| no-Goal `PLAN MODE ONLY` | Strict planning control before any file edits. |
+| `APPROVED - EXECUTE` | A bounded execution prompt after human review. |
+| `STOP / RECOVER` | A recovery prompt for premature execution or scope drift. |
+| Browser QA | UI verification instructions for real user flows. |
+| Security constraints | No-secret, approval-gated rules for sensitive work. |
+| Prompt rubric | A way to score prompt quality before use. |
+
 ## Who This Is For
 
 - Developers using Codex for real repository work.
@@ -31,16 +64,6 @@ This repository packages those patterns as:
 - Maintainers who want safer public documentation and prompt examples.
 - Product, UI, security, and platform teams that need approval-gated AI coding workflows.
 - Turkish and English users who want clear Codex workflow examples.
-
-## What You Get
-
-- Goal + Full Prompt packages.
-- no-Goal `PLAN MODE ONLY` prompts for strict control.
-- `APPROVED - EXECUTE` prompts for approved implementation.
-- `STOP / RECOVER` prompts when an agent starts too early or leaves scope.
-- Browser QA instructions for UI work.
-- Security constraints for auth, sessions, secrets, password managers, databases, shell tools, MCP/app tools, and production-adjacent work.
-- A prompt quality rubric and evaluation workflow.
 
 ## Quick Start
 
@@ -68,7 +91,7 @@ For prompt-only output:
 Only output the final prompt. No commentary. Create a Codex prompt for: [your task]
 ```
 
-## Start Here
+## Navigation
 
 | Goal | Go to |
 | --- | --- |
@@ -79,6 +102,16 @@ Only output the final prompt. No commentary. Create a Codex prompt for: [your ta
 | Check public repo safety rules | [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) |
 | Review prompt/security boundaries | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
 | See planned improvements | [docs/ROADMAP.md](docs/ROADMAP.md) |
+
+## Trust Signals
+
+| Area | Standard |
+| --- | --- |
+| Public safety | No secrets, private prompts, customer data, local paths, or private URLs. |
+| Human control | Risky work starts with `PLAN MODE ONLY` and waits for explicit approval. |
+| Verification | Prompts require tests, QA, scans, or clear "unable to verify" reporting. |
+| Documentation | README stays concise; deeper guidance lives in `docs/` and `knowledge/`. |
+| Maintenance | Changelog, release notes, security policy, contribution guide, issue templates. |
 
 ## What This Is Not
 

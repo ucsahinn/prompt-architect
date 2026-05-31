@@ -4,6 +4,12 @@ All notable changes to this project are documented here.
 
 The format follows Keep a Changelog where practical.
 
+## [Unreleased]
+
+### Changed
+
+- Added README visual assets and a more polished public storefront layout.
+
 ## [1.0.2] - 2026-05-31
 
 ### Changed

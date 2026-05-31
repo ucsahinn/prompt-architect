@@ -4,6 +4,14 @@
 
 [English](README.md) | [Türkçe](README.tr.md)
 
+[![Release](https://img.shields.io/github/v/release/ucsahinn/codex-enterprise-prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)
+[![Security Policy](https://img.shields.io/badge/security-policy-b91c1c)](SECURITY.md)
+[![Docs](https://img.shields.io/badge/docs-ready-2563eb)](docs/USAGE.md)
+[![Public Safe](https://img.shields.io/badge/public--safe-checklist-7c3aed)](docs/PUBLIC_REPO_CHECKLIST.md)
+
+![Codex Enterprise Prompt Architect workflow banner](assets/banner.svg)
+
 - **Durum:** v1.0.2 public release
 - **Lisans:** MIT
 - **Proje tipi:** Markdown tabanlı Codex skill paketi ve Prompt Lab bilgi tabanı
@@ -24,6 +32,31 @@ Bu repo bu kalıpları şu şekilde paketler:
 - prompt kalite rubriği,
 - AI coding-agent iş akışları için kaynaklı notlar.
 
+## Hızlı Başla
+
+| Şunu istiyorum... | Kullan |
+| --- | --- |
+| Güvenli Codex promptu üretmek | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
+| Codex'in erken dosya düzenlemesini engellemek | [no-Goal PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
+| Onaylanmış planı uygulatmak | [APPROVED - EXECUTE](docs/USAGE.md#approved--execute) |
+| Kapsam dışına çıkan agent'ı durdurmak | [STOP / RECOVER](docs/USAGE.md#stop--recover) |
+| Public repo güvenliğini kontrol etmek | [Public repo checklist](docs/PUBLIC_REPO_CHECKLIST.md) |
+| Sızıntı önleme kurallarını incelemek | [Security model](docs/SECURITY_MODEL.md) |
+
+![Codex workflow overview](assets/workflow-overview.svg)
+
+## Ne Sunar?
+
+| Yetenek | Sağladığı değer |
+| --- | --- |
+| Goal + Full Prompt | Kısa hedef ve tam ilk mesaj promptu. |
+| no-Goal `PLAN MODE ONLY` | Dosya düzenlemeden önce sıkı plan kontrolü. |
+| `APPROVED - EXECUTE` | İnsan onayından sonra sınırlı execution promptu. |
+| `STOP / RECOVER` | Erken execution veya kapsam kayması için toparlama promptu. |
+| Browser QA | Gerçek kullanıcı akışları için UI doğrulama talimatları. |
+| Güvenlik kısıtları | Hassas işlerde no-secret ve onay kapılı kurallar. |
+| Prompt rubriği | Promptu kullanmadan önce kalite skoru verme yöntemi. |
+
 ## Kimler İçin?
 
 - Codex'i gerçek repo işlerinde kullanan geliştiriciler.
@@ -31,16 +64,6 @@ Bu repo bu kalıpları şu şekilde paketler:
 - Public dokümantasyon ve prompt örneklerini daha güvenli tutmak isteyen maintainer'lar.
 - Onay kapılı AI coding workflow'ları isteyen ürün, UI, güvenlik ve platform ekipleri.
 - Türkçe ve İngilizce Codex workflow örnekleri arayan kullanıcılar.
-
-## Ne Sunar?
-
-- Goal + Full Prompt paketleri.
-- Sıkı kontrol için no-Goal `PLAN MODE ONLY` promptları.
-- Onaylanmış uygulama için `APPROVED - EXECUTE` promptları.
-- Codex erken başladığında veya kapsam dışına çıktığında `STOP / RECOVER` promptları.
-- UI işleri için browser QA talimatları.
-- Auth, session, secret, password manager, database, shell tool, MCP/app tool ve production-adjacent işler için güvenlik kısıtları.
-- Prompt kalite rubriği ve değerlendirme workflow'u.
 
 ## Hızlı Başlangıç
 
@@ -68,7 +91,7 @@ Sadece prompt çıktı istiyorsanız:
 Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 ```
 
-## Nereden Başlamalı?
+## Navigasyon
 
 | Hedef | Dosya |
 | --- | --- |
@@ -79,6 +102,16 @@ Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 | Public repo güvenlik kontrolü yapmak | [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) |
 | Prompt/güvenlik sınırlarını incelemek | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
 | Planlanan işleri görmek | [docs/ROADMAP.md](docs/ROADMAP.md) |
+
+## Güven Sinyalleri
+
+| Alan | Standart |
+| --- | --- |
+| Public safety | Secret, private prompt, müşteri verisi, local path veya private URL yok. |
+| İnsan kontrolü | Riskli işler `PLAN MODE ONLY` ile başlar ve açık onay bekler. |
+| Doğrulama | Promptlar test, QA, scan veya net "doğrulanamadı" raporu ister. |
+| Dokümantasyon | README kısa kalır; detaylar `docs/` ve `knowledge/` içinde yaşar. |
+| Bakım | Changelog, release notes, security policy, contribution guide, issue template'leri. |
 
 ## Ne Değildir?
 

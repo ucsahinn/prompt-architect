@@ -1,0 +1,49 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Enterprise Prompt Architect banner</title>
+  <desc id="desc">A clean technical banner showing a prompt architecture workflow for Codex.</desc>
+  <rect width="1280" height="420" rx="0" fill="#0B1020"/>
+  <path d="M0 308C168 238 299 266 438 296C613 334 782 376 1000 287C1118 239 1210 235 1280 249V420H0V308Z" fill="#14213D"/>
+  <path d="M0 326C154 272 306 287 453 318C640 358 820 382 1011 313C1125 272 1216 270 1280 283V420H0V326Z" fill="#0F766E" opacity="0.34"/>
+  <g opacity="0.2">
+    <path d="M114 84H384" stroke="#E5E7EB"/>
+    <path d="M114 124H297" stroke="#E5E7EB"/>
+    <path d="M114 164H346" stroke="#E5E7EB"/>
+    <path d="M936 82H1170" stroke="#E5E7EB"/>
+    <path d="M990 122H1170" stroke="#E5E7EB"/>
+    <path d="M916 162H1170" stroke="#E5E7EB"/>
+  </g>
+  <rect x="92" y="58" width="220" height="140" rx="16" fill="#111827" stroke="#334155"/>
+  <rect x="362" y="58" width="220" height="140" rx="16" fill="#111827" stroke="#334155"/>
+  <rect x="632" y="58" width="220" height="140" rx="16" fill="#111827" stroke="#334155"/>
+  <rect x="902" y="58" width="220" height="140" rx="16" fill="#111827" stroke="#334155"/>
+  <circle cx="126" cy="92" r="16" fill="#38BDF8"/>
+  <circle cx="396" cy="92" r="16" fill="#A3E635"/>
+  <circle cx="666" cy="92" r="16" fill="#FBBF24"/>
+  <circle cx="936" cy="92" r="16" fill="#F472B6"/>
+  <text x="154" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">Intent</text>
+  <text x="424" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">Plan</text>
+  <text x="694" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">Approval</text>
+  <text x="964" y="98" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">Verify</text>
+  <text x="122" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Clear goal</text>
+  <text x="122" y="158" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Scoped context</text>
+  <text x="392" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Repo inspection</text>
+  <text x="392" y="158" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Risk map</text>
+  <text x="662" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Human gate</text>
+  <text x="662" y="158" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Small phases</text>
+  <text x="932" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Tests and QA</text>
+  <text x="932" y="158" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Final evidence</text>
+  <path d="M318 128H352" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M348 122L356 128L348 134" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M588 128H622" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M618 122L626 128L618 134" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M858 128H892" stroke="#94A3B8" stroke-width="2"/>
+  <path d="M888 122L896 128L888 134" stroke="#94A3B8" stroke-width="2"/>
+  <text x="92" y="270" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="800">Codex Enterprise Prompt Architect</text>
+  <text x="94" y="314" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24">Structured goals. Safer prompts. Reviewable AI workflows.</text>
+  <rect x="92" y="344" width="166" height="38" rx="19" fill="#38BDF8"/>
+  <text x="122" y="369" fill="#082F49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">PLAN MODE</text>
+  <rect x="272" y="344" width="176" height="38" rx="19" fill="#A3E635"/>
+  <text x="304" y="369" fill="#1A2E05" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">APPROVAL GATE</text>
+  <rect x="462" y="344" width="160" height="38" rx="19" fill="#FBBF24"/>
+  <text x="493" y="369" fill="#451A03" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">PUBLIC SAFE</text>
+</svg>

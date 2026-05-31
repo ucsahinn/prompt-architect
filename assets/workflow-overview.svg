@@ -1,0 +1,57 @@
+<svg width="1180" height="460" viewBox="0 0 1180 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Codex workflow overview</title>
+  <desc id="desc">A six-step workflow from intent to reusable documentation.</desc>
+  <rect width="1180" height="460" rx="22" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="1178" height="458" rx="21" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="54" y="70" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">From request to reviewable Codex workflow</text>
+  <text x="56" y="108" fill="#475569" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">A public-safe prompt architecture loop for repository work.</text>
+  <g>
+    <rect x="56" y="160" width="150" height="128" rx="14" fill="#E0F2FE" stroke="#7DD3FC"/>
+    <text x="86" y="205" fill="#075985" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800">Intent</text>
+    <text x="82" y="238" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Goal, context,</text>
+    <text x="82" y="260" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">constraints</text>
+  </g>
+  <g>
+    <rect x="244" y="160" width="150" height="128" rx="14" fill="#DCFCE7" stroke="#86EFAC"/>
+    <text x="274" y="205" fill="#166534" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800">Inspect</text>
+    <text x="270" y="238" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Repo rules, files,</text>
+    <text x="270" y="260" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">scripts</text>
+  </g>
+  <g>
+    <rect x="432" y="160" width="150" height="128" rx="14" fill="#FEF3C7" stroke="#FCD34D"/>
+    <text x="462" y="205" fill="#92400E" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800">Plan</text>
+    <text x="458" y="238" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Risks, phases,</text>
+    <text x="458" y="260" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">checks</text>
+  </g>
+  <g>
+    <rect x="620" y="160" width="150" height="128" rx="14" fill="#FCE7F3" stroke="#F9A8D4"/>
+    <text x="650" y="205" fill="#9D174D" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800">Approve</text>
+    <text x="646" y="238" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Human gate,</text>
+    <text x="646" y="260" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">bounded work</text>
+  </g>
+  <g>
+    <rect x="808" y="160" width="150" height="128" rx="14" fill="#EDE9FE" stroke="#C4B5FD"/>
+    <text x="838" y="205" fill="#5B21B6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800">Execute</text>
+    <text x="834" y="238" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Small phases,</text>
+    <text x="834" y="260" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">preserve work</text>
+  </g>
+  <g>
+    <rect x="996" y="160" width="150" height="128" rx="14" fill="#ECFCCB" stroke="#BEF264"/>
+    <text x="1026" y="205" fill="#3F6212" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800">Verify</text>
+    <text x="1022" y="238" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Tests, QA,</text>
+    <text x="1022" y="260" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">evidence</text>
+  </g>
+  <path d="M210 224H236" stroke="#64748B" stroke-width="2"/>
+  <path d="M232 218L240 224L232 230" stroke="#64748B" stroke-width="2"/>
+  <path d="M398 224H424" stroke="#64748B" stroke-width="2"/>
+  <path d="M420 218L428 224L420 230" stroke="#64748B" stroke-width="2"/>
+  <path d="M586 224H612" stroke="#64748B" stroke-width="2"/>
+  <path d="M608 218L616 224L608 230" stroke="#64748B" stroke-width="2"/>
+  <path d="M774 224H800" stroke="#64748B" stroke-width="2"/>
+  <path d="M796 218L804 224L796 230" stroke="#64748B" stroke-width="2"/>
+  <path d="M962 224H988" stroke="#64748B" stroke-width="2"/>
+  <path d="M984 218L992 224L984 230" stroke="#64748B" stroke-width="2"/>
+  <rect x="56" y="342" width="1090" height="62" rx="14" fill="#0F172A"/>
+  <text x="84" y="381" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700">Design rule:</text>
+  <text x="206" y="381" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">No risky execution before source-grounded planning, explicit approval, and verification.</text>
+</svg>
