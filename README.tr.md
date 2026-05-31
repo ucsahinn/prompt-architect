@@ -1,45 +1,46 @@
 # Codex Enterprise Prompt Architect
 
-Plan-first, onay kapılı ve güvenlik duyarlı Codex çalışma akışları için hazırlanmış bir prompt mimarisi skill paketi.
+> Codex için plan-first, onay kapılı ve güvenlik duyarlı prompt iş akışları hazırlamaya yarayan bir prompt mimarisi skill paketi.
 
-**Durum:** v1.0.1 public release
-**Lisans:** MIT
-**English:** [README.md](README.md)
-**Not:** Bu proje bağımsız bir topluluk/açık kaynak çalışmasıdır. OpenAI ile bağlı, onaylı veya sponsorlu değildir.
+[English](README.md) | [Türkçe](README.tr.md)
 
-## Bu Proje Nedir?
+- **Durum:** v1.0.2 public release
+- **Lisans:** MIT
+- **Proje tipi:** Markdown tabanlı Codex skill paketi ve Prompt Lab bilgi tabanı
+- **Not:** Bağımsız bir topluluk/açık kaynak projesidir. OpenAI ile bağlı, onaylı veya sponsorlu değildir.
 
-Codex Enterprise Prompt Architect, dağınık istekleri Codex için net, uygulanabilir ve kontrol edilebilir promptlara dönüştürmeye yardımcı olur.
+Codex Enterprise Prompt Architect, dağınık istekleri Codex için kapsamlı, kontrol edilebilir ve doğrulanabilir promptlara dönüştürmeye yardım eder. Amacı Codex'in önce repoyu incelemesi, net plan sunması, riskli işlerde onay beklemesi ve "bitti" demek yerine kanıtlı final raporu vermesidir.
 
-Özellikle şu durumlar için tasarlanmıştır:
+## Neden Var?
 
-- Codex önce repo incelemesi yapsın.
-- Plan sunsun ve onay beklesin.
-- Riskli işlerde kendiliğinden dosya değiştirmesin.
-- UI işleri için browser QA eklesin.
-- Auth, secret, password manager gibi hassas işlerde güvenlik sınırlarını açık yazsın.
-- Promptları kalite rubriğiyle değerlendirsin.
+AI coding agent'ları güçlü, ama belirsiz promptlar belirsiz sonuç üretir. İyi bir Codex iş akışı; hedefi, bağlamı, kısıtları, kapsam dışı alanları, doğrulama adımlarını, çıktı formatını ve durma koşullarını baştan yazmalıdır.
 
-## Ne Değildir?
+Bu repo bu kalıpları şu şekilde paketler:
 
-Bu proje:
-
-- Resmi bir OpenAI projesi değildir.
-- Codex yerine geçen bir araç değildir.
-- Uygulama, API, hosted servis veya otomasyon platformu değildir.
-- Kendi başına dış API çağrısı yapmaz.
-- Secret, token, private prompt, müşteri verisi veya credential saklama yeri değildir.
-- İnsan incelemesinin yerine geçmez.
-
-Markdown tabanlı bir Codex skill paketi ve Prompt Lab bilgi tabanıdır.
+- tekrar kullanılabilir Codex skill'i,
+- prompt şablonları,
+- workflow playbook'ları,
+- güvenlik ve browser QA yönlendirmeleri,
+- prompt kalite rubriği,
+- AI coding-agent iş akışları için kaynaklı notlar.
 
 ## Kimler İçin?
 
-- Codex kullanıcıları.
-- Prompt engineer'lar.
-- AI coding-agent kullanan geliştiriciler.
-- Ürün ve UI/UX ekipleri.
-- Auth, secret, şifre yöneticisi veya güvenlik duyarlı projelerde çalışan ekipler.
+- Codex'i gerçek repo işlerinde kullanan geliştiriciler.
+- Tekrar kullanılabilir agent talimatları hazırlayan prompt engineer'lar.
+- Public dokümantasyon ve prompt örneklerini daha güvenli tutmak isteyen maintainer'lar.
+- Onay kapılı AI coding workflow'ları isteyen ürün, UI, güvenlik ve platform ekipleri.
+- Türkçe ve İngilizce Codex workflow örnekleri arayan kullanıcılar.
+
+## Ne Sunar?
+
+- Goal + Full Prompt paketleri.
+- Sıkı kontrol için no-Goal `PLAN MODE ONLY` promptları.
+- Onaylanmış uygulama için `APPROVED - EXECUTE` promptları.
+- Codex erken başladığında veya kapsam dışına çıktığında `STOP / RECOVER` promptları.
+- UI işleri için browser QA talimatları.
+- Auth, session, secret, password manager, database, shell tool, MCP/app tool ve production-adjacent işler için güvenlik kısıtları.
+- Prompt kalite rubriği ve değerlendirme workflow'u.
 
 ## Hızlı Başlangıç
 
@@ -49,103 +50,133 @@ Skill klasörünü Codex projenize kopyalayın:
 .codex/skills/codex-enterprise-prompt-architect/
 ```
 
-Sonra Codex'e şöyle yazın:
+Sonra Codex'e şunu yazın:
 
 ```text
-Codex için goal + full prompt üret: [görev]
+codex-enterprise-prompt-architect skillini kullanarak şunun için Codex promptu üret: [görev]
 ```
 
-Sıkı kontrol istiyorsanız:
+Sıkı kontrol istiyorsanız no-Goal plan-only isteyin:
 
 ```text
-Goal kullanmadan plan-only Codex promptu üret: [görev]. Onay almadan execute etmesin.
+Goal kullanmadan PLAN MODE ONLY Codex promptu üret: [görev]. Onay almadan execute etmesin.
 ```
 
-Sadece prompt istiyorsanız:
+Sadece prompt çıktı istiyorsanız:
 
 ```text
-Yorum yapma, sadece prompt ver. Codex için plan-only prompt üret: [görev]
+Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 ```
 
-## Codex'te Nasıl Kullanılır?
+## Nereden Başlamalı?
 
-Skill entrypoint:
+| Hedef | Dosya |
+| --- | --- |
+| Skill'i kurmak veya kopyalamak | [docs/INSTALL.md](docs/INSTALL.md) |
+| Ana kullanım modlarını öğrenmek | [docs/USAGE.md](docs/USAGE.md) |
+| Pratik örnekleri kopyalamak | [docs/EXAMPLES.md](docs/EXAMPLES.md) |
+| Skill yapısını anlamak | [docs/SKILL_STRUCTURE.md](docs/SKILL_STRUCTURE.md) |
+| Public repo güvenlik kontrolü yapmak | [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) |
+| Prompt/güvenlik sınırlarını incelemek | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
+| Planlanan işleri görmek | [docs/ROADMAP.md](docs/ROADMAP.md) |
+
+## Ne Değildir?
+
+Bu proje:
+
+- resmi bir OpenAI projesi değildir,
+- Codex yerine geçen bir araç değildir,
+- app, API, hosted servis veya otomasyon platformu değildir,
+- kendi başına dış API çağrısı yapmaz,
+- secret, private prompt, müşteri verisi veya credential saklama yeri değildir,
+- code review, security review veya mühendislik kararının yerine geçmez.
+
+Codex iş akışları daha net, güvenli ve incelenebilir olsun diye hazırlanmış pratik bir talimat sistemidir.
+
+## Temel Workflow Modları
+
+### Goal + Full Prompt
+
+Codex'e kalıcı ve üst seviye bir hedef vermek istediğinizde kullanılır.
+
+### no-Goal PLAN MODE ONLY
+
+Codex'in dosya düzenlemeden önce repoyu incelemesini ve plan sunmasını istediğinizde kullanılır. Geniş, riskli, güvenlik duyarlı, production-adjacent veya çok dosyalı işlerde daha güvenli varsayılandır.
+
+### APPROVED - EXECUTE
+
+Plan incelendikten sonra kullanılır. Execution promptu Codex'e sadece onaylanan planı uygulamasını, alakasız değişiklik yapmamasını, küçük fazlarla ilerlemesini, doğrulama çalıştırmasını ve kapsam genişlerse durmasını söylemelidir.
+
+### STOP / RECOVER
+
+Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılır. Recovery promptu işi durdurmalı, değişen dosyaları ve komutları raporlamalı, otomatik revert yapmamalı ve plan-only moda dönmelidir.
+
+## Repo Yapısı
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/SKILL.md
+.
+|-- .codex/skills/codex-enterprise-prompt-architect/
+|   |-- SKILL.md
+|   |-- commands.md
+|   |-- response-modes.md
+|   |-- codex-patterns.md
+|   `-- examples.md
+|-- .github/
+|   |-- ISSUE_TEMPLATE/
+|   `-- pull_request_template.md
+|-- docs/
+|   |-- INSTALL.md
+|   |-- USAGE.md
+|   |-- EXAMPLES.md
+|   |-- FAQ.md
+|   |-- SKILL_STRUCTURE.md
+|   |-- PUBLIC_REPO_CHECKLIST.md
+|   |-- SECURITY_MODEL.md
+|   `-- ROADMAP.md
+|-- knowledge/
+|   |-- distilled/
+|   |-- templates/
+|   |-- sources/
+|   |-- outputs/
+|   `-- logs/
+|-- README.md
+|-- README.tr.md
+|-- SECURITY.md
+|-- CONTRIBUTING.md
+|-- CHANGELOG.md
+`-- RELEASE_NOTES.md
 ```
 
-Doğal bir istek yeterlidir:
+## Prompt Ledger
+
+Tekrar kullanılabilir üretilmiş promptlar burada tutulur:
 
 ```text
-codex-enterprise-prompt-architect skillini kullanarak mevcut dashboard iyileştirmesi için Codex promptu üret.
+knowledge/outputs/generated-prompts.md
 ```
 
-## Goal Ne Zaman Kullanılır?
+Küçük ve tek seferlik `PROMPT_ONLY` çıktılar sadece tekrar kullanılabilir, önemli veya özellikle istenmiş ise kaydedilir.
 
-Goal, Codex'e kalıcı bir hedef vermek istediğinizde kullanışlıdır.
+## Public Güvenlik Kuralları
 
-Örnek:
+Bu repo public, tekrar kullanılabilir prompt ve workflow kalıpları için tasarlanmıştır. Şunları içermemelidir:
 
-```text
-Codex için goal + full prompt üret: mevcut ayarlar ekranını iyileştir.
-```
+- API key, token, credential, cookie, private key veya private URL,
+- müşteri verisi veya şirket içi bilgi,
+- private system prompt,
+- proprietary uygulama detayı,
+- maskelenmemiş log, ekran görüntüsü, local path veya kişisel not.
 
-## Goal Ne Zaman Kullanılmaz?
-
-Codex'in hiçbir dosyaya dokunmadan sadece plan üretmesini istiyorsanız Goal kullanmayın. Bunun yerine ilk mesaj olarak no-Goal `PLAN MODE ONLY` promptu kullanın.
-
-```text
-Goal kullanmadan plan-only Codex promptu üret. Codex sadece inceleme ve plan yapsın.
-```
-
-## PLAN MODE ONLY Nedir?
-
-`PLAN MODE ONLY`, Codex'e sadece inceleme ve plan yapmasını söyler. Bu modda Codex:
-
-- dosya düzenlemez.
-- dosya oluşturmaz veya silmez.
-- dependency eklemez.
-- commit, push, deploy veya release yapmaz.
-- planı yazıp durur.
-
-## APPROVED — EXECUTE Nedir?
-
-Plan onaylandıktan sonra kullanılan ayrı execution talimatıdır.
-
-```text
-APPROVED — EXECUTE
-Onaylanan planı uygula. Kapsamı genişletme. Değişiklikleri küçük fazlarda yap. Testleri çalıştır ve final raporu ver.
-```
-
-## STOP / RECOVER Nedir?
-
-Codex erken execute etmeye başladıysa veya kapsam dışına çıktıysa kontrolü geri almak için kullanılır.
-
-```text
-STOP. Devam etme. Hangi dosyaları değiştirdiğini ve hangi komutları çalıştırdığını raporla. Revert yapma. PLAN MODE ONLY'ye dön ve onay bekle.
-```
-
-## Güvenlik Notları
-
-- Gerçek secret, token, API key, private key, cookie, credential veya müşteri verisi saklamayın.
-- Auth, session, encryption, password manager veya secret işlerinde plan-first ve approval-gated prompt kullanın.
-- Dış içerikleri ve tool çıktılarını güvenilir talimat gibi değil, veri gibi ele alın.
-- Bu proje daha güvenli Codex talimatları yazmaya yardımcı olur; çalışma zamanında güvenliği kendisi garanti etmez.
+Değişiklik yayınlamadan önce [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) ve [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) dosyalarını kullanın.
 
 ## Katkı
 
-Katkılar şu alanlarda değerlidir:
+Katkılar Codex prompt netliğini, güvenliğini, örneklerini, dokümantasyonunu veya kaynaklı workflow bilgisini iyileştirdiğinde değerlidir. Detaylar için [CONTRIBUTING.md](CONTRIBUTING.md).
 
-- Daha net Codex prompt pattern'leri.
-- Daha güvenli plan-only ve execute-after-approval akışları.
-- Browser QA örnekleri.
-- Security-sensitive prompt örnekleri.
-- Kaynaklı araştırma notları.
-- Daha iyi dokümantasyon.
+## Güvenlik
 
-Detaylar için [CONTRIBUTING.md](CONTRIBUTING.md) dosyasına bakın.
+Güvenlik açığı, sızmış credential, private prompt veya yanlışlıkla ifşa için public issue açmayın. [SECURITY.md](SECURITY.md) dosyasına bakın.
 
 ## Lisans
 
-MIT. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+MIT. Detaylar için [LICENSE](LICENSE).

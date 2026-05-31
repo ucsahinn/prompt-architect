@@ -4,6 +4,16 @@ All notable changes to this project are documented here.
 
 The format follows Keep a Changelog where practical.
 
+## [1.0.2] - 2026-05-31
+
+### Changed
+
+- Reworked `README.md` into an English-first public repository storefront.
+- Updated `README.tr.md` as the natural Turkish counterpart.
+- Added public repository readiness and security model documentation.
+- Added documentation and security-report issue templates.
+- Replaced local strategy-note paths in generated prompt outputs with public-safe wording.
+
 ## [1.0.1] - 2026-05-31
 
 ### Changed

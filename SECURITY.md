@@ -27,6 +27,8 @@ This repository must not contain real secrets, credentials, tokens, cookies, pri
 
 If a real secret is committed or published, treat it as compromised. Rotate or revoke it first, then handle repository cleanup.
 
+For the project-specific public safety model, placeholder policy, and leak-prevention checklist, see [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md).
+
 ### Response Expectations
 
 This project is maintained on a best-effort basis. Reports are reviewed when possible and prioritized by severity, reproducibility, and impact. No guaranteed response timeline is promised.
@@ -57,6 +59,8 @@ Güvenlik kapsamına giren konular:
 Bu repo gerçek secret, credential, token, cookie, private key, müşteri verisi, private prompt, `.env` dosyası veya paid/private içerik içermemelidir.
 
 Gerçek bir secret commitlenir veya yayınlanırsa önce o credential rotate/revoke edilmelidir. Repo temizliği bundan sonra ele alınmalıdır.
+
+Proje özelindeki public güvenlik modeli, placeholder politikası ve sızıntı önleme kontrol listesi için [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) dosyasına bakın.
 
 ### Beklenti
 

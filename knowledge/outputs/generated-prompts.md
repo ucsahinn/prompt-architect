@@ -169,3 +169,40 @@ Verification/quality notes:
 - Includes PLAN MODE ONLY prompt, approval execution prompt, STOP / RECOVER prompt, verification checklist, browser QA checklist, security constraints, and final report format.
 
 Follow-up needed: None for this test prompt.
+
+## 2026-05-31 - GitHub Repository Improvement Codex Prompt
+
+Date: 2026-05-31
+
+User request summary: Generate a Codex prompt that uses a user-provided local repository strategy note and additional best-practice context to audit, organize, improve, and polish the user's existing repositories for public GitHub trust, documentation, bilingual presentation, security hygiene, and maintainability.
+
+Scenario summary: Broad existing-repository cleanup and public repo readiness workflow with strict plan-only first phase, approval-gated execution, no commit/push/deploy without explicit authorization, security/leak-prevention controls, and repo-specific verification.
+
+Target agent: Codex
+
+Prompt type: No-goal PLAN MODE ONLY + optional Goal + ONAYLANDI - UYGULA + STOP / RECOVER
+
+Knowledge used:
+- `.codex/skills/codex-enterprise-prompt-architect/SKILL.md`
+- `knowledge/distilled/codex-prompting.md`
+- `knowledge/distilled/codex-workflow-patterns.md`
+- `knowledge/distilled/response-modes.md`
+- `knowledge/distilled/evaluation-workflows.md`
+- `knowledge/distilled/prompt-quality-rubric.md`
+- `knowledge/distilled/public-repo-lessons.md`
+- `knowledge/templates/output-formats.md`
+- User-provided local repository strategy note
+- GitHub Docs: About READMEs, community profiles, repository security settings
+- OpenAI Codex Docs: prompting, AGENTS.md, agent approvals and security
+
+Final prompt: Stored at `knowledge/outputs/github-repo-improvement-codex-prompt.md`.
+
+Verification/quality notes:
+- Quality score: 55/55 across 11 rubric categories.
+- Meets enterprise bar with all categories scored 5/5.
+- Uses no-goal plan-only by default because repository-wide improvement is broad and may touch docs, CI, security policy, GitHub workflows, and public release surfaces.
+- Includes exact approval phrase `ONAYLANDI - UYGULA`.
+- Includes repository inspection rules, source-of-truth order, in-scope improvement principles, scorecard, phased execution plan, verification, browser QA, secret/leak-prevention rules, and stop/recover prompt.
+- Blocks commits, pushes, deployments, releases, dependency installs, destructive commands, secret access, and GitHub settings mutations unless separately approved.
+
+Follow-up needed: None.

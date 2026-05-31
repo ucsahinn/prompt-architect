@@ -61,6 +61,7 @@ sk-example-do-not-use
 - [ ] Examples are copy-pasteable.
 - [ ] Guidance is source-backed or clearly marked as a pattern.
 - [ ] README/docs remain accurate.
+- [ ] Public repo safety guidance in `docs/PUBLIC_REPO_CHECKLIST.md` and `docs/SECURITY_MODEL.md` was followed when relevant.
 - [ ] Generated prompt ledger is updated if a reusable generated prompt was added.
 
 ## Türkçe
@@ -115,3 +116,7 @@ YOUR_API_KEY_HERE
 example-token-placeholder
 sk-example-do-not-use
 ```
+
+### Public Repo Güvenliği
+
+Yayınlanacak değişikliklerde `docs/PUBLIC_REPO_CHECKLIST.md` ve `docs/SECURITY_MODEL.md` dosyalarındaki local path, placeholder, secret scan ve public-safe örnek kurallarını izleyin.
