@@ -19,6 +19,25 @@
 
 Codex Enterprise Prompt Architect helps turn vague AI coding requests into scoped, safer, and verifiable Codex prompts. It is built for teams and maintainers who want Codex to inspect first, plan clearly, wait for approval on risky work, and report evidence instead of just saying "done".
 
+## Enterprise Evaluator Path
+
+| If you need to prove... | Start with | Evidence you get |
+| --- | --- | --- |
+| The repository is public-safe | [Public repo checklist](docs/PUBLIC_REPO_CHECKLIST.md) | Secret, local-path, private-prompt and generated-artifact guardrails. |
+| The prompt workflow has human control | [Usage modes](docs/USAGE.md) | `PLAN MODE ONLY`, `APPROVED - EXECUTE`, `STOP / RECOVER` and `PROMPT_ONLY` paths. |
+| The skill can be copied into a Codex workspace | [Install guide](docs/INSTALL.md) | File layout, copy path and setup expectations. |
+| The security boundary is explicit | [Security model](docs/SECURITY_MODEL.md) | No-secret, disclosure, prompt privacy and verification rules. |
+| The examples are usable | [Examples](docs/EXAMPLES.md) | Copy-ready prompts with scope, verification and stop conditions. |
+
+## Operating Guarantees
+
+| Signal | Standard |
+| --- | --- |
+| Skill-first routing | Prompts are shaped around reusable skill instructions instead of one-off loose chat. |
+| Approval gates | Risky execution is separated from planning and requires an explicit approval step. |
+| Verification pressure | Generated prompts ask for tests, scans, browser QA or an honest unverified report. |
+| Public-safe knowledge base | Research notes, templates and outputs avoid secrets, private prompts, customer data and local operator paths. |
+
 ## Why This Exists
 
 AI coding agents are useful, but loose prompts create loose outcomes. A good Codex workflow should state the goal, context, constraints, non-goals, verification, output format, and stop conditions before the agent starts changing files.

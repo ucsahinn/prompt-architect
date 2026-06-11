@@ -19,6 +19,25 @@
 
 Codex Enterprise Prompt Architect, dağınık istekleri Codex için kapsamlı, kontrol edilebilir ve doğrulanabilir promptlara dönüştürmeye yardım eder. Amacı Codex'in önce repoyu incelemesi, net plan sunması, riskli işlerde onay beklemesi ve "bitti" demek yerine kanıtlı final raporu vermesidir.
 
+## Enterprise Değerlendirme Yolu
+
+| Kanıtlamak istediğiniz şey | Başlangıç | Alacağınız kanıt |
+| --- | --- | --- |
+| Reponun public-safe olduğunu | [Public repo checklist](docs/PUBLIC_REPO_CHECKLIST.md) | Secret, local path, private prompt ve generated artifact sınırları. |
+| Prompt akışında insan kontrolü olduğunu | [Kullanım modları](docs/USAGE.md) | `PLAN MODE ONLY`, `APPROVED - EXECUTE`, `STOP / RECOVER` ve `PROMPT_ONLY` yolları. |
+| Skill'in Codex workspace'e taşınabildiğini | [Kurulum rehberi](docs/INSTALL.md) | Dosya yapısı, kopyalama yolu ve kurulum beklentisi. |
+| Güvenlik sınırının net olduğunu | [Security model](docs/SECURITY_MODEL.md) | No-secret, disclosure, prompt privacy ve doğrulama kuralları. |
+| Örneklerin doğrudan kullanılabilir olduğunu | [Örnekler](docs/EXAMPLES.md) | Kapsam, doğrulama ve durma koşulu içeren kopyalanabilir promptlar. |
+
+## Operasyon Güvenceleri
+
+| Sinyal | Standart |
+| --- | --- |
+| Skill-first routing | Promptlar tek seferlik gevşek chat yerine tekrar kullanılabilir skill talimatlarına göre şekillenir. |
+| Onay kapıları | Riskli execution planlamadan ayrılır ve açık onay adımı ister. |
+| Doğrulama baskısı | Üretilen promptlar test, scan, browser QA veya dürüst "doğrulanamadı" raporu ister. |
+| Public-safe bilgi tabanı | Araştırma notları, şablonlar ve çıktılar secret, private prompt, müşteri verisi ve local operator path içermez. |
+
 ## Neden Var?
 
 AI coding agent'ları güçlü, ama belirsiz promptlar belirsiz sonuç üretir. İyi bir Codex iş akışı; hedefi, bağlamı, kısıtları, kapsam dışı alanları, doğrulama adımlarını, çıktı formatını ve durma koşullarını baştan yazmalıdır.
