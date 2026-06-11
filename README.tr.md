@@ -19,7 +19,7 @@
 
 Codex Enterprise Prompt Architect, dağınık istekleri Codex için kapsamlı, kontrol edilebilir ve doğrulanabilir promptlara dönüştürmeye yardım eder. Amacı Codex'in önce repoyu incelemesi, net plan sunması, riskli işlerde onay beklemesi ve "bitti" demek yerine kanıtlı final raporu vermesidir.
 
-## Enterprise Değerlendirme Yolu
+## 🧭 Enterprise Değerlendirme Yolu
 
 | Kanıtlamak istediğiniz şey | Başlangıç | Alacağınız kanıt |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ Codex Enterprise Prompt Architect, dağınık istekleri Codex için kapsamlı, k
 | Güvenlik sınırının net olduğunu | [Security model](docs/SECURITY_MODEL.md) | No-secret, disclosure, prompt privacy ve doğrulama kuralları. |
 | Örneklerin doğrudan kullanılabilir olduğunu | [Örnekler](docs/EXAMPLES.md) | Kapsam, doğrulama ve durma koşulu içeren kopyalanabilir promptlar. |
 
-## Operasyon Güvenceleri
+## ✅ Operasyon Güvenceleri
 
 | Sinyal | Standart |
 | --- | --- |
@@ -38,7 +38,7 @@ Codex Enterprise Prompt Architect, dağınık istekleri Codex için kapsamlı, k
 | Doğrulama baskısı | Üretilen promptlar test, scan, browser QA veya dürüst "doğrulanamadı" raporu ister. |
 | Public-safe bilgi tabanı | Araştırma notları, şablonlar ve çıktılar secret, private prompt, müşteri verisi ve local operator path içermez. |
 
-## Neden Var?
+## 🎯 Neden Var?
 
 AI coding agent'ları güçlü, ama belirsiz promptlar belirsiz sonuç üretir. İyi bir Codex iş akışı; hedefi, bağlamı, kısıtları, kapsam dışı alanları, doğrulama adımlarını, çıktı formatını ve durma koşullarını baştan yazmalıdır.
 
@@ -51,7 +51,7 @@ Bu repo bu kalıpları şu şekilde paketler:
 - prompt kalite rubriği,
 - AI coding-agent iş akışları için kaynaklı notlar.
 
-## Hızlı Başla
+## ⚡ Hızlı Başla
 
 | Şunu istiyorum... | Kullan |
 | --- | --- |
@@ -64,7 +64,7 @@ Bu repo bu kalıpları şu şekilde paketler:
 
 ![Codex workflow overview](assets/workflow-overview.svg)
 
-## Ne Sunar?
+## 🧩 Ne Sunar?
 
 | Yetenek | Sağladığı değer |
 | --- | --- |
@@ -76,7 +76,7 @@ Bu repo bu kalıpları şu şekilde paketler:
 | Güvenlik kısıtları | Hassas işlerde no-secret ve onay kapılı kurallar. |
 | Prompt rubriği | Promptu kullanmadan önce kalite skoru verme yöntemi. |
 
-## Kimler İçin?
+## 👥 Kimler İçin?
 
 - Codex'i gerçek repo işlerinde kullanan geliştiriciler.
 - Tekrar kullanılabilir agent talimatları hazırlayan prompt engineer'lar.
@@ -84,7 +84,7 @@ Bu repo bu kalıpları şu şekilde paketler:
 - Onay kapılı AI coding workflow'ları isteyen ürün, UI, güvenlik ve platform ekipleri.
 - Türkçe ve İngilizce Codex workflow örnekleri arayan kullanıcılar.
 
-## Hızlı Başlangıç
+## 🚀 Hızlı Başlangıç
 
 Skill klasörünü Codex projenize kopyalayın:
 
@@ -110,7 +110,7 @@ Sadece prompt çıktı istiyorsanız:
 Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 ```
 
-## Navigasyon
+## 🧭 Navigasyon
 
 | Hedef | Dosya |
 | --- | --- |
@@ -122,7 +122,7 @@ Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 | Prompt/güvenlik sınırlarını incelemek | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
 | Planlanan işleri görmek | [docs/ROADMAP.md](docs/ROADMAP.md) |
 
-## Güven Sinyalleri
+## ✅ Güven Sinyalleri
 
 | Alan | Standart |
 | --- | --- |
@@ -132,7 +132,7 @@ Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 | Dokümantasyon | README kısa kalır; detaylar `docs/` ve `knowledge/` içinde yaşar. |
 | Bakım | Changelog, release notes, security policy, contribution guide, issue template'leri. |
 
-## Ne Değildir?
+## 🚫 Ne Değildir?
 
 Bu proje:
 
@@ -145,25 +145,25 @@ Bu proje:
 
 Codex iş akışları daha net, güvenli ve incelenebilir olsun diye hazırlanmış pratik bir talimat sistemidir.
 
-## Temel Workflow Modları
+## ⚙️ Temel Workflow Modları
 
-### Goal + Full Prompt
+### 🎯 Goal + Full Prompt
 
 Codex'e kalıcı ve üst seviye bir hedef vermek istediğinizde kullanılır.
 
-### no-Goal PLAN MODE ONLY
+### 🧭 no-Goal PLAN MODE ONLY
 
 Codex'in dosya düzenlemeden önce repoyu incelemesini ve plan sunmasını istediğinizde kullanılır. Geniş, riskli, güvenlik duyarlı, production-adjacent veya çok dosyalı işlerde daha güvenli varsayılandır.
 
-### APPROVED - EXECUTE
+### ✅ APPROVED - EXECUTE
 
 Plan incelendikten sonra kullanılır. Execution promptu Codex'e sadece onaylanan planı uygulamasını, alakasız değişiklik yapmamasını, küçük fazlarla ilerlemesini, doğrulama çalıştırmasını ve kapsam genişlerse durmasını söylemelidir.
 
-### STOP / RECOVER
+### 🧯 STOP / RECOVER
 
 Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılır. Recovery promptu işi durdurmalı, değişen dosyaları ve komutları raporlamalı, otomatik revert yapmamalı ve plan-only moda dönmelidir.
 
-## Repo Yapısı
+## 📁 Repo Yapısı
 
 ```text
 .
@@ -199,7 +199,7 @@ Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılı
 `-- RELEASE_NOTES.md
 ```
 
-## Prompt Ledger
+## 🧾 Prompt Ledger
 
 Tekrar kullanılabilir üretilmiş promptlar burada tutulur:
 
@@ -209,7 +209,7 @@ knowledge/outputs/generated-prompts.md
 
 Küçük ve tek seferlik `PROMPT_ONLY` çıktılar sadece tekrar kullanılabilir, önemli veya özellikle istenmiş ise kaydedilir.
 
-## Public Güvenlik Kuralları
+## 🛡️ Public Güvenlik Kuralları
 
 Bu repo public, tekrar kullanılabilir prompt ve workflow kalıpları için tasarlanmıştır. Şunları içermemelidir:
 
@@ -221,14 +221,14 @@ Bu repo public, tekrar kullanılabilir prompt ve workflow kalıpları için tasa
 
 Değişiklik yayınlamadan önce [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) ve [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) dosyalarını kullanın.
 
-## Katkı
+## 🤝 Katkı
 
 Katkılar Codex prompt netliğini, güvenliğini, örneklerini, dokümantasyonunu veya kaynaklı workflow bilgisini iyileştirdiğinde değerlidir. Detaylar için [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Güvenlik
+## 🔐 Güvenlik
 
 Güvenlik açığı, sızmış credential, private prompt veya yanlışlıkla ifşa için public issue açmayın. [SECURITY.md](SECURITY.md) dosyasına bakın.
 
-## Lisans
+## ⚖️ Lisans
 
 MIT. Detaylar için [LICENSE](LICENSE).

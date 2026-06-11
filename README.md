@@ -19,7 +19,7 @@
 
 Codex Enterprise Prompt Architect helps turn vague AI coding requests into scoped, safer, and verifiable Codex prompts. It is built for teams and maintainers who want Codex to inspect first, plan clearly, wait for approval on risky work, and report evidence instead of just saying "done".
 
-## Enterprise Evaluator Path
+## 🧭 Enterprise Evaluator Path
 
 | If you need to prove... | Start with | Evidence you get |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ Codex Enterprise Prompt Architect helps turn vague AI coding requests into scope
 | The security boundary is explicit | [Security model](docs/SECURITY_MODEL.md) | No-secret, disclosure, prompt privacy and verification rules. |
 | The examples are usable | [Examples](docs/EXAMPLES.md) | Copy-ready prompts with scope, verification and stop conditions. |
 
-## Operating Guarantees
+## ✅ Operating Guarantees
 
 | Signal | Standard |
 | --- | --- |
@@ -38,7 +38,7 @@ Codex Enterprise Prompt Architect helps turn vague AI coding requests into scope
 | Verification pressure | Generated prompts ask for tests, scans, browser QA or an honest unverified report. |
 | Public-safe knowledge base | Research notes, templates and outputs avoid secrets, private prompts, customer data and local operator paths. |
 
-## Why This Exists
+## 🎯 Why This Exists
 
 AI coding agents are useful, but loose prompts create loose outcomes. A good Codex workflow should state the goal, context, constraints, non-goals, verification, output format, and stop conditions before the agent starts changing files.
 
@@ -51,7 +51,7 @@ This repository packages those patterns as:
 - prompt evaluation rubrics,
 - source-backed notes for AI coding-agent workflows.
 
-## Start Fast
+## ⚡ Start Fast
 
 | I want to... | Use this |
 | --- | --- |
@@ -64,7 +64,7 @@ This repository packages those patterns as:
 
 ![Codex workflow overview](assets/workflow-overview.svg)
 
-## What You Get
+## 🧩 What You Get
 
 | Capability | What it gives you |
 | --- | --- |
@@ -76,7 +76,7 @@ This repository packages those patterns as:
 | Security constraints | No-secret, approval-gated rules for sensitive work. |
 | Prompt rubric | A way to score prompt quality before use. |
 
-## Who This Is For
+## 👥 Who This Is For
 
 - Developers using Codex for real repository work.
 - Prompt engineers building reusable agent instructions.
@@ -84,7 +84,7 @@ This repository packages those patterns as:
 - Product, UI, security, and platform teams that need approval-gated AI coding workflows.
 - Turkish and English users who want clear Codex workflow examples.
 
-## Quick Start
+## 🚀 Quick Start
 
 Copy the skill directory into your Codex project:
 
@@ -110,7 +110,7 @@ For prompt-only output:
 Only output the final prompt. No commentary. Create a Codex prompt for: [your task]
 ```
 
-## Navigation
+## 🧭 Navigation
 
 | Goal | Go to |
 | --- | --- |
@@ -122,7 +122,7 @@ Only output the final prompt. No commentary. Create a Codex prompt for: [your ta
 | Review prompt/security boundaries | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
 | See planned improvements | [docs/ROADMAP.md](docs/ROADMAP.md) |
 
-## Trust Signals
+## ✅ Trust Signals
 
 | Area | Standard |
 | --- | --- |
@@ -132,7 +132,7 @@ Only output the final prompt. No commentary. Create a Codex prompt for: [your ta
 | Documentation | README stays concise; deeper guidance lives in `docs/` and `knowledge/`. |
 | Maintenance | Changelog, release notes, security policy, contribution guide, issue templates. |
 
-## What This Is Not
+## 🚫 What This Is Not
 
 This is not:
 
@@ -145,25 +145,25 @@ This is not:
 
 It is a practical instruction system for designing, running, and reviewing Codex workflows with less ambiguity.
 
-## Core Workflow Modes
+## ⚙️ Core Workflow Modes
 
-### Goal + Full Prompt
+### 🎯 Goal + Full Prompt
 
 Use when a persistent high-level objective helps Codex keep the definition of done in view.
 
-### no-Goal PLAN MODE ONLY
+### 🧭 no-Goal PLAN MODE ONLY
 
 Use when Codex must inspect the repository and produce a plan before any edits. This is the safer default for broad, risky, security-sensitive, production-adjacent, or multi-file work.
 
-### APPROVED - EXECUTE
+### ✅ APPROVED - EXECUTE
 
 Use only after reviewing a plan. The execution prompt should tell Codex to follow the approved plan, preserve unrelated work, implement in small phases, verify, and stop if new facts expand scope.
 
-### STOP / RECOVER
+### 🧯 STOP / RECOVER
 
 Use when Codex starts editing too early or leaves scope. The recovery prompt should stop work, list changed files and commands run, avoid automatic revert, and return to plan-only mode.
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```text
 .
@@ -199,7 +199,7 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 `-- RELEASE_NOTES.md
 ```
 
-## Prompt Ledger
+## 🧾 Prompt Ledger
 
 Reusable generated prompts are logged in:
 
@@ -209,7 +209,7 @@ knowledge/outputs/generated-prompts.md
 
 Small one-off `PROMPT_ONLY` outputs are logged only when reusable, important, or explicitly requested.
 
-## Public Safety Rules
+## 🛡️ Public Safety Rules
 
 This repository is designed for public, reusable prompt and workflow patterns. It must not contain:
 
@@ -221,14 +221,14 @@ This repository is designed for public, reusable prompt and workflow patterns. I
 
 Before publishing changes, use [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) and [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md).
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome when they improve Codex prompt clarity, safety, examples, documentation, or source-backed workflow guidance. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Security
+## 🔐 Security
 
 Do not open public issues for vulnerabilities, leaked credentials, private prompts, or accidental disclosure. See [SECURITY.md](SECURITY.md).
 
-## License
+## ⚖️ License
 
 MIT. See [LICENSE](LICENSE).
