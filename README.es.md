@@ -1,63 +1,151 @@
-# Codex Enterprise Prompt Architect
+# &#9997; Codex Enterprise Prompt Architect - README completa en español
 
-<p align="center">
-  <a href="README.de.md">&#127465;&#127466; Deutsch</a> ? <a href="README.es.md">&#127466;&#127480; Espa&ntilde;ol</a> ? <a href="README.md">&#127468;&#127463; English</a> ? <a href="README.pt-BR.md">&#127463;&#127479; Portugu&ecirc;s (Brasil)</a> ? <a href="README.tr.md">&#127481;&#127479; T&uuml;rk&ccedil;e</a> ? <a href="README.fr.md">&#127467;&#127479; French</a>
-</p>
+[&#127468;&#127463; English](README.md) | [&#127465;&#127466; Deutsch](README.de.md) | [&#127466;&#127480; Español](README.es.md) | [&#127463;&#127479; Português (Brasil)](README.pt-BR.md) | [&#127481;&#127479; Türkçe](README.tr.md) | [&#127467;&#127479; Français](README.fr.md)
 
-Paquete de arquitectura de prompts para Codex con workflows plan-first, gates de aprobacion, conocimiento Prompt Lab y verificacion orientada a release.
+> Este archivo es una portada completa en español, no un resumen corto. Cubre propósito, límites, uso, validación, seguridad y publicación.
+>
+> README canónico en inglés: [README.md](README.md)
 
-## Por que existe este repositorio
+Research-backed prompt architecture lab for Codex, agents, response modes and enterprise prompt evaluation.
 
-Paquete de arquitectura de prompts para Codex con workflows plan-first, gates de aprobacion, conocimiento Prompt Lab y verificacion orientada a release.
+Empieza por el README canónico si necesitas la descripción inglesa más actual. Usa esta página cuando quieras el mismo contrato operativo en español.
 
-Esta portada localizada se mantiene para que el lector entienda el repositorio sin depender de una etiqueta de idioma corta. La referencia canonica profunda sigue en README.md; esta pagina contiene suficiente contexto para elegir el punto de entrada, el limite de seguridad y la verificacion correcta.
+## Estado y señales de confianza
 
-## Para quien es
+|Área | Detalle|
+|--- | ---|
+|Estado | Public repository: ucsahinn/codex-enterprise-prompt-architect|
+|Fuente de verdad | [README canónico en inglés](README.md)|
+|Usuarios | Codex users who need implementation-ready prompts.; Maintainers building prompt libraries with clear modes and safety gates.|
+|Validación | Prompt ledger and examples remain internally consistent.; Generated prompts do not include private local data.|
+|Seguridad | Keeps source notes, distilled guidance, templates and generated outputs separated.; Includes a prompt ledger and validation script.|
 
-Equipos y maintainers que quieren convertir solicitudes vagas en prompts Codex verificables con scope, reglas de parada y evidencia.
+## Qué es este repositorio
 
-## Inicio rapido
+- A public prompt architecture repository for high-quality Codex task prompts.
+- A knowledge base for prompt reliability, agent workflows, context engineering and safety.
+- A template system for building prompts with explicit execution gates.
+- A validation-backed lab for generated prompts and examples.
 
-| Si necesitas... | Abre |
-| --- | --- |
-| Usage modes | [docs/USAGE.md](docs/USAGE.md) |
-| Install guide | [docs/INSTALL.md](docs/INSTALL.md) |
-| Examples | [docs/EXAMPLES.md](docs/EXAMPLES.md) |
-| Subagents | [docs/SUBAGENTS.md](docs/SUBAGENTS.md) |
-| Validation | [docs/VALIDATION.md](docs/VALIDATION.md) |
-| Public repo checklist | [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) |
+## Qué no es
+
+- Not a private prompt vault.
+- Not a benchmark leaderboard.
+- Not a tool for storing secrets, customer data or account credentials.
+- Not a promise that one prompt can replace repository inspection and real verification.
+
+## Para quién es
+
+- Codex users who need implementation-ready prompts.
+- Maintainers building prompt libraries with clear modes and safety gates.
+- Teams comparing source-backed prompt patterns.
+- Reviewers checking prompt outputs for scope, validation and public safety.
+
+## Inicio rápido
+
+1. Clona o actualiza el repositorio.
+2. Lee README, seguridad y el mapa de documentación.
+3. Ejecuta las validaciones adecuadas.
+4. Prepara solo los archivos cambiados de forma explícita.
+5. Antes de push o release, revisa remoto, secretos y enlaces otra vez.
+
+## Guía de decisión
+
+- Need full implementation prompt -> use the goal and full prompt template.
+- Need planning only -> use PLAN MODE ONLY.
+- Need execute gate -> require APPROVED - EXECUTE.
+- Need recovery -> use STOP / RECOVER patterns.
+- Need source quality -> check knowledge/distilled and knowledge/sources.
 
 ## Mapa del repositorio
 
-- .codex/skills/ - reusable skill entrypoint
-- knowledge/distilled/ - distilled prompt rules
-- knowledge/templates/ - prompt templates
-- knowledge/sources/ - source notes
-- docs/ - install, usage, examples, validation and security model
-- scripts/validate-prompt-lab.mjs - validation gate
+|Ruta | Por qué importa|
+|--- | ---|
+|[knowledge/templates/](knowledge/templates/) | prompt and agent templates|
+|[knowledge/sources/](knowledge/sources/) | raw source categories and notes|
+|[knowledge/distilled/](knowledge/distilled/) | distilled guidance from research|
+|[knowledge/outputs/](knowledge/outputs/) | generated prompt examples|
+|[knowledge/logs/](knowledge/logs/) | decision and research logs|
+|[docs/](docs/) | install, usage, validation, skill and security docs|
+|[scripts/validate-prompt-lab.mjs](scripts/validate-prompt-lab.mjs) | repository validator|
 
-## Validacion e higiene de release
+## Flujo de trabajo
 
-Antes de commit o publicacion, revisa links, Markdown, validacion existente del repo y Gitleaks.
+1. Collect source-backed context first.
+2. Choose response mode and approval gate.
+3. Write concrete execution instructions with verification requirements.
+4. Separate reusable knowledge from generated outputs.
+5. Validate the repository and inspect diffs before publishing.
 
-Ruta recomendada de release/readiness:
+## Comandos y validación
 
-1. Revisar el README relevante y los documentos enlazados.
-2. Ejecutar la validacion del repositorio cuando exista un comando.
-3. Comprobar links Markdown y assets locales.
-4. Ejecutar Gitleaks o el secret scan configurado.
-5. Verificar origin/main despues del push antes de afirmar que la publicacion termino.
+Ejecuta estos comandos solo después de clonar el repositorio y entender qué escriben o verifican.
 
-## Limite de seguridad y alcance publico
+```powershell
+node scripts/validate-prompt-lab.mjs
+git diff --check
+gitleaks dir . --no-banner --redact
+```
 
-Los prompts no deben contener datos privados de clientes, tokens ni secretos locales. La ejecucion riesgosa queda plan-first y con aprobacion.
+## Lista de verificación
 
-## Contribucion y mantenimiento
+- Prompt ledger and examples remain internally consistent.
+- Generated prompts do not include private local data.
+- Docs links resolve.
+- Research notes separate fact from interpretation.
+- Remote HEAD is verified after push.
 
-Mant?n las paginas localizadas alineadas con el README canonico cuando cambien el alcance, los pasos de instalacion, las reglas de release o los limites de seguridad. No agregues afirmaciones que no esten respaldadas por el repositorio, docs live del producto o evidencia publica de release.
+## Límite de seguridad
 
-## Estandar de completitud
+- Keeps source notes, distilled guidance, templates and generated outputs separated.
+- Includes a prompt ledger and validation script.
+- Documents PLAN MODE ONLY, APPROVED - EXECUTE, STOP / RECOVER and output-mode contracts.
+- Treats external research as source material, not blind authority.
 
-Este README localizado no es una nota corta. Explica proposito, entrada, superficies del repositorio, validacion, limite de seguridad y referencias canonicas.
+Public-safe rule: do not add secrets, tokens, cookies, private keys, private prompts, customer data, local-only auth files, generated logs, archives or build outputs unless the canonical README explicitly says they belong in the public repo.
 
-Referencia canonica: [README.md](README.md).
+## Higiene de release y publicación
+
+- Release only public-safe prompt artifacts and docs.
+- Keep prompt outputs reviewable and traceable.
+- Do not claim current Codex behavior without checking official docs when version-sensitive.
+- Run validator and secret scan before push.
+
+## Mantenimiento
+
+- Keep this localized README aligned with README.md when the repo contract changes.
+- Prefer factual repo links over marketing claims.
+- Do not invent install commands, metrics, users, releases or support promises.
+- If a command is version-sensitive, re-check it before documenting it.
+- When a localized file cannot be updated fully, leave a clear note instead of a partial translation.
+
+## Ruta de contribución
+
+- Open a focused change against the smallest set of files.
+- Read AGENTS.md or CONTRIBUTING.md when present before editing.
+- Run the repo validation commands listed above.
+- Review staged diffs explicitly before commit.
+- Use security disclosure paths instead of public issues for sensitive reports.
+
+## Definición de terminado
+
+Terminado significa: contenido completo, enlaces correctos, límites de seguridad claros, validación ejecutada, Git limpio y remote HEAD verificado después del push.
+
+|Recomendación | Por qué importa|
+|--- | ---|
+|Content | Research-backed prompt architecture lab for Codex, agents, response modes and enterprise prompt evaluation.|
+|Links | All referenced local files must exist and resolve from the repository root.|
+|Security | Generated prompts do not include private local data.|
+|Verification | Valida estructura, enlaces, Markdown, secretos, scripts relevantes y remote HEAD antes de afirmar que algo está publicado.|
+|Remote | After push, compare local HEAD with origin/main and GitHub remote HEAD.|
+
+## Enlaces importantes
+
+|Ruta | Por qué importa|
+|--- | ---|
+|[Canonical README](README.md) | README.md|
+|[Usage docs](docs/USAGE.md) | docs/USAGE.md|
+|[Validation docs](docs/VALIDATION.md) | docs/VALIDATION.md|
+|[Prompt templates](knowledge/templates/) | knowledge/templates/|
+|[Distilled knowledge](knowledge/distilled/) | knowledge/distilled/|
+|[Security model](docs/SECURITY_MODEL.md) | docs/SECURITY_MODEL.md|
