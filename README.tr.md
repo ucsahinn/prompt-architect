@@ -1,8 +1,15 @@
 # Codex Enterprise Prompt Architect
 
-> Codex için plan-first, onay kapılı ve güvenlik duyarlı prompt iş akışları hazırlamaya yarayan bir prompt mimarisi skill paketi.
+<p align="center">
+  <a href="README.de.md">🇩🇪 Deutsch</a> ·
+  <a href="README.es.md">🇪🇸 Español</a> ·
+  <a href="README.md">🇬🇧 English</a> ·
+  <a href="README.pt-BR.md">🇧🇷 Português (Brasil)</a> ·
+  <a href="README.tr.md">🇹🇷 Türkçe</a> ·
+  <a href="README.fr.md">🇫🇷 French</a>
+</p>
 
-[English](README.md) | [Türkçe](README.tr.md)
+> Codex için plan-first, onay kapılı ve güvenlik duyarlı prompt iş akışları hazırlamaya yarayan bir prompt mimarisi skill paketi.
 
 [![Release](https://img.shields.io/github/v/release/ucsahinn/codex-enterprise-prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)

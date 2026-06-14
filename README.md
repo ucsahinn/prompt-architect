@@ -4,12 +4,12 @@
 
 <p align="center">
   🌐 <strong>Languages:</strong>
-  🇩🇪 Deutsch ·
-  🇪🇸 Español ·
+  <a href="README.de.md">🇩🇪 Deutsch</a> ·
+  <a href="README.es.md">🇪🇸 Español</a> ·
   <a href="README.md">🇬🇧 English</a> ·
-  🇧🇷 Português (Brasil) ·
+  <a href="README.pt-BR.md">🇧🇷 Português (Brasil)</a> ·
   <a href="README.tr.md">🇹🇷 Türkçe</a> ·
-  🇫🇷 French
+  <a href="README.fr.md">🇫🇷 French</a>
 </p>
 
 [![Release](https://img.shields.io/github/v/release/ucsahinn/codex-enterprise-prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/releases)
