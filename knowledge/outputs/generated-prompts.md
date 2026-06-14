@@ -108,6 +108,44 @@ Verification/quality notes:
 
 Follow-up needed: None.
 
+## 2026-06-14 - Full Prompt Lab Upgrade Release Pattern
+
+Date: 2026-06-14
+
+User request summary: Execute the approved full Prompt Lab repository upgrade, improve the Codex skill package, add validation gates, refresh source-backed guidance, polish the public README storefront, and prepare the explicit commit/push/release path.
+
+Scenario summary: Broad prompt-skill repository improvement after explicit approval, covering skill routing, knowledge-base updates, source-card discipline, subagent/tool boundaries, dependency-free validation, GitHub Actions validation, bilingual README polish, secret hygiene, release notes, and release-publication readiness.
+
+Target agent: Codex
+
+Prompt type: Approved execution after PLAN MODE ONLY + release verification
+
+Knowledge used:
+- `.codex/skills/codex-enterprise-prompt-architect/SKILL.md`
+- `knowledge/distilled/response-modes.md`
+- `knowledge/distilled/browser-qa-playbook.md`
+- `knowledge/distilled/security-prompting-playbook.md`
+- `knowledge/templates/output-formats.md`
+- `knowledge/sources/official-docs.md`
+- `knowledge/sources/security-and-safety.md`
+- `knowledge/sources/research-papers.md`
+- `docs/PUBLIC_REPO_CHECKLIST.md`
+- `docs/VALIDATION.md`
+- OpenAI Codex docs: skills, AGENTS.md, MCP, plugins, subagents, approvals/security, prompting
+- OpenAI tools docs
+- OWASP LLM Top 10 2025
+- Playwright MCP documentation
+
+Final prompt: This repository upgrade documents the reusable pattern across the skill package, docs, validator, and release notes.
+
+Verification/quality notes:
+- Preserves Codex as the primary target and does not turn the repo into a generic prompt library.
+- Adds a real validation command and GitHub Actions workflow instead of fake badges.
+- Strengthens source-backed prompt generation, MCP/tool safety, subagent routing, and release gates.
+- Keeps `.playwright-mcp/` local browser artifacts out of source control.
+
+Follow-up needed: After the approved push/release completes, watch the first GitHub Actions run and update release notes if the public workflow result reveals a new issue.
+
 ## 2026-05-31 - Formal Skill Package Test
 
 Date: 2026-05-31
@@ -174,9 +212,9 @@ Follow-up needed: None for this test prompt.
 
 Date: 2026-05-31
 
-User request summary: Generate a Codex prompt that uses a user-provided local repository strategy note and additional best-practice context to audit, organize, improve, and polish the user's existing repositories for public GitHub trust, documentation, bilingual presentation, security hygiene, and maintainability.
+User request summary: Generate a Codex prompt that uses a user-provided local repository strategy note and additional best-practice context to audit, organize, improve, and polish the user's existing repositories for public GitHub trust, visual storefront quality, documentation, bilingual presentation, security hygiene, and maintainability.
 
-Scenario summary: Broad existing-repository cleanup and public repo readiness workflow with strict plan-only first phase, approval-gated execution, no commit/push/deploy without explicit authorization, security/leak-prevention controls, and repo-specific verification.
+Scenario summary: Broad existing-repository cleanup and public repo readiness workflow with strict plan-only first phase, approval-gated execution, README storefront and visual asset strategy, no commit/push/deploy without explicit authorization, security/leak-prevention controls, and repo-specific verification.
 
 Target agent: Codex
 
@@ -202,7 +240,7 @@ Verification/quality notes:
 - Meets enterprise bar with all categories scored 5/5.
 - Uses no-goal plan-only by default because repository-wide improvement is broad and may touch docs, CI, security policy, GitHub workflows, and public release surfaces.
 - Includes exact approval phrase `ONAYLANDI - UYGULA`.
-- Includes repository inspection rules, source-of-truth order, in-scope improvement principles, scorecard, phased execution plan, verification, browser QA, secret/leak-prevention rules, and stop/recover prompt.
+- Includes repository inspection rules, source-of-truth order, visual storefront requirements, asset safety rules, in-scope improvement principles, scorecard, phased execution plan, verification, browser QA, secret/leak-prevention rules, and stop/recover prompt.
 - Blocks commits, pushes, deployments, releases, dependency installs, destructive commands, secret access, and GitHub settings mutations unless separately approved.
 
 Follow-up needed: None.

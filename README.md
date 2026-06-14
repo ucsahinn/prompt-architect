@@ -8,16 +8,28 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/security-policy-b91c1c)](SECURITY.md)
 [![Docs](https://img.shields.io/badge/docs-ready-2563eb)](docs/USAGE.md)
+[![Prompt Lab Validation](https://github.com/ucsahinn/codex-enterprise-prompt-architect/actions/workflows/docs-validate.yml/badge.svg)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/actions/workflows/docs-validate.yml)
 [![Public Safe](https://img.shields.io/badge/public--safe-checklist-7c3aed)](docs/PUBLIC_REPO_CHECKLIST.md)
 
 ![Codex Enterprise Prompt Architect workflow banner](assets/banner.svg)
 
-- **Status:** v1.0.2 public release
+- **Status:** v1.1.0 public release
 - **License:** MIT
 - **Project type:** Markdown-based Codex skill package and Prompt Lab knowledge base
 - **Note:** Independent community project. Not affiliated with, endorsed by, or sponsored by OpenAI.
 
 Codex Enterprise Prompt Architect helps turn vague AI coding requests into scoped, safer, and verifiable Codex prompts. It is built for teams and maintainers who want Codex to inspect first, plan clearly, wait for approval on risky work, and report evidence instead of just saying "done".
+
+## 🧭 Operator Command Center
+
+| Signal | Use it when | Start here |
+| --- | --- | --- |
+| 🧠 Prompt architecture | You need a ready-to-paste Codex prompt with scope, verification and stop rules. | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
+| 🛑 Plan-first control | The repo is broad, risky, security-sensitive or release-adjacent. | [PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
+| ✅ Approved execution | A plan has been reviewed and implementation can start. | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
+| 🔎 Source-backed work | Current docs, MCP behavior, security guidance or repo claims matter. | [Source maintenance](docs/SOURCE_MAINTENANCE.md) |
+| 🧪 Release confidence | You need local checks before commit, push or release. | [Validation](docs/VALIDATION.md) |
+| 🧩 Specialist routing | A broad task needs code mapping, docs research, security or release review. | [Subagents](docs/SUBAGENTS.md) |
 
 ## 🧭 Enterprise Evaluator Path
 
@@ -57,8 +69,8 @@ This repository packages those patterns as:
 | --- | --- |
 | Generate a safe Codex prompt | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
 | Keep Codex from editing too early | [no-Goal PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
-| Approve a scoped implementation | [APPROVED - EXECUTE](docs/USAGE.md#approved--execute) |
-| Stop an agent that left scope | [STOP / RECOVER](docs/USAGE.md#stop--recover) |
+| Approve a scoped implementation | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
+| Stop an agent that left scope | [STOP / RECOVER](docs/USAGE.md#stop-recover) |
 | Check public repo safety | [Public repo checklist](docs/PUBLIC_REPO_CHECKLIST.md) |
 | Review leak-prevention rules | [Security model](docs/SECURITY_MODEL.md) |
 
@@ -118,6 +130,10 @@ Only output the final prompt. No commentary. Create a Codex prompt for: [your ta
 | Learn the main usage modes | [docs/USAGE.md](docs/USAGE.md) |
 | Copy practical examples | [docs/EXAMPLES.md](docs/EXAMPLES.md) |
 | Understand the skill layout | [docs/SKILL_STRUCTURE.md](docs/SKILL_STRUCTURE.md) |
+| Run local validation | [docs/VALIDATION.md](docs/VALIDATION.md) |
+| Maintain source-backed notes | [docs/SOURCE_MAINTENANCE.md](docs/SOURCE_MAINTENANCE.md) |
+| Route specialist agents safely | [docs/SUBAGENTS.md](docs/SUBAGENTS.md) |
+| Decide skill vs plugin packaging | [docs/PLUGIN_READINESS.md](docs/PLUGIN_READINESS.md) |
 | Check public repo safety rules | [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) |
 | Review prompt/security boundaries | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
 | See planned improvements | [docs/ROADMAP.md](docs/ROADMAP.md) |
@@ -129,6 +145,8 @@ Only output the final prompt. No commentary. Create a Codex prompt for: [your ta
 | Public safety | No secrets, private prompts, customer data, local paths, or private URLs. |
 | Human control | Risky work starts with `PLAN MODE ONLY` and waits for explicit approval. |
 | Verification | Prompts require tests, QA, scans, or clear "unable to verify" reporting. |
+| CI gate | The dependency-free Prompt Lab validator runs in GitHub Actions. |
+| Source discipline | Current or unstable claims use source cards with confidence and outdated-risk notes. |
 | Documentation | README stays concise; deeper guidance lives in `docs/` and `knowledge/`. |
 | Maintenance | Changelog, release notes, security policy, contribution guide, issue templates. |
 
@@ -175,6 +193,7 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 |   `-- examples.md
 |-- .github/
 |   |-- ISSUE_TEMPLATE/
+|   |-- workflows/
 |   `-- pull_request_template.md
 |-- docs/
 |   |-- INSTALL.md
@@ -182,6 +201,10 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 |   |-- EXAMPLES.md
 |   |-- FAQ.md
 |   |-- SKILL_STRUCTURE.md
+|   |-- VALIDATION.md
+|   |-- SOURCE_MAINTENANCE.md
+|   |-- SUBAGENTS.md
+|   |-- PLUGIN_READINESS.md
 |   |-- PUBLIC_REPO_CHECKLIST.md
 |   |-- SECURITY_MODEL.md
 |   `-- ROADMAP.md
@@ -193,6 +216,8 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 |   `-- logs/
 |-- README.md
 |-- README.tr.md
+|-- scripts/
+|   `-- validate-prompt-lab.mjs
 |-- SECURITY.md
 |-- CONTRIBUTING.md
 |-- CHANGELOG.md
@@ -220,6 +245,12 @@ This repository is designed for public, reusable prompt and workflow patterns. I
 - unredacted logs, screenshots, local paths, or personal notes.
 
 Before publishing changes, use [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) and [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md).
+
+For local release checks, run:
+
+```powershell
+node scripts/validate-prompt-lab.mjs
+```
 
 ## 🤝 Contributing
 

@@ -85,3 +85,27 @@ Decision:
 
 Reason:
 - Recovery instructions reduce damage when Codex starts editing too early and prevent automatic reverts that could overwrite user work.
+
+## 2026-06-14 - Validation Is A First-Class Release Gate
+
+Decision:
+- Prompt Lab releases should include a dependency-free validation command and, when public, a matching GitHub Actions workflow.
+
+Reason:
+- The repository is mostly Markdown, but it still has correctness risks: broken links, missing skill files, drifted response modes, source-card gaps, fake badges, and accidental local artifacts.
+
+## 2026-06-14 - Subagents Are Routed, Not Used Blindly
+
+Decision:
+- Generated prompts may recommend subagents for bounded specialist work, but should not instruct Codex to use every available subagent.
+
+Reason:
+- Subagents add cost and context boundaries. They help with code mapping, docs research, security review, browser verification, test checks, and release verification only when the task shape justifies them.
+
+## 2026-06-14 - Plugin Packaging Is Optional
+
+Decision:
+- Keep this repository as a skill package by default and document plugin readiness separately.
+
+Reason:
+- The current project is instruction-heavy and does not bundle MCP servers, apps, hooks, or installation automation that would justify plugin packaging yet.

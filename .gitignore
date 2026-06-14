@@ -39,6 +39,7 @@ temp/
 playwright-report/
 test-results/
 screenshots/
+.playwright-mcp/
 
 # Keep Prompt Lab research/decision logs public; only root/runtime logs are ignored.
 !knowledge/logs/

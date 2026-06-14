@@ -1,6 +1,8 @@
 # Context Engineering Source Notes
 
 Last checked: 2026-05-31
+Confidence: Medium-high for reusable context-engineering patterns; medium for newer conceptual framing.
+Outdated risk: Medium. Terminology and tool-specific context mechanisms change quickly.
 
 ## Working Definition
 

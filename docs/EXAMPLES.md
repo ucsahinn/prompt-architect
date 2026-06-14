@@ -52,6 +52,12 @@ Create a security-sensitive Codex prompt for an existing password manager. Scope
 Audit this Codex prompt. Score execution control, scope control, security constraints, browser QA, verification, output format, and stop conditions. Revise only if needed: [prompt]
 ```
 
+### 9. Research-backed repo upgrade
+
+```text
+Create a no-Goal PLAN MODE ONLY Codex prompt for upgrading a public prompt-skill repository. Require repository inspection first, official docs for current Codex/MCP/skill behavior, source cards with confidence and outdated-risk notes, safe subagent routing, validation commands, secret scans, and an approval phrase before edits.
+```
+
 ## Türkçe Örnekler
 
 ### 1. PROMPT_ONLY
@@ -100,4 +106,10 @@ Mevcut password manager için security-sensitive Codex promptu üret. Kapsam: se
 
 ```text
 Bu Codex promptunu test et ve skorla. Execution control, scope control, security constraints, browser QA, verification, output format ve stop conditions açısından değerlendir. Gerekirse revize et: [prompt]
+```
+
+### 9. Kaynak destekli repo upgrade
+
+```text
+Public prompt-skill reposu için no-Goal PLAN MODE ONLY Codex promptu üret. Önce repo incelemesi, güncel Codex/MCP/skill davranışı için resmi dokümanlar, confidence ve outdated-risk içeren source card'lar, güvenli subagent routing, validation komutları, secret scan ve edit öncesi approval phrase zorunlu olsun.
 ```

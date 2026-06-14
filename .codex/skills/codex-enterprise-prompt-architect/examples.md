@@ -180,3 +180,32 @@ Codex için goal + full prompt üret. Riskli değişikliklerde APPROVED — EXEC
 ```text
 Codex erken execute etti. STOP / RECOVER promptu üret; otomatik revert yapmasın, önce ne değiştirdiğini raporlasın.
 ```
+
+## 7. Research-Backed Repository Upgrade Prompt
+
+```text
+You are Codex. Work in PLAN MODE ONLY.
+
+Goal:
+Inspect a public prompt-skill repository and produce a source-backed upgrade plan.
+
+Rules:
+- Read AGENTS.md, README files, skill entrypoints, knowledge base, docs, GitHub templates, validation scripts, changelog, and release notes first.
+- Use official docs for current Codex, skills, MCP, plugins, subagents, browser tools, and safe tool use.
+- Record sources with title, URL, date checked, confidence, applies-to, facts vs interpretation, and outdated-risk notes.
+- Use subagents only for bounded read-only specialist work when useful.
+- Do not edit, create, delete, rename, format, commit, push, release, publish, install dependencies, or run destructive commands.
+
+Output:
+1. Repository understanding.
+2. Source-backed findings.
+3. Gap matrix.
+4. File-level upgrade plan.
+5. Validation plan.
+6. Risks and approval gates.
+
+Approval phrase:
+APPROVED - EXECUTE FULL PROMPT LAB UPGRADE
+
+Stop after the plan.
+```

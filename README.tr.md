@@ -8,16 +8,28 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/security-policy-b91c1c)](SECURITY.md)
 [![Docs](https://img.shields.io/badge/docs-ready-2563eb)](docs/USAGE.md)
+[![Prompt Lab Validation](https://github.com/ucsahinn/codex-enterprise-prompt-architect/actions/workflows/docs-validate.yml/badge.svg)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/actions/workflows/docs-validate.yml)
 [![Public Safe](https://img.shields.io/badge/public--safe-checklist-7c3aed)](docs/PUBLIC_REPO_CHECKLIST.md)
 
 ![Codex Enterprise Prompt Architect workflow banner](assets/banner.svg)
 
-- **Durum:** v1.0.2 public release
+- **Durum:** v1.1.0 public release
 - **Lisans:** MIT
 - **Proje tipi:** Markdown tabanlı Codex skill paketi ve Prompt Lab bilgi tabanı
 - **Not:** Bağımsız bir topluluk/açık kaynak projesidir. OpenAI ile bağlı, onaylı veya sponsorlu değildir.
 
 Codex Enterprise Prompt Architect, dağınık istekleri Codex için kapsamlı, kontrol edilebilir ve doğrulanabilir promptlara dönüştürmeye yardım eder. Amacı Codex'in önce repoyu incelemesi, net plan sunması, riskli işlerde onay beklemesi ve "bitti" demek yerine kanıtlı final raporu vermesidir.
+
+## 🧭 Operator Komuta Merkezi
+
+| Sinyal | Ne zaman kullanılır? | Başlangıç |
+| --- | --- | --- |
+| 🧠 Prompt mimarisi | Scope, doğrulama ve stop kuralları olan hazır Codex promptu gerektiğinde. | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
+| 🛑 Plan-first kontrol | Repo geniş, riskli, güvenlik duyarlı veya release-adjacent ise. | [PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
+| ✅ Onaylı execution | Plan incelendi ve uygulama başlayabilir ise. | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
+| 🔎 Kaynaklı çalışma | Güncel docs, MCP davranışı, güvenlik rehberi veya public repo iddiası önemliyse. | [Source maintenance](docs/SOURCE_MAINTENANCE.md) |
+| 🧪 Release güveni | Commit, push veya release öncesi lokal kontrol gerektiğinde. | [Validation](docs/VALIDATION.md) |
+| 🧩 Uzman routing | Geniş işlerde code map, docs research, security veya release review gerekiyorsa. | [Subagents](docs/SUBAGENTS.md) |
 
 ## 🧭 Enterprise Değerlendirme Yolu
 
@@ -57,8 +69,8 @@ Bu repo bu kalıpları şu şekilde paketler:
 | --- | --- |
 | Güvenli Codex promptu üretmek | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
 | Codex'in erken dosya düzenlemesini engellemek | [no-Goal PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
-| Onaylanmış planı uygulatmak | [APPROVED - EXECUTE](docs/USAGE.md#approved--execute) |
-| Kapsam dışına çıkan agent'ı durdurmak | [STOP / RECOVER](docs/USAGE.md#stop--recover) |
+| Onaylanmış planı uygulatmak | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
+| Kapsam dışına çıkan agent'ı durdurmak | [STOP / RECOVER](docs/USAGE.md#stop-recover) |
 | Public repo güvenliğini kontrol etmek | [Public repo checklist](docs/PUBLIC_REPO_CHECKLIST.md) |
 | Sızıntı önleme kurallarını incelemek | [Security model](docs/SECURITY_MODEL.md) |
 
@@ -118,6 +130,10 @@ Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 | Ana kullanım modlarını öğrenmek | [docs/USAGE.md](docs/USAGE.md) |
 | Pratik örnekleri kopyalamak | [docs/EXAMPLES.md](docs/EXAMPLES.md) |
 | Skill yapısını anlamak | [docs/SKILL_STRUCTURE.md](docs/SKILL_STRUCTURE.md) |
+| Lokal validation çalıştırmak | [docs/VALIDATION.md](docs/VALIDATION.md) |
+| Kaynaklı notları yönetmek | [docs/SOURCE_MAINTENANCE.md](docs/SOURCE_MAINTENANCE.md) |
+| Subagent routing'i güvenli yapmak | [docs/SUBAGENTS.md](docs/SUBAGENTS.md) |
+| Skill mi plugin mi kararını vermek | [docs/PLUGIN_READINESS.md](docs/PLUGIN_READINESS.md) |
 | Public repo güvenlik kontrolü yapmak | [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) |
 | Prompt/güvenlik sınırlarını incelemek | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
 | Planlanan işleri görmek | [docs/ROADMAP.md](docs/ROADMAP.md) |
@@ -129,6 +145,8 @@ Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 | Public safety | Secret, private prompt, müşteri verisi, local path veya private URL yok. |
 | İnsan kontrolü | Riskli işler `PLAN MODE ONLY` ile başlar ve açık onay bekler. |
 | Doğrulama | Promptlar test, QA, scan veya net "doğrulanamadı" raporu ister. |
+| CI kapısı | Dependency-free Prompt Lab validator GitHub Actions içinde çalışır. |
+| Kaynak disiplini | Güncel veya değişken iddialarda confidence ve outdated-risk içeren source card kullanılır. |
 | Dokümantasyon | README kısa kalır; detaylar `docs/` ve `knowledge/` içinde yaşar. |
 | Bakım | Changelog, release notes, security policy, contribution guide, issue template'leri. |
 
@@ -175,6 +193,7 @@ Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılı
 |   `-- examples.md
 |-- .github/
 |   |-- ISSUE_TEMPLATE/
+|   |-- workflows/
 |   `-- pull_request_template.md
 |-- docs/
 |   |-- INSTALL.md
@@ -182,6 +201,10 @@ Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılı
 |   |-- EXAMPLES.md
 |   |-- FAQ.md
 |   |-- SKILL_STRUCTURE.md
+|   |-- VALIDATION.md
+|   |-- SOURCE_MAINTENANCE.md
+|   |-- SUBAGENTS.md
+|   |-- PLUGIN_READINESS.md
 |   |-- PUBLIC_REPO_CHECKLIST.md
 |   |-- SECURITY_MODEL.md
 |   `-- ROADMAP.md
@@ -193,6 +216,8 @@ Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılı
 |   `-- logs/
 |-- README.md
 |-- README.tr.md
+|-- scripts/
+|   `-- validate-prompt-lab.mjs
 |-- SECURITY.md
 |-- CONTRIBUTING.md
 |-- CHANGELOG.md
@@ -220,6 +245,12 @@ Bu repo public, tekrar kullanılabilir prompt ve workflow kalıpları için tasa
 - maskelenmemiş log, ekran görüntüsü, local path veya kişisel not.
 
 Değişiklik yayınlamadan önce [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) ve [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) dosyalarını kullanın.
+
+Lokal release kontrolü için:
+
+```powershell
+node scripts/validate-prompt-lab.mjs
+```
 
 ## 🤝 Katkı
 

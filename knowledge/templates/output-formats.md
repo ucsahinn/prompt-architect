@@ -312,6 +312,45 @@ Output:
 [Sources, findings, reusable patterns, uncertainties, recommended prompt]
 ```
 
+## Source Card
+
+```text
+## [Source Title]
+
+- URL: [URL]
+- Source type: [official docs / standard / research paper / repository / credible guide]
+- Date checked: [YYYY-MM-DD]
+- Confidence: [High / Medium / Low]
+- Applies to: [prompt area]
+- Short summary: [concise summary]
+- Reusable lessons:
+  - [...]
+- Facts vs interpretation:
+  - Fact: [...]
+  - Interpretation: [...]
+- Outdated risk: [Low / Medium / High]
+```
+
+## Subagent-Aware Codex Prompt
+
+```text
+You are Codex. Use subagents only for bounded specialist work that materially improves this task.
+
+Subagent routing:
+- code_mapper: [when needed]
+- docs_researcher: [when current docs are needed]
+- security_auditor: [when secrets/auth/tool risk exists]
+- frontend_verifier: [when UI/browser evidence is needed]
+- test_verifier: [when checks can run in parallel]
+- release_verifier: [before push/tag/release/publication]
+
+Rules:
+- Do not spawn every subagent by default.
+- Keep implementation in the main thread unless write scopes are explicitly split.
+- Subagents must not bypass approvals, secrets, destructive actions, or external-state gates.
+- Summarize specialist findings before editing.
+```
+
 ## Prompt Improvement Prompt
 
 ```text

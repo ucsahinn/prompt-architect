@@ -17,7 +17,7 @@ Entrypoint:
 Supporting files:
 
 - `commands.md` - short slash-style and natural-language commands.
-- `response-modes.md` - `PROMPT_ONLY`, Goal + Full Prompt, `PLAN MODE ONLY`, `APPROVED — EXECUTE`, audit, rewrite, and `STOP / RECOVER` modes.
+- `response-modes.md` - `PROMPT_ONLY`, Goal + Full Prompt, `PLAN MODE ONLY`, `APPROVED — EXECUTE`, research-backed, template, audit, rewrite, instruction-file, and `STOP / RECOVER` modes.
 - `codex-patterns.md` - reusable Codex workflow patterns.
 - `examples.md` - complete examples.
 
@@ -42,6 +42,13 @@ Reusable generated prompts are logged in:
 knowledge/outputs/generated-prompts.md
 ```
 
+Validation and packaging references:
+
+- [VALIDATION.md](VALIDATION.md) - local validator and release checks.
+- [SOURCE_MAINTENANCE.md](SOURCE_MAINTENANCE.md) - source-card refresh rules.
+- [SUBAGENTS.md](SUBAGENTS.md) - safe specialist routing.
+- [PLUGIN_READINESS.md](PLUGIN_READINESS.md) - when to keep this as a skill vs package as a plugin.
+
 ## Türkçe
 
 Formal Codex skill paketi burada bulunur:
@@ -59,7 +66,7 @@ Entrypoint:
 Destek dosyaları:
 
 - `commands.md` - kısa slash-style ve doğal dil komutları.
-- `response-modes.md` - `PROMPT_ONLY`, Goal + Full Prompt, `PLAN MODE ONLY`, `APPROVED — EXECUTE`, audit, rewrite ve `STOP / RECOVER` modları.
+- `response-modes.md` - `PROMPT_ONLY`, Goal + Full Prompt, `PLAN MODE ONLY`, `APPROVED — EXECUTE`, research-backed, template, audit, rewrite, instruction-file ve `STOP / RECOVER` modları.
 - `codex-patterns.md` - tekrar kullanılabilir Codex workflow pattern'leri.
 - `examples.md` - tam örnekler.
 
@@ -83,3 +90,10 @@ Tekrar kullanılabilir promptlar şu ledgere eklenir:
 ```text
 knowledge/outputs/generated-prompts.md
 ```
+
+Doğrulama ve paketleme referansları:
+
+- [VALIDATION.md](VALIDATION.md) - lokal validator ve release kontrolleri.
+- [SOURCE_MAINTENANCE.md](SOURCE_MAINTENANCE.md) - source-card yenileme kuralları.
+- [SUBAGENTS.md](SUBAGENTS.md) - güvenli specialist routing.
+- [PLUGIN_READINESS.md](PLUGIN_READINESS.md) - skill olarak kalma veya plugin paketleme kararı.

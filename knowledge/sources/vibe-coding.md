@@ -1,6 +1,8 @@
 # Vibe Coding Source Notes
 
 Last checked: 2026-05-31
+Confidence: Medium for workflow caution patterns; low for hype-driven claims.
+Outdated risk: Medium. Tool behavior and public usage patterns change quickly.
 
 ## Working Definition
 

@@ -58,6 +58,22 @@ Use to evaluate a Codex prompt before pasting it into a risky repo.
 Audit this Codex prompt. Score execution control, scope control, security constraints, browser QA, verification, output format, and stop conditions: [prompt]
 ```
 
+### Research-Backed Prompt
+
+Use when the prompt depends on current Codex behavior, MCP/tool guidance, security standards, provider docs, or public repository claims.
+
+```text
+Create a research-backed Codex prompt for improving a public skill repository. Use official docs first, record source quality, separate facts from interpretation, and include research stop criteria.
+```
+
+### Subagent-Aware Prompt
+
+Use when a broad task benefits from bounded specialist work.
+
+```text
+Create a Codex prompt for a broad repository upgrade. Include safe subagent routing for code mapping, docs research, release verification, and security review. Do not allow every subagent or tool by default.
+```
+
 ## Türkçe
 
 ### Goal + Full Prompt
@@ -108,6 +124,14 @@ Codex promptunu kullanmadan önce kontrol etmek için kullanın.
 Bu Codex promptunu test et ve skorla. Scope creep, erken execute, security constraints, browser QA, verification, output format ve stop conditions açısından değerlendir: [prompt]
 ```
 
+### Research-Backed Prompt
+
+Güncel Codex davranışı, MCP/tool rehberi, güvenlik standardı, provider dokümanı veya public repo iddiası gerekiyorsa kullanın.
+
+```text
+Public skill reposu iyileştirmek için kaynak destekli Codex promptu üret. Resmi dokümanları öncele, kaynak kalitesini yaz, gerçeklerle yorumu ayır ve araştırma stop kriteri ekle.
+```
+
 ## Choosing The Mode
 
 - Use `PROMPT_ONLY` when the user says "only prompt", "sadece prompt ver", "yorum yapma", or similar.
@@ -115,5 +139,7 @@ Bu Codex promptunu test et ve skorla. Scope creep, erken execute, security const
 - Use no-Goal `PLAN MODE ONLY` when strict control matters.
 - Use `APPROVED — EXECUTE` only after reviewing a plan.
 - Use `STOP / RECOVER` when Codex starts editing too early.
+- Use `RESEARCH_BACKED` when current source-backed facts matter.
 - Add browser QA for UI work.
 - Add security constraints for auth, secrets, password managers, databases, production-adjacent work, and risky tools.
+- Add MCP/tool/subagent boundaries for broad or tool-heavy work.

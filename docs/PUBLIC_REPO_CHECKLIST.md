@@ -28,6 +28,7 @@ Use this checklist before publishing, tagging, releasing, or sharing this reposi
 - [ ] Generated reusable prompts are logged in `knowledge/outputs/generated-prompts.md`.
 - [ ] Examples are copy-pasteable and use placeholders.
 - [ ] Turkish docs are natural Turkish, not mechanical translation.
+- [ ] Validation, source maintenance, subagent routing, and plugin-readiness docs are linked when relevant.
 
 ## Public Safety
 
@@ -46,6 +47,7 @@ rg --files --hidden -g "!.git/**"
 rg -n "C:\\Users\\|/Users/|/home/|sk-|api[_-]?key|token|password|secret|private key|BEGIN .*PRIVATE KEY" --hidden -g "!.git/**"
 git diff --check
 git status --short
+node scripts/validate-prompt-lab.mjs
 ```
 
 If a dedicated secret scanner such as Gitleaks is available, run it before a release or public push.
@@ -65,6 +67,8 @@ These are repository settings, not local file changes:
 
 - [ ] `CHANGELOG.md` has an entry for the change.
 - [ ] `RELEASE_NOTES.md` matches the intended release.
+- [ ] `node scripts/validate-prompt-lab.mjs` passes.
 - [ ] No generated archives, installers, build output, logs, or temporary files are tracked.
+- [ ] `.playwright-mcp/` and other local browser artifacts are not staged.
 - [ ] Git status is understood before any commit.
 - [ ] Commit, push, tag, release, or publish actions are explicitly approved.

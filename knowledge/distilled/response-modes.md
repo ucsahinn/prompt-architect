@@ -1,8 +1,10 @@
 # Response Modes
 
-Last updated: 2026-05-31
+Last updated: 2026-06-14
 
 Use these modes to keep Prompt Lab outputs predictable.
+
+Current routing note: use Codex as the default target. Use MCP tools, browser tools, Context7, OpenAI Docs, and subagents only when the task shape justifies them. Do not instruct an agent to use every available tool or every subagent indiscriminately.
 
 ## PROMPT_ONLY
 
@@ -240,3 +242,33 @@ Required sections:
 
 Stop conditions:
 - Stop before model-specific claims if docs are stale or missing.
+
+## STOP_RECOVER
+
+Alias: `STOP / RECOVER`
+
+When to use:
+- Codex started editing too early, left scope, ran commands before approval, or needs to return to plan-only control.
+
+What to output:
+- Stop command.
+- Changed files report request.
+- Commands run report request.
+- Background process check.
+- No-revert-without-approval rule.
+- Recovery plan request.
+
+What not to output:
+- No automatic revert instruction.
+- No new implementation authorization.
+
+Required sections:
+- Stop now.
+- Report changed files.
+- Report commands run.
+- Report background processes.
+- Return to PLAN MODE ONLY.
+- Wait for approval.
+
+Stop conditions:
+- Stop before any further edits, destructive commands, commits, pushes, deploys, releases, or scope expansion.

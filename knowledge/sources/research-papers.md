@@ -1,6 +1,40 @@
 # Research Paper Source Cards
 
-Last checked: 2026-05-31
+Last checked: 2026-06-14
+
+## The Prompt Report: A Systematic Survey of Prompting Techniques
+
+- URL: https://arxiv.org/abs/2406.06608
+- Source type: Research survey.
+- Date checked: 2026-06-14.
+- Confidence: High for taxonomy-level prompt engineering patterns.
+- Applies to: prompt structure, role/task/context/constraints/output formats, decomposition, evaluation, anti-hallucination patterns.
+- Summary: A broad survey of prompting techniques and terminology. Useful for naming prompt patterns and avoiding ad-hoc prompt-library sprawl.
+- Reusable lessons:
+  - Treat prompt structure as a system with task, context, constraints, examples, and output contract.
+  - Choose techniques by task need instead of stacking every technique.
+  - Record evaluation criteria and stop conditions.
+- Facts vs interpretation:
+  - Fact: the survey catalogs prompt engineering techniques and usage patterns.
+  - Interpretation: Prompt Lab should use the taxonomy as a vocabulary aid, not as proof that every technique belongs in every prompt.
+- Outdated risk: Medium. Prompting terminology evolves quickly.
+
+## Lost in the Middle: How Language Models Use Long Contexts
+
+- URL: https://arxiv.org/abs/2307.03172
+- Source type: Research paper.
+- Date checked: 2026-06-14.
+- Confidence: High for long-context placement risk.
+- Applies to: long prompts, instruction-file design, context engineering, source packing.
+- Summary: Long-context models can underuse information placed in the middle of context, especially when retrieval or answer evidence is not positioned clearly.
+- Reusable lessons:
+  - Put critical constraints early and recap them near the end.
+  - Avoid burying approval gates or security rules in large context dumps.
+  - Use progressive disclosure and concise entrypoints.
+- Facts vs interpretation:
+  - Fact: the paper documents context-position sensitivity.
+  - Interpretation: Prompt Lab should keep `SKILL.md` short and put deeper details into linked files.
+- Outdated risk: Low to medium.
 
 ## ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing
 

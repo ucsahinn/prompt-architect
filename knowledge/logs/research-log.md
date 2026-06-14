@@ -123,3 +123,36 @@ Reusable lessons added:
 Research stop reason:
 - Codex coverage is now strong enough for goal design, no-goal plan-only prompts, approval-gated execution, AGENTS.md design, browser QA, security-sensitive workflows, evaluation, recovery prompts, and large app cleanup prompt packages.
 - Further work should be based on real Codex session failures or a specific repository prompt need.
+
+## 2026-06-14 - Prompt Lab v1.1.0 Source Refresh
+
+Scope:
+- Refresh current source-backed guidance for the public Codex Enterprise Prompt Architect repository.
+- Keep Codex as the primary target.
+- Use non-Codex sources only when they improve agent-control, prompt evaluation, context engineering, browser QA, public repo quality, or security boundaries.
+
+High-confidence sources checked:
+- OpenAI Codex Best Practices: https://developers.openai.com/codex/learn/best-practices
+- OpenAI Codex Prompting: https://developers.openai.com/codex/prompting
+- OpenAI Codex Agent Skills: https://developers.openai.com/codex/skills
+- OpenAI Codex AGENTS.md: https://developers.openai.com/codex/guides/agents-md
+- OpenAI Codex MCP: https://developers.openai.com/codex/mcp
+- OpenAI Codex Plugins: https://developers.openai.com/codex/plugins
+- OpenAI Codex Subagents: https://developers.openai.com/codex/subagents
+- OpenAI Agent Approvals And Security: https://developers.openai.com/codex/agent-approvals-security
+- OpenAI API Tools: https://developers.openai.com/api/docs/guides/tools
+- OWASP LLM Top 10 2025: https://genai.owasp.org/llm-top-10/
+- Playwright MCP: https://github.com/microsoft/playwright-mcp
+- Prompt Report: https://arxiv.org/abs/2406.06608
+- Lost in the Middle: https://arxiv.org/abs/2307.03172
+
+Reusable lessons added:
+- Treat AGENTS.md, skills, config, MCP, plugins, subagents, hooks, and rules as separate surfaces.
+- Keep skill entrypoints concise and put deeper theory in `knowledge/` and `docs/`.
+- Use source cards for unstable or public-facing claims.
+- Prefer least-privilege MCP/tool routing over "use every tool."
+- Use subagents for bounded specialist work, not indiscriminate parallelism.
+- Add local validation and CI gates for public prompt-skill repositories.
+
+Research stop reason:
+- Coverage is sufficient to update the skill package, knowledge base, docs, validator, README storefront, and release notes without drifting into generic AI content.

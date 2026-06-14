@@ -46,6 +46,20 @@ The skill works as a compact package. The `knowledge/` folder gives future Codex
 
 No `npm install`, `pip install`, build, database, server, or API key is required.
 
+### Validate After Copy
+
+Inside this repository, run:
+
+```powershell
+node scripts/validate-prompt-lab.mjs
+```
+
+When you copy the skill into another workspace, confirm that `SKILL.md` and the supporting Markdown files are copied together.
+
+### Plugin Packaging
+
+This repository stays a skill package by default. See [PLUGIN_READINESS.md](PLUGIN_READINESS.md) before adding plugin manifests, MCP config, hooks, or bundled app integrations.
+
 ## Türkçe
 
 ### Skill'i Kurma
@@ -89,3 +103,17 @@ Skill tek başına kullanılabilir. `knowledge/` klasörü daha zengin bağlam s
 ### Build Gerekmez
 
 `npm install`, `pip install`, build, database, server veya API key gerekmez.
+
+### Kopyalama Sonrası Doğrulama
+
+Bu repoda şu komutu çalıştırın:
+
+```powershell
+node scripts/validate-prompt-lab.mjs
+```
+
+Skill'i başka bir workspace'e kopyaladığınızda `SKILL.md` ve destek Markdown dosyalarının birlikte taşındığını kontrol edin.
+
+### Plugin Paketleme
+
+Bu repo varsayılan olarak skill paketi kalır. Plugin manifest, MCP config, hook veya app entegrasyonu eklemeden önce [PLUGIN_READINESS.md](PLUGIN_READINESS.md) dosyasına bakın.

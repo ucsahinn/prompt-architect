@@ -1,6 +1,79 @@
 # Official Docs Source Cards
 
-Last checked: 2026-05-31
+Last checked: 2026-06-14
+
+## 2026-06-14 Refresh: OpenAI Codex Surface Boundaries
+
+- URL: https://developers.openai.com/codex/learn/best-practices
+- Source type: Official OpenAI Codex documentation.
+- Date checked: 2026-06-14.
+- Confidence: High.
+- Applies to: Codex prompt structure, AGENTS.md, skills, plan-first work, verification.
+- Short summary: Current Codex guidance emphasizes goal, context, constraints, done criteria, planning for complex work, durable AGENTS.md guidance, reusable skills, and verification.
+- Reusable lessons:
+  - Keep AGENTS.md practical and concise.
+  - Put repeatable workflows in skills.
+  - Ask for tests, checks, screenshots, review, or honest unverified reporting.
+  - Avoid broad permissions before the workflow is understood.
+- Facts vs interpretation:
+  - Fact: Codex docs describe AGENTS.md, skills, planning, and verification as first-class workflow surfaces.
+  - Interpretation: Prompt Lab should teach surface choice directly instead of burying everything in a single long prompt.
+- Outdated risk: High. Codex behavior and product surfaces change quickly.
+
+## 2026-06-14 Refresh: OpenAI Codex Skills
+
+- URL: https://developers.openai.com/codex/skills
+- Source type: Official OpenAI Codex documentation.
+- Date checked: 2026-06-14.
+- Confidence: High.
+- Applies to: `SKILL.md`, skill descriptions, progressive disclosure, reusable prompt workflows.
+- Short summary: Skills package task instructions plus optional resources, scripts, references, and assets. Codex sees concise skill metadata first and loads full instructions only when selected.
+- Reusable lessons:
+  - Keep skill descriptions clear, concrete, and trigger-focused.
+  - Keep full instructions compact and link to deeper references.
+  - Prefer instruction-only skills unless scripts materially improve reliability.
+- Facts vs interpretation:
+  - Fact: skills are directory-based packages with `SKILL.md` entrypoints.
+  - Interpretation: this repo should keep `.codex/skills/codex-enterprise-prompt-architect/` as the canonical public source package and validate that support files remain present.
+- Outdated risk: High.
+
+## 2026-06-14 Refresh: Codex MCP, Plugins, And Subagents
+
+- URLs:
+  - https://developers.openai.com/codex/mcp
+  - https://developers.openai.com/codex/plugins
+  - https://developers.openai.com/codex/subagents
+- Source type: Official OpenAI Codex documentation.
+- Date checked: 2026-06-14.
+- Confidence: High.
+- Applies to: MCP tool routing, plugin-readiness, specialist subagent workflows.
+- Short summary: MCP connects Codex to tools and context; plugins bundle skills/apps/MCP/hooks for distribution; subagents are specialist contexts useful for delegated work but inherit sandbox and approval boundaries.
+- Reusable lessons:
+  - Treat MCP and browser tools as action surfaces, not just context.
+  - Use plugins only when distribution needs justify packaging.
+  - Use subagents for bounded specialist work, not as default noise.
+  - Require approval for mutating account, repository, release, production, database, or credential actions.
+- Facts vs interpretation:
+  - Fact: Codex docs expose MCP, plugins, and subagents as separate surfaces.
+  - Interpretation: generated prompts should name the correct surface for the job instead of saying "use every tool."
+- Outdated risk: High.
+
+## 2026-06-14 Refresh: OpenAI API Tools
+
+- URL: https://developers.openai.com/api/docs/guides/tools
+- Source type: Official OpenAI API documentation.
+- Date checked: 2026-06-14.
+- Confidence: High.
+- Applies to: OpenAI API tool design, function tools, built-in tools, file search, web search, MCP, shell/computer-use style tools.
+- Short summary: Tool access is configured explicitly and should be controlled by workflow design, guardrails, approvals, and observability.
+- Reusable lessons:
+  - Separate Codex runtime tool guidance from OpenAI API tool guidance.
+  - Name allowed and forbidden tools in generated prompts.
+  - Add human review or approval gates for risky tool actions.
+- Facts vs interpretation:
+  - Fact: OpenAI tool guidance distinguishes built-in, function, MCP, and other tool classes.
+  - Interpretation: Prompt Lab templates should require tool-class clarity and approval gates.
+- Outdated risk: High.
 
 ## OpenAI: Codex Execution Plans
 

@@ -1,6 +1,7 @@
 # AI Coding Agent Source Notes
 
 Last checked: 2026-05-31
+Outdated risk: Medium-high. Coding-agent surfaces, approvals, MCP integrations, and subagent behavior change quickly.
 
 ## Durable Patterns
 

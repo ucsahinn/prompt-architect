@@ -1,6 +1,40 @@
 # Security And Safety Source Notes
 
-Last checked: 2026-05-31
+Last checked: 2026-06-14
+
+## 2026-06-14 Refresh: OWASP Top 10 For LLM Applications 2025
+
+- URL: https://genai.owasp.org/llm-top-10/
+- Source type: OWASP Gen AI Security Project.
+- Date checked: 2026-06-14.
+- Confidence: High.
+- Applies to: prompt injection, sensitive information disclosure, supply chain, improper output handling, excessive agency, system prompt leakage, misinformation, unbounded consumption.
+- Short summary: OWASP's 2025 LLM risk set maps directly to agentic coding prompts because prompts can grant tools, read files, publish outputs, or expose sensitive information.
+- Reusable lessons:
+  - Keep prompt injection and excessive agency as first-class risks.
+  - Require output validation, source provenance, and human approval for dangerous actions.
+  - Include loop/budget limits for broad research or automation.
+- Facts vs interpretation:
+  - Fact: OWASP lists prompt injection, sensitive information disclosure, supply chain, improper output handling, excessive agency, and related LLM risks.
+  - Interpretation: Prompt Lab templates should include explicit untrusted-content handling and least-privilege tool guidance.
+- Outdated risk: Medium. OWASP guidance versions change, but the risk categories are durable.
+
+## 2026-06-14 Refresh: OpenAI Agent Security
+
+- URL: https://openai.com/index/designing-agents-to-resist-prompt-injection/
+- Source type: Official OpenAI security guidance.
+- Date checked: 2026-06-14.
+- Confidence: High.
+- Applies to: agent prompt injection, tool permissions, source/sink analysis.
+- Short summary: Defensive agent design should constrain the impact of successful manipulation, separate untrusted content from trusted instructions, and guard dangerous sinks.
+- Reusable lessons:
+  - Do not rely only on malicious-input filtering.
+  - Identify sources that can influence the agent and sinks that can cause harm.
+  - Require consent or blocking rules before sensitive transmissions or dangerous tool actions.
+- Facts vs interpretation:
+  - Fact: external content can steer agents toward unintended actions.
+  - Interpretation: Prompt Lab security prompts should make source/sink review mandatory for MCP, browser, web, and repository-content workflows.
+- Outdated risk: Medium.
 
 ## OpenAI Prompt Injection Guidance
 

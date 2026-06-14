@@ -1,6 +1,6 @@
 # Browser QA Playbook
 
-Last updated: 2026-05-31
+Last updated: 2026-06-14
 
 ## Pattern: User-Visible Behavior First
 
@@ -21,7 +21,8 @@ Last updated: 2026-05-31
 - Source references:
   - Playwright best practices: https://playwright.dev/docs/best-practices
   - Playwright accessibility testing: https://playwright.dev/docs/accessibility-testing
-  - Context7 Playwright docs query on 2026-05-31.
+  - Playwright MCP: https://github.com/microsoft/playwright-mcp
+  - Context7 Playwright MCP docs query on 2026-06-14.
 
 ## Pattern: Resilient Locator Contract
 
@@ -38,7 +39,25 @@ Last updated: 2026-05-31
   - Run tests locally and inspect failures with traces.
 - Source references:
   - Playwright best practices.
-  - Context7 Playwright docs query on 2026-05-31.
+  - Context7 Playwright MCP docs query on 2026-06-14.
+
+## Pattern: Snapshot Before Screenshot
+
+- When to use it: MCP/browser QA prompts that need page structure, interaction targets, or accessibility evidence.
+- Why it works: accessibility snapshots expose semantic page state more reliably than visual screenshots for deciding what to click or verify.
+- Prompt structure:
+  - Use a page snapshot for semantic structure and interaction targets.
+  - Use screenshots only for visual framing, layout, overflow, and design evidence.
+  - Check console and network errors when the tool surface supports it.
+  - Avoid arbitrary browser code execution unless the context is trusted and the user approves the risk.
+- Failure modes:
+  - Acting from screenshots alone.
+  - Running unsafe browser code when snapshot/click/fill tools are enough.
+  - Capturing real secrets or private account data in screenshots.
+- Verification method:
+  - Final report names routes, viewport sizes, console/network status, and whether screenshot evidence was captured.
+- Source references:
+  - Playwright MCP: https://github.com/microsoft/playwright-mcp
 
 ## Codex Browser QA Addendum
 

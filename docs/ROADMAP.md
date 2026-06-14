@@ -10,8 +10,17 @@ The project should stay focused on Codex prompt generation and Codex workflow qu
 - Clearer prompt ledger conventions for teams.
 - More security-sensitive prompt patterns for auth, secrets, and zero-knowledge applications.
 - More browser QA prompt examples for complex UI flows.
-- Packaging improvements if Codex skill mechanics evolve.
+- Plugin packaging only if distribution needs require bundled metadata, MCP config, hooks, or apps.
 - Community-contributed prompt patterns with source-backed rationale.
+- Source-card refreshes when Codex, MCP, plugin, browser, or subagent docs change.
+- Validator improvements for Markdown links, mode parity, and source metadata.
+
+## Recently Added
+
+- Dependency-free Prompt Lab validator.
+- GitHub Actions validation workflow.
+- Source maintenance, validation, subagent routing, and plugin-readiness docs.
+- `.playwright-mcp/` local artifact exclusion.
 
 ## Not Planned
 

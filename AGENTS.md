@@ -12,6 +12,7 @@ Primary domains:
 - Claude Code, Gemini, Cursor, Windsurf, Lovable, Replit Agent, and similar tools are secondary and should be addressed only when the user asks or when a direct Codex lesson is being compared.
 - AGENTS.md, CLAUDE.md, rules, skills, subagents, and reusable instruction-file design.
 - AI coding workflows, plan/execute/verify loops, browser QA loops, prompt evaluation, security-aware prompting, and enterprise AI instruction design.
+- Codex surface routing across AGENTS.md, skills, config, MCP, subagents, plugins, hooks, and approval rules.
 
 This project's only purpose is prompt engineering and prompt generation. Do not perform unrelated user tasks inside this repository.
 
@@ -65,6 +66,13 @@ For Codex prompt creation, use the formal skill entrypoint at `.codex/skills/cod
 
 Use `knowledge/distilled/response-modes.md` to route output mode.
 
+Use the surface routing docs when generating broad agent-control prompts:
+
+- `docs/SUBAGENTS.md` for delegated specialist routing.
+- `docs/PLUGIN_READINESS.md` for skill-vs-plugin packaging decisions.
+- `docs/SOURCE_MAINTENANCE.md` for source-card and research refresh rules.
+- `docs/VALIDATION.md` for local and release validation gates.
+
 Strict routing:
 
 - If the user says `sadece prompt ver`, `yorum yapma`, `ekleme yapma`, `only prompt`, or similar, use `PROMPT_ONLY`.
@@ -96,6 +104,8 @@ Codex-specific routing:
 - Always include an approval-gated execution prompt for risky app changes, broad UI cleanup, auth/session work, password managers, secret-handling changes, database changes, production-adjacent changes, or multi-file refactors.
 - Always include browser QA for UI work.
 - Always include security constraints for auth, sessions, secrets, password managers, encryption, leak checks, update systems, shell tools, MCP/app tools, and external content.
+- For MCP, browser, GitHub, account, database, production, or app connector workflows, state allowed tools, forbidden tools, approval-required actions, and untrusted-output handling explicitly.
+- For subagent-heavy prompts, require bounded specialist tasks, read-only defaults, and main-thread review before editing.
 - Generate STOP / RECOVER prompts when Codex starts executing too early or leaves approved scope.
 - Save important Codex prompt packages to `knowledge/outputs/generated-prompts.md`.
 - If the user says `sadece prompt ver`, `yorum yapma`, `ekleme yapma`, `only prompt`, or similar, return `PROMPT_ONLY` with no explanation.
@@ -152,3 +162,11 @@ Ask clarification only when the missing information is necessary to avoid a mate
 ## Verification
 
 Before reporting workspace updates, verify file structure with `rg --files` or equivalent. For prompt outputs, verify that the prompt includes constraints, non-goals, output format, and success checks.
+
+For repository updates, run the dependency-free validator when available:
+
+```powershell
+node scripts/validate-prompt-lab.mjs
+```
+
+Before push, tag, release, or publication, also run `git diff --check`, inspect `git status --short`, and run Gitleaks or the documented public-safety scan when available.

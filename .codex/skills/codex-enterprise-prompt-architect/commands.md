@@ -52,6 +52,24 @@ Scores and reviews a Codex prompt.
 
 Returns only the final prompt.
 
+```text
+/codex-prompt research-backed
+```
+
+Creates a source-grounded Codex prompt with source-quality rules, research stop criteria, and facts vs interpretation handling.
+
+```text
+/codex-prompt template-build
+```
+
+Creates a reusable prompt template, workflow pack, command recipe, or rubric artifact.
+
+```text
+/codex-prompt agents-md
+```
+
+Creates repository-focused AGENTS.md instructions.
+
 ## English Requests
 
 ```text
@@ -86,6 +104,14 @@ Add security constraints for auth, sessions, and secrets to this Codex prompt: [
 Only output the final prompt. No commentary. Create a Codex prompt for: [task]
 ```
 
+```text
+Create a research-backed Codex prompt for: [task]. Use official docs first and separate facts from interpretation.
+```
+
+```text
+Create an AGENTS.md instruction file for this repository: [context]
+```
+
 ## Türkçe İstekler
 
 ```text
@@ -118,4 +144,12 @@ Bu Codex promptuna auth, session ve secret için security constraints ekle: [pro
 
 ```text
 Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
+```
+
+```text
+Kaynak destekli Codex promptu üret: [görev]. Resmi dokümanları öncele, gerçeklerle yorumu ayır.
+```
+
+```text
+Bu repo için AGENTS.md talimat dosyası üret: [bağlam]
 ```

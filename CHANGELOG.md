@@ -6,9 +6,28 @@ The format follows Keep a Changelog where practical.
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-06-14
+
+### Added
+
+- Added a dependency-free Prompt Lab validator at `scripts/validate-prompt-lab.mjs`.
+- Added GitHub Actions validation workflow for the skill package, docs, source cards, and public-safety checks.
+- Added validation, source-maintenance, subagent-routing, and plugin-readiness documentation.
+- Added README command-center sections with clearer icon-led navigation.
+- Added source-backed refresh notes for current Codex, MCP, plugins, subagents, OpenAI tools, OWASP LLM risks, and prompt/context research.
+
 ### Changed
 
+- Expanded skill routing for research-backed prompts, reusable templates, AGENTS.md, CLAUDE.md, and Gemini system-instruction outputs.
+- Strengthened MCP, browser, account-tool, and subagent safety guidance.
+- Updated public checklist, install guide, usage docs, roadmap, PR template, and knowledge playbooks for validation-first release readiness.
+- Updated `README.md` and `README.tr.md` to advertise v1.1.0 and the real Prompt Lab validation workflow.
 - Added README visual assets and a more polished public storefront layout.
+
+### Security
+
+- Added `.playwright-mcp/` to `.gitignore` so local browser artifacts are not accidentally staged.
+- Added validator checks for missing assets, response-mode drift, source-card metadata, and obvious secret-like values.
 
 ## [1.0.2] - 2026-05-31
 
