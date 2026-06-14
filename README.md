@@ -2,7 +2,15 @@
 
 > Structured Codex prompt patterns, approval-gated workflows, and safety checklists for reviewable AI-assisted development.
 
-[English](README.md) | [Türkçe](README.tr.md)
+<p align="center">
+  🌐 <strong>Languages:</strong>
+  🇩🇪 Deutsch ·
+  🇪🇸 Español ·
+  <a href="README.md">🇬🇧 English</a> ·
+  🇧🇷 Português (Brasil) ·
+  <a href="README.tr.md">🇹🇷 Türkçe</a> ·
+  🇫🇷 French
+</p>
 
 [![Release](https://img.shields.io/github/v/release/ucsahinn/codex-enterprise-prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)
