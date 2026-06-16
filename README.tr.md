@@ -1,4 +1,10 @@
-# Codex Enterprise Prompt Architect
+# Prompt Architect
+
+<p align="center">
+  <img src="assets/icon.svg" alt="Prompt Architect ikonu" width="120" />
+  <br />
+  <img src="assets/banner.svg" alt="Intent, plan, onay ve doğrulama adımlarını gösteren Prompt Architect workflow banner görseli" width="100%" />
+</p>
 
 <p align="center">
   <a href="README.de.md">🇩🇪 Deutsch</a> ·
@@ -11,27 +17,26 @@
 
 > Codex için plan-first, onay kapılı ve güvenlik duyarlı prompt iş akışları hazırlamaya yarayan bir prompt mimarisi skill paketi.
 
-[![Release](https://img.shields.io/github/v/release/ucsahinn/codex-enterprise-prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/releases)
+[![Release](https://img.shields.io/github/v/release/ucsahinn/prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/prompt-architect/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/security-policy-b91c1c)](SECURITY.md)
 [![Docs](https://img.shields.io/badge/docs-ready-2563eb)](docs/USAGE.md)
-[![Prompt Lab Validation](https://github.com/ucsahinn/codex-enterprise-prompt-architect/actions/workflows/docs-validate.yml/badge.svg)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/actions/workflows/docs-validate.yml)
+[![Prompt Lab Validation](https://github.com/ucsahinn/prompt-architect/actions/workflows/docs-validate.yml/badge.svg)](https://github.com/ucsahinn/prompt-architect/actions/workflows/docs-validate.yml)
 [![Public Safe](https://img.shields.io/badge/public--safe-checklist-7c3aed)](docs/PUBLIC_REPO_CHECKLIST.md)
 
-![Codex Enterprise Prompt Architect workflow banner](assets/banner.svg)
 
 - **Durum:** v1.1.0 public release
 - **Lisans:** MIT
 - **Proje tipi:** Markdown tabanlı Codex skill paketi ve Prompt Lab bilgi tabanı
 - **Not:** Bağımsız bir topluluk/açık kaynak projesidir. OpenAI ile bağlı, onaylı veya sponsorlu değildir.
 
-Codex Enterprise Prompt Architect, dağınık istekleri Codex için kapsamlı, kontrol edilebilir ve doğrulanabilir promptlara dönüştürmeye yardım eder. Amacı Codex'in önce repoyu incelemesi, net plan sunması, riskli işlerde onay beklemesi ve "bitti" demek yerine kanıtlı final raporu vermesidir.
+Prompt Architect, dağınık istekleri Codex için kapsamlı, kontrol edilebilir ve doğrulanabilir promptlara dönüştürmeye yardım eder. Amacı Codex'in önce repoyu incelemesi, net plan sunması, riskli işlerde onay beklemesi ve "bitti" demek yerine kanıtlı final raporu vermesidir.
 
 ## 🧭 Operator Komuta Merkezi
 
 | Sinyal | Ne zaman kullanılır? | Başlangıç |
 | --- | --- | --- |
-| 🧠 Prompt mimarisi | Scope, doğrulama ve stop kuralları olan hazır Codex promptu gerektiğinde. | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
+| 🧠 Prompt mimarisi | Scope, doğrulama ve stop kuralları olan hazır Codex promptu gerektiğinde. | [Skill entrypoint](.codex/skills/prompt-architect/SKILL.md) |
 | 🛑 Plan-first kontrol | Repo geniş, riskli, güvenlik duyarlı veya release-adjacent ise. | [PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
 | ✅ Onaylı execution | Plan incelendi ve uygulama başlayabilir ise. | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
 | 🔎 Kaynaklı çalışma | Güncel docs, MCP davranışı, güvenlik rehberi veya public repo iddiası önemliyse. | [Source maintenance](docs/SOURCE_MAINTENANCE.md) |
@@ -74,7 +79,7 @@ Bu repo bu kalıpları şu şekilde paketler:
 
 | Şunu istiyorum... | Kullan |
 | --- | --- |
-| Güvenli Codex promptu üretmek | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
+| Güvenli Codex promptu üretmek | [Skill entrypoint](.codex/skills/prompt-architect/SKILL.md) |
 | Codex'in erken dosya düzenlemesini engellemek | [no-Goal PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
 | Onaylanmış planı uygulatmak | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
 | Kapsam dışına çıkan agent'ı durdurmak | [STOP / RECOVER](docs/USAGE.md#stop-recover) |
@@ -108,13 +113,13 @@ Bu repo bu kalıpları şu şekilde paketler:
 Skill klasörünü Codex projenize kopyalayın:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/
+.codex/skills/prompt-architect/
 ```
 
 Sonra Codex'e şunu yazın:
 
 ```text
-codex-enterprise-prompt-architect skillini kullanarak şunun için Codex promptu üret: [görev]
+prompt-architect skillini kullanarak şunun için Codex promptu üret: [görev]
 ```
 
 Sıkı kontrol istiyorsanız no-Goal plan-only isteyin:
@@ -192,7 +197,7 @@ Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılı
 
 ```text
 .
-|-- .codex/skills/codex-enterprise-prompt-architect/
+|-- .codex/skills/prompt-architect/
 |   |-- SKILL.md
 |   |-- commands.md
 |   |-- response-modes.md

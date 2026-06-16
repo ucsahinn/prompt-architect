@@ -34,7 +34,7 @@ Last checked: 2026-06-14
   - Prefer instruction-only skills unless scripts materially improve reliability.
 - Facts vs interpretation:
   - Fact: skills are directory-based packages with `SKILL.md` entrypoints.
-  - Interpretation: this repo should keep `.codex/skills/codex-enterprise-prompt-architect/` as the canonical public source package and validate that support files remain present.
+  - Interpretation: this repo should keep `.codex/skills/prompt-architect/` as the canonical public source package and validate that support files remain present.
 - Outdated risk: High.
 
 ## 2026-06-14 Refresh: Codex MCP, Plugins, And Subagents

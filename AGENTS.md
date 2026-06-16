@@ -62,7 +62,7 @@ Use the knowledge base before researching:
 
 When asked for a prompt, infer the target agent if unspecified and default to Codex. If the user says "biz Codex'de çalışıyoruz", "Codex için", or similar, keep the output Codex-specific and do not broaden to other tools unless asked. Produce ready-to-paste prompts with clear role, mission, context, scope, non-goals, inputs, constraints, workflow, quality bar, verification, output format, stop conditions, and failure handling.
 
-For Codex prompt creation, use the formal skill entrypoint at `.codex/skills/codex-enterprise-prompt-architect/SKILL.md`. Use this skill whenever the user asks for Codex prompt generation, Codex prompt improvement, Codex prompt audit, or Codex workflow prompt creation. The older `.codex/skills/codex-enterprise-prompt-architect.md` and `.codex/skills/codex-enterprise-prompt-architect-commands.md` files are compatibility shims.
+For Codex prompt creation, use the formal skill entrypoint at `.codex/skills/prompt-architect/SKILL.md`. Use this skill whenever the user asks for Codex prompt generation, Codex prompt improvement, Codex prompt audit, or Codex workflow prompt creation. The older `.codex/skills/prompt-architect.md` and `.codex/skills/prompt-architect-commands.md` files are compatibility shims.
 
 Use `knowledge/distilled/response-modes.md` to route output mode.
 

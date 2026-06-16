@@ -1,6 +1,6 @@
 # Installation
 
-Codex Enterprise Prompt Architect is a Markdown-based Codex skill package. It has no build step and does not call external APIs by itself.
+Prompt Architect is a Markdown-based Codex skill package. It has no build step and does not call external APIs by itself.
 
 ## English
 
@@ -9,13 +9,13 @@ Codex Enterprise Prompt Architect is a Markdown-based Codex skill package. It ha
 Copy this directory into your Codex project:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/
+.codex/skills/prompt-architect/
 ```
 
 Confirm the entrypoint exists:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/SKILL.md
+.codex/skills/prompt-architect/SKILL.md
 ```
 
 Recommended layout:
@@ -24,7 +24,7 @@ Recommended layout:
 your-project/
   .codex/
     skills/
-      codex-enterprise-prompt-architect/
+      prompt-architect/
         SKILL.md
         commands.md
         response-modes.md
@@ -67,13 +67,13 @@ This repository stays a skill package by default. See [PLUGIN_READINESS.md](PLUG
 Bu klasörü Codex projenize kopyalayın:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/
+.codex/skills/prompt-architect/
 ```
 
 Entrypoint dosyasını kontrol edin:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/SKILL.md
+.codex/skills/prompt-architect/SKILL.md
 ```
 
 Önerilen yapı:
@@ -82,7 +82,7 @@ Entrypoint dosyasını kontrol edin:
 projeniz/
   .codex/
     skills/
-      codex-enterprise-prompt-architect/
+      prompt-architect/
         SKILL.md
         commands.md
         response-modes.md

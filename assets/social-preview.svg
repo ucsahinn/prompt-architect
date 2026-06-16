@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt Architect social preview</title>
+  <desc id="desc">Social preview card for Prompt Architect, reusable prompt patterns and approval-gated AI workflows.</desc>
+  <rect width="1280" height="640" rx="36" fill="#0B1020"/>
+  <path d="M0 448C170 366 310 396 468 430C650 470 830 492 1030 392C1140 337 1228 334 1280 352V640H0V448Z" fill="#0F766E" opacity="0.35"/>
+  <text x="96" y="206" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="82" font-weight="800">Prompt Architect</text>
+  <text x="100" y="286" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="600">Reusable prompt patterns, approval gates, and verification checklists.</text>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" font-weight="700">
+    <rect x="104" y="384" width="210" height="76" rx="18" fill="#38BDF8"/>
+    <text x="140" y="432" fill="#082F49">Plan first</text>
+    <rect x="344" y="384" width="260" height="76" rx="18" fill="#A3E635"/>
+    <text x="380" y="432" fill="#1A2E05">Approval gate</text>
+    <rect x="634" y="384" width="230" height="76" rx="18" fill="#FBBF24"/>
+    <text x="670" y="432" fill="#451A03">Public safe</text>
+    <rect x="894" y="384" width="220" height="76" rx="18" fill="#F472B6"/>
+    <text x="930" y="432" fill="#500724">Verify</text>
+  </g>
+</svg>

@@ -1,6 +1,6 @@
 # Release Notes: v1.1.0
 
-Codex Enterprise Prompt Architect v1.1.0 turns the repository from a polished prompt-skill showcase into a validation-backed Prompt Lab package. The release keeps the Codex-first mission intact while adding stronger source discipline, safer tool/subagent routing, and a real local/CI quality gate.
+Prompt Architect v1.1.0 turns the repository from a polished prompt-skill showcase into a validation-backed Prompt Lab package. The release keeps the Codex-first mission intact while adding stronger source discipline, safer tool/subagent routing, and a real local/CI quality gate.
 
 ## Highlights
 

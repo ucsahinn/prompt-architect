@@ -26,12 +26,12 @@
 - Strengthened Codex templates for no-goal strict planning, optional Goal warnings, STOP / RECOVER prompts, browser QA, security constraints, refactor/debug execution gates, and final reports.
 - Updated `AGENTS.md` to keep future sessions Codex-focused by default and to avoid broadening to other tools unless asked.
 - Added `knowledge/outputs/codex-premium-app-prompt-test.md` and ledger entry with 55/55 rubric score.
-- Added `.codex/skills/codex-enterprise-prompt-architect.md` as a reusable Codex-focused prompt-generation skill/workflow.
-- Added `.codex/skills/codex-enterprise-prompt-architect-commands.md` with slash-command style workflow shortcuts.
+- Added `.codex/skills/prompt-architect.md` as a reusable Codex-focused prompt-generation skill/workflow.
+- Added `.codex/skills/prompt-architect-commands.md` with slash-command style workflow shortcuts.
 - Updated `README.md` with "Using this as a Codex Skill / Workflow" instructions.
 - Updated `AGENTS.md` to route Codex prompt creation through the reusable skill/workflow.
 - Added `knowledge/outputs/sample-skill-output.md` as a PROMPT_ONLY sample and logged it in `generated-prompts.md`.
-- Added formal Codex skill package directory `.codex/skills/codex-enterprise-prompt-architect/` with `SKILL.md`, `commands.md`, `response-modes.md`, `codex-patterns.md`, and `examples.md`.
+- Added formal Codex skill package directory `.codex/skills/prompt-architect/` with `SKILL.md`, `commands.md`, `response-modes.md`, `codex-patterns.md`, and `examples.md`.
 - Updated the previous skill-style `.md` files as compatibility shims that point to the formal skill entrypoint.
-- Updated `README.md` and `AGENTS.md` to reference `.codex/skills/codex-enterprise-prompt-architect/SKILL.md`.
+- Updated `README.md` and `AGENTS.md` to reference `.codex/skills/prompt-architect/SKILL.md`.
 - Added `knowledge/outputs/formal-skill-package-test.md` and logged it in `generated-prompts.md`.

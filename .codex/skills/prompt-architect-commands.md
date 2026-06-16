@@ -1,17 +1,17 @@
-# Codex Enterprise Prompt Architect Commands
+# Prompt Architect Commands
 
 Compatibility shim.
 
 The formal command reference lives here:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/commands.md
+.codex/skills/prompt-architect/commands.md
 ```
 
 The formal skill entrypoint is:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/SKILL.md
+.codex/skills/prompt-architect/SKILL.md
 ```
 
 Common requests:

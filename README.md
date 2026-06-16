@@ -1,6 +1,12 @@
-# Codex Enterprise Prompt Architect
+# Prompt Architect
 
 > Structured Codex prompt patterns, approval-gated workflows, and safety checklists for reviewable AI-assisted development.
+
+<p align="center">
+  <img src="assets/icon.svg" alt="Prompt Architect icon" width="120" />
+  <br />
+  <img src="assets/banner.svg" alt="Prompt Architect workflow banner showing intent, plan, approval, and verification" width="100%" />
+</p>
 
 <p align="center">
   🌐 <strong>Languages:</strong>
@@ -12,27 +18,25 @@
   <a href="README.fr.md">🇫🇷 French</a>
 </p>
 
-[![Release](https://img.shields.io/github/v/release/ucsahinn/codex-enterprise-prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/releases)
+[![Release](https://img.shields.io/github/v/release/ucsahinn/prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/prompt-architect/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/security-policy-b91c1c)](SECURITY.md)
 [![Docs](https://img.shields.io/badge/docs-ready-2563eb)](docs/USAGE.md)
-[![Prompt Lab Validation](https://github.com/ucsahinn/codex-enterprise-prompt-architect/actions/workflows/docs-validate.yml/badge.svg)](https://github.com/ucsahinn/codex-enterprise-prompt-architect/actions/workflows/docs-validate.yml)
+[![Prompt Lab Validation](https://github.com/ucsahinn/prompt-architect/actions/workflows/docs-validate.yml/badge.svg)](https://github.com/ucsahinn/prompt-architect/actions/workflows/docs-validate.yml)
 [![Public Safe](https://img.shields.io/badge/public--safe-checklist-7c3aed)](docs/PUBLIC_REPO_CHECKLIST.md)
-
-![Codex Enterprise Prompt Architect workflow banner](assets/banner.svg)
 
 - **Status:** v1.1.0 public release
 - **License:** MIT
 - **Project type:** Markdown-based Codex skill package and Prompt Lab knowledge base
 - **Note:** Independent community project. Not affiliated with, endorsed by, or sponsored by OpenAI.
 
-Codex Enterprise Prompt Architect helps turn vague AI coding requests into scoped, safer, and verifiable Codex prompts. It is built for teams and maintainers who want Codex to inspect first, plan clearly, wait for approval on risky work, and report evidence instead of just saying "done".
+Prompt Architect helps turn vague AI coding requests into scoped, safer, and verifiable Codex prompts. It is built for teams and maintainers who want Codex to inspect first, plan clearly, wait for approval on risky work, and report evidence instead of just saying "done".
 
 ## 🧭 Operator Command Center
 
 | Signal | Use it when | Start here |
 | --- | --- | --- |
-| 🧠 Prompt architecture | You need a ready-to-paste Codex prompt with scope, verification and stop rules. | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
+| 🧠 Prompt architecture | You need a ready-to-paste Codex prompt with scope, verification and stop rules. | [Skill entrypoint](.codex/skills/prompt-architect/SKILL.md) |
 | 🛑 Plan-first control | The repo is broad, risky, security-sensitive or release-adjacent. | [PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
 | ✅ Approved execution | A plan has been reviewed and implementation can start. | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
 | 🔎 Source-backed work | Current docs, MCP behavior, security guidance or repo claims matter. | [Source maintenance](docs/SOURCE_MAINTENANCE.md) |
@@ -75,7 +79,7 @@ This repository packages those patterns as:
 
 | I want to... | Use this |
 | --- | --- |
-| Generate a safe Codex prompt | [Skill entrypoint](.codex/skills/codex-enterprise-prompt-architect/SKILL.md) |
+| Generate a safe Codex prompt | [Skill entrypoint](.codex/skills/prompt-architect/SKILL.md) |
 | Keep Codex from editing too early | [no-Goal PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
 | Approve a scoped implementation | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
 | Stop an agent that left scope | [STOP / RECOVER](docs/USAGE.md#stop-recover) |
@@ -109,13 +113,13 @@ This repository packages those patterns as:
 Copy the skill directory into your Codex project:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/
+.codex/skills/prompt-architect/
 ```
 
 Then ask Codex:
 
 ```text
-Use the codex-enterprise-prompt-architect skill to create a Codex prompt for: [your task]
+Use the prompt-architect skill to create a Codex prompt for: [your task]
 ```
 
 For strict control, ask for a no-Goal plan-only prompt:
@@ -143,6 +147,8 @@ Only output the final prompt. No commentary. Create a Codex prompt for: [your ta
 | Route specialist agents safely | [docs/SUBAGENTS.md](docs/SUBAGENTS.md) |
 | Decide skill vs plugin packaging | [docs/PLUGIN_READINESS.md](docs/PLUGIN_READINESS.md) |
 | Check public repo safety rules | [docs/PUBLIC_REPO_CHECKLIST.md](docs/PUBLIC_REPO_CHECKLIST.md) |
+| Prepare GitHub metadata | [docs/GITHUB_SETTINGS.md](docs/GITHUB_SETTINGS.md) |
+| Improve discoverability | [docs/SEO.md](docs/SEO.md) |
 | Review prompt/security boundaries | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
 | See planned improvements | [docs/ROADMAP.md](docs/ROADMAP.md) |
 
@@ -193,7 +199,7 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 
 ```text
 .
-|-- .codex/skills/codex-enterprise-prompt-architect/
+|-- .codex/skills/prompt-architect/
 |   |-- SKILL.md
 |   |-- commands.md
 |   |-- response-modes.md
@@ -214,6 +220,8 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 |   |-- SUBAGENTS.md
 |   |-- PLUGIN_READINESS.md
 |   |-- PUBLIC_REPO_CHECKLIST.md
+|   |-- SEO.md
+|   |-- GITHUB_SETTINGS.md
 |   |-- SECURITY_MODEL.md
 |   `-- ROADMAP.md
 |-- knowledge/
@@ -224,6 +232,7 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 |   `-- logs/
 |-- README.md
 |-- README.tr.md
+|-- package.json
 |-- scripts/
 |   `-- validate-prompt-lab.mjs
 |-- SECURITY.md

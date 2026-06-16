@@ -59,8 +59,8 @@ The format follows Keep a Changelog where practical.
 
 ### Added
 
-- Formal Codex skill package at `.codex/skills/codex-enterprise-prompt-architect/`.
-- `SKILL.md` entrypoint for Codex Enterprise Prompt Architect.
+- Formal Codex skill package at `.codex/skills/prompt-architect/`.
+- `SKILL.md` entrypoint for Prompt Architect.
 - Skill reference files for commands, response modes, Codex patterns, and examples.
 - Prompt Lab knowledge base under `knowledge/`.
 - Codex prompt playbooks for Goal/no-Goal, `PLAN MODE ONLY`, approval-gated execution, `STOP / RECOVER`, browser QA, security constraints, and prompt evaluation.
