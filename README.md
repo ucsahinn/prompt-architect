@@ -18,6 +18,23 @@
   <a href="README.fr.md"><img src="https://flagcdn.com/w20/fr.png" alt="Fran&#231;ais" width="20"></a>
 </p>
 
+<!-- bilingual-welcome:start -->
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><img src="https://flagcdn.com/w20/gb.png" alt="English" width="20"> English welcome</h3>
+      <p>Prompt Architect packages source-backed Codex prompt patterns, approval-gated execution modes, safety checklists, and reviewable AI-assisted development workflows.</p>
+      <p><strong>Start here:</strong> [Usage modes](docs/USAGE.md) explains the operating model.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><img src="https://flagcdn.com/w20/tr.png" alt="Turkce" width="20"> T&#252;rk&#231;e kar&#351;&#305;lama</h3>
+      <p>Prompt Architect; kaynakli Codex prompt kaliplari, onay kapili calisma modlari, guvenlik checklistleri ve incelenebilir AI destekli gelistirme akislari sunar.</p>
+      <p><strong>Buradan ba&#351;la:</strong> [README.tr.md](README.tr.md) Turkce karsilama ve kullanim yolunu anlatir.</p>
+    </td>
+  </tr>
+</table>
+<!-- bilingual-welcome:end -->
+
 [![Release](https://img.shields.io/github/v/release/ucsahinn/prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/prompt-architect/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/security-policy-b91c1c)](SECURITY.md)
