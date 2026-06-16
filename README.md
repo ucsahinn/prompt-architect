@@ -33,18 +33,18 @@
 
 Prompt Architect helps turn vague AI coding requests into scoped, safer, and verifiable Codex prompts. It is built for teams and maintainers who want Codex to inspect first, plan clearly, wait for approval on risky work, and report evidence instead of just saying "done".
 
-## 🧭 Operator Command Center
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ed.svg" alt="" aria-hidden="true" width="20"> Operator Command Center
 
 | Signal | Use it when | Start here |
 | --- | --- | --- |
-| 🧠 Prompt architecture | You need a ready-to-paste Codex prompt with scope, verification and stop rules. | [Skill entrypoint](.codex/skills/prompt-architect/SKILL.md) |
-| 🛑 Plan-first control | The repo is broad, risky, security-sensitive or release-adjacent. | [PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
-| ✅ Approved execution | A plan has been reviewed and implementation can start. | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
-| 🔎 Source-backed work | Current docs, MCP behavior, security guidance or repo claims matter. | [Source maintenance](docs/SOURCE_MAINTENANCE.md) |
-| 🧪 Release confidence | You need local checks before commit, push or release. | [Validation](docs/VALIDATION.md) |
-| 🧩 Specialist routing | A broad task needs code mapping, docs research, security or release review. | [Subagents](docs/SUBAGENTS.md) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9e0.svg" alt="" aria-hidden="true" width="20"> Prompt architecture | You need a ready-to-paste Codex prompt with scope, verification and stop rules. | [Skill entrypoint](.codex/skills/prompt-architect/SKILL.md) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f6d1.svg" alt="" aria-hidden="true" width="20"> Plan-first control | The repo is broad, risky, security-sensitive or release-adjacent. | [PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2705.svg" alt="" aria-hidden="true" width="20"> Approved execution | A plan has been reviewed and implementation can start. | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50e.svg" alt="" aria-hidden="true" width="20"> Source-backed work | Current docs, MCP behavior, security guidance or repo claims matter. | [Source maintenance](docs/SOURCE_MAINTENANCE.md) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ea.svg" alt="" aria-hidden="true" width="20"> Release confidence | You need local checks before commit, push or release. | [Validation](docs/VALIDATION.md) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9e9.svg" alt="" aria-hidden="true" width="20"> Specialist routing | A broad task needs code mapping, docs research, security or release review. | [Subagents](docs/SUBAGENTS.md) |
 
-## 🧭 Enterprise Evaluator Path
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ed.svg" alt="" aria-hidden="true" width="20"> Enterprise Evaluator Path
 
 | If you need to prove... | Start with | Evidence you get |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ Prompt Architect helps turn vague AI coding requests into scoped, safer, and ver
 | The security boundary is explicit | [Security model](docs/SECURITY_MODEL.md) | No-secret, disclosure, prompt privacy and verification rules. |
 | The examples are usable | [Examples](docs/EXAMPLES.md) | Copy-ready prompts with scope, verification and stop conditions. |
 
-## ✅ Operating Guarantees
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2705.svg" alt="" aria-hidden="true" width="20"> Operating Guarantees
 
 | Signal | Standard |
 | --- | --- |
@@ -63,7 +63,7 @@ Prompt Architect helps turn vague AI coding requests into scoped, safer, and ver
 | Verification pressure | Generated prompts ask for tests, scans, browser QA or an honest unverified report. |
 | Public-safe knowledge base | Research notes, templates and outputs avoid secrets, private prompts, customer data and local operator paths. |
 
-## 🎯 Why This Exists
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3af.svg" alt="" aria-hidden="true" width="20"> Why This Exists
 
 AI coding agents are useful, but loose prompts create loose outcomes. A good Codex workflow should state the goal, context, constraints, non-goals, verification, output format, and stop conditions before the agent starts changing files.
 
@@ -76,7 +76,7 @@ This repository packages those patterns as:
 - prompt evaluation rubrics,
 - source-backed notes for AI coding-agent workflows.
 
-## ⚡ Start Fast
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/26a1.svg" alt="" aria-hidden="true" width="20"> Start Fast
 
 | I want to... | Use this |
 | --- | --- |
@@ -89,7 +89,7 @@ This repository packages those patterns as:
 
 ![Codex workflow overview](assets/workflow-overview.svg)
 
-## 🧩 What You Get
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9e9.svg" alt="" aria-hidden="true" width="20"> What You Get
 
 | Capability | What it gives you |
 | --- | --- |
@@ -101,7 +101,7 @@ This repository packages those patterns as:
 | Security constraints | No-secret, approval-gated rules for sensitive work. |
 | Prompt rubric | A way to score prompt quality before use. |
 
-## 👥 Who This Is For
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f465.svg" alt="" aria-hidden="true" width="20"> Who This Is For
 
 - Developers using Codex for real repository work.
 - Prompt engineers building reusable agent instructions.
@@ -109,7 +109,7 @@ This repository packages those patterns as:
 - Product, UI, security, and platform teams that need approval-gated AI coding workflows.
 - Turkish and English users who want clear Codex workflow examples.
 
-## 🚀 Quick Start
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f680.svg" alt="" aria-hidden="true" width="20"> Quick Start
 
 Copy the skill directory into your Codex project:
 
@@ -135,7 +135,7 @@ For prompt-only output:
 Only output the final prompt. No commentary. Create a Codex prompt for: [your task]
 ```
 
-## 🧭 Navigation
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ed.svg" alt="" aria-hidden="true" width="20"> Navigation
 
 | Goal | Go to |
 | --- | --- |
@@ -153,7 +153,7 @@ Only output the final prompt. No commentary. Create a Codex prompt for: [your ta
 | Review prompt/security boundaries | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
 | See planned improvements | [docs/ROADMAP.md](docs/ROADMAP.md) |
 
-## ✅ Trust Signals
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2705.svg" alt="" aria-hidden="true" width="20"> Trust Signals
 
 | Area | Standard |
 | --- | --- |
@@ -165,7 +165,7 @@ Only output the final prompt. No commentary. Create a Codex prompt for: [your ta
 | Documentation | README stays concise; deeper guidance lives in `docs/` and `knowledge/`. |
 | Maintenance | Changelog, release notes, security policy, contribution guide, issue templates. |
 
-## 🚫 What This Is Not
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f6ab.svg" alt="" aria-hidden="true" width="20"> What This Is Not
 
 This is not:
 
@@ -178,25 +178,25 @@ This is not:
 
 It is a practical instruction system for designing, running, and reviewing Codex workflows with less ambiguity.
 
-## ⚙️ Core Workflow Modes
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2699.svg" alt="" aria-hidden="true" width="20"> Core Workflow Modes
 
-### 🎯 Goal + Full Prompt
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3af.svg" alt="" aria-hidden="true" width="20"> Goal + Full Prompt
 
 Use when a persistent high-level objective helps Codex keep the definition of done in view.
 
-### 🧭 no-Goal PLAN MODE ONLY
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ed.svg" alt="" aria-hidden="true" width="20"> no-Goal PLAN MODE ONLY
 
 Use when Codex must inspect the repository and produce a plan before any edits. This is the safer default for broad, risky, security-sensitive, production-adjacent, or multi-file work.
 
-### ✅ APPROVED - EXECUTE
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2705.svg" alt="" aria-hidden="true" width="20"> APPROVED - EXECUTE
 
 Use only after reviewing a plan. The execution prompt should tell Codex to follow the approved plan, preserve unrelated work, implement in small phases, verify, and stop if new facts expand scope.
 
-### 🧯 STOP / RECOVER
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ef.svg" alt="" aria-hidden="true" width="20"> STOP / RECOVER
 
 Use when Codex starts editing too early or leaves scope. The recovery prompt should stop work, list changed files and commands run, avoid automatic revert, and return to plan-only mode.
 
-## 📁 Repository Structure
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4c1.svg" alt="" aria-hidden="true" width="20"> Repository Structure
 
 ```text
 .
@@ -242,7 +242,7 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 `-- RELEASE_NOTES.md
 ```
 
-## 🧾 Prompt Ledger
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9fe.svg" alt="" aria-hidden="true" width="20"> Prompt Ledger
 
 Reusable generated prompts are logged in:
 
@@ -252,7 +252,7 @@ knowledge/outputs/generated-prompts.md
 
 Small one-off `PROMPT_ONLY` outputs are logged only when reusable, important, or explicitly requested.
 
-## 🛡️ Public Safety Rules
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f6e1.svg" alt="" aria-hidden="true" width="20"> Public Safety Rules
 
 This repository is designed for public, reusable prompt and workflow patterns. It must not contain:
 
@@ -270,14 +270,14 @@ For local release checks, run:
 node scripts/validate-prompt-lab.mjs
 ```
 
-## 🤝 Contributing
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f91d.svg" alt="" aria-hidden="true" width="20"> Contributing
 
 Contributions are welcome when they improve Codex prompt clarity, safety, examples, documentation, or source-backed workflow guidance. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## 🔐 Security
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f510.svg" alt="" aria-hidden="true" width="20"> Security
 
 Do not open public issues for vulnerabilities, leaked credentials, private prompts, or accidental disclosure. See [SECURITY.md](SECURITY.md).
 
-## ⚖️ License
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2696.svg" alt="" aria-hidden="true" width="20"> License
 
 MIT. See [LICENSE](LICENSE).

@@ -33,18 +33,18 @@
 
 Prompt Architect, dağınık istekleri Codex için kapsamlı, kontrol edilebilir ve doğrulanabilir promptlara dönüştürmeye yardım eder. Amacı Codex'in önce repoyu incelemesi, net plan sunması, riskli işlerde onay beklemesi ve "bitti" demek yerine kanıtlı final raporu vermesidir.
 
-## 🧭 Operator Komuta Merkezi
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ed.svg" alt="" aria-hidden="true" width="20"> Operator Komuta Merkezi
 
 | Sinyal | Ne zaman kullanılır? | Başlangıç |
 | --- | --- | --- |
-| 🧠 Prompt mimarisi | Scope, doğrulama ve stop kuralları olan hazır Codex promptu gerektiğinde. | [Skill entrypoint](.codex/skills/prompt-architect/SKILL.md) |
-| 🛑 Plan-first kontrol | Repo geniş, riskli, güvenlik duyarlı veya release-adjacent ise. | [PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
-| ✅ Onaylı execution | Plan incelendi ve uygulama başlayabilir ise. | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
-| 🔎 Kaynaklı çalışma | Güncel docs, MCP davranışı, güvenlik rehberi veya public repo iddiası önemliyse. | [Source maintenance](docs/SOURCE_MAINTENANCE.md) |
-| 🧪 Release güveni | Commit, push veya release öncesi lokal kontrol gerektiğinde. | [Validation](docs/VALIDATION.md) |
-| 🧩 Uzman routing | Geniş işlerde code map, docs research, security veya release review gerekiyorsa. | [Subagents](docs/SUBAGENTS.md) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9e0.svg" alt="" aria-hidden="true" width="20"> Prompt mimarisi | Scope, doğrulama ve stop kuralları olan hazır Codex promptu gerektiğinde. | [Skill entrypoint](.codex/skills/prompt-architect/SKILL.md) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f6d1.svg" alt="" aria-hidden="true" width="20"> Plan-first kontrol | Repo geniş, riskli, güvenlik duyarlı veya release-adjacent ise. | [PLAN MODE ONLY](docs/USAGE.md#no-goal-plan-mode-only) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2705.svg" alt="" aria-hidden="true" width="20"> Onaylı execution | Plan incelendi ve uygulama başlayabilir ise. | [APPROVED - EXECUTE](docs/USAGE.md#approved-execute) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50e.svg" alt="" aria-hidden="true" width="20"> Kaynaklı çalışma | Güncel docs, MCP davranışı, güvenlik rehberi veya public repo iddiası önemliyse. | [Source maintenance](docs/SOURCE_MAINTENANCE.md) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ea.svg" alt="" aria-hidden="true" width="20"> Release güveni | Commit, push veya release öncesi lokal kontrol gerektiğinde. | [Validation](docs/VALIDATION.md) |
+| <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9e9.svg" alt="" aria-hidden="true" width="20"> Uzman routing | Geniş işlerde code map, docs research, security veya release review gerekiyorsa. | [Subagents](docs/SUBAGENTS.md) |
 
-## 🧭 Enterprise Değerlendirme Yolu
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ed.svg" alt="" aria-hidden="true" width="20"> Enterprise Değerlendirme Yolu
 
 | Kanıtlamak istediğiniz şey | Başlangıç | Alacağınız kanıt |
 | --- | --- | --- |
@@ -54,7 +54,7 @@ Prompt Architect, dağınık istekleri Codex için kapsamlı, kontrol edilebilir
 | Güvenlik sınırının net olduğunu | [Security model](docs/SECURITY_MODEL.md) | No-secret, disclosure, prompt privacy ve doğrulama kuralları. |
 | Örneklerin doğrudan kullanılabilir olduğunu | [Örnekler](docs/EXAMPLES.md) | Kapsam, doğrulama ve durma koşulu içeren kopyalanabilir promptlar. |
 
-## ✅ Operasyon Güvenceleri
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2705.svg" alt="" aria-hidden="true" width="20"> Operasyon Güvenceleri
 
 | Sinyal | Standart |
 | --- | --- |
@@ -63,7 +63,7 @@ Prompt Architect, dağınık istekleri Codex için kapsamlı, kontrol edilebilir
 | Doğrulama baskısı | Üretilen promptlar test, scan, browser QA veya dürüst "doğrulanamadı" raporu ister. |
 | Public-safe bilgi tabanı | Araştırma notları, şablonlar ve çıktılar secret, private prompt, müşteri verisi ve local operator path içermez. |
 
-## 🎯 Neden Var?
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3af.svg" alt="" aria-hidden="true" width="20"> Neden Var?
 
 AI coding agent'ları güçlü, ama belirsiz promptlar belirsiz sonuç üretir. İyi bir Codex iş akışı; hedefi, bağlamı, kısıtları, kapsam dışı alanları, doğrulama adımlarını, çıktı formatını ve durma koşullarını baştan yazmalıdır.
 
@@ -76,7 +76,7 @@ Bu repo bu kalıpları şu şekilde paketler:
 - prompt kalite rubriği,
 - AI coding-agent iş akışları için kaynaklı notlar.
 
-## ⚡ Hızlı Başla
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/26a1.svg" alt="" aria-hidden="true" width="20"> Hızlı Başla
 
 | Şunu istiyorum... | Kullan |
 | --- | --- |
@@ -89,7 +89,7 @@ Bu repo bu kalıpları şu şekilde paketler:
 
 ![Codex workflow overview](assets/workflow-overview.svg)
 
-## 🧩 Ne Sunar?
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9e9.svg" alt="" aria-hidden="true" width="20"> Ne Sunar?
 
 | Yetenek | Sağladığı değer |
 | --- | --- |
@@ -101,7 +101,7 @@ Bu repo bu kalıpları şu şekilde paketler:
 | Güvenlik kısıtları | Hassas işlerde no-secret ve onay kapılı kurallar. |
 | Prompt rubriği | Promptu kullanmadan önce kalite skoru verme yöntemi. |
 
-## 👥 Kimler İçin?
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f465.svg" alt="" aria-hidden="true" width="20"> Kimler İçin?
 
 - Codex'i gerçek repo işlerinde kullanan geliştiriciler.
 - Tekrar kullanılabilir agent talimatları hazırlayan prompt engineer'lar.
@@ -109,7 +109,7 @@ Bu repo bu kalıpları şu şekilde paketler:
 - Onay kapılı AI coding workflow'ları isteyen ürün, UI, güvenlik ve platform ekipleri.
 - Türkçe ve İngilizce Codex workflow örnekleri arayan kullanıcılar.
 
-## 🚀 Hızlı Başlangıç
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f680.svg" alt="" aria-hidden="true" width="20"> Hızlı Başlangıç
 
 Skill klasörünü Codex projenize kopyalayın:
 
@@ -135,7 +135,7 @@ Sadece prompt çıktı istiyorsanız:
 Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 ```
 
-## 🧭 Navigasyon
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ed.svg" alt="" aria-hidden="true" width="20"> Navigasyon
 
 | Hedef | Dosya |
 | --- | --- |
@@ -151,7 +151,7 @@ Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 | Prompt/güvenlik sınırlarını incelemek | [docs/SECURITY_MODEL.md](docs/SECURITY_MODEL.md) |
 | Planlanan işleri görmek | [docs/ROADMAP.md](docs/ROADMAP.md) |
 
-## ✅ Güven Sinyalleri
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2705.svg" alt="" aria-hidden="true" width="20"> Güven Sinyalleri
 
 | Alan | Standart |
 | --- | --- |
@@ -163,7 +163,7 @@ Yorum yapma, sadece prompt ver. Codex için prompt üret: [görev]
 | Dokümantasyon | README kısa kalır; detaylar `docs/` ve `knowledge/` içinde yaşar. |
 | Bakım | Changelog, release notes, security policy, contribution guide, issue template'leri. |
 
-## 🚫 Ne Değildir?
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f6ab.svg" alt="" aria-hidden="true" width="20"> Ne Değildir?
 
 Bu proje:
 
@@ -176,25 +176,25 @@ Bu proje:
 
 Codex iş akışları daha net, güvenli ve incelenebilir olsun diye hazırlanmış pratik bir talimat sistemidir.
 
-## ⚙️ Temel Workflow Modları
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2699.svg" alt="" aria-hidden="true" width="20"> Temel Workflow Modları
 
-### 🎯 Goal + Full Prompt
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3af.svg" alt="" aria-hidden="true" width="20"> Goal + Full Prompt
 
 Codex'e kalıcı ve üst seviye bir hedef vermek istediğinizde kullanılır.
 
-### 🧭 no-Goal PLAN MODE ONLY
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ed.svg" alt="" aria-hidden="true" width="20"> no-Goal PLAN MODE ONLY
 
 Codex'in dosya düzenlemeden önce repoyu incelemesini ve plan sunmasını istediğinizde kullanılır. Geniş, riskli, güvenlik duyarlı, production-adjacent veya çok dosyalı işlerde daha güvenli varsayılandır.
 
-### ✅ APPROVED - EXECUTE
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2705.svg" alt="" aria-hidden="true" width="20"> APPROVED - EXECUTE
 
 Plan incelendikten sonra kullanılır. Execution promptu Codex'e sadece onaylanan planı uygulamasını, alakasız değişiklik yapmamasını, küçük fazlarla ilerlemesini, doğrulama çalıştırmasını ve kapsam genişlerse durmasını söylemelidir.
 
-### 🧯 STOP / RECOVER
+### <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ef.svg" alt="" aria-hidden="true" width="20"> STOP / RECOVER
 
 Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılır. Recovery promptu işi durdurmalı, değişen dosyaları ve komutları raporlamalı, otomatik revert yapmamalı ve plan-only moda dönmelidir.
 
-## 📁 Repo Yapısı
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4c1.svg" alt="" aria-hidden="true" width="20"> Repo Yapısı
 
 ```text
 .
@@ -237,7 +237,7 @@ Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılı
 `-- RELEASE_NOTES.md
 ```
 
-## 🧾 Prompt Ledger
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9fe.svg" alt="" aria-hidden="true" width="20"> Prompt Ledger
 
 Tekrar kullanılabilir üretilmiş promptlar burada tutulur:
 
@@ -247,7 +247,7 @@ knowledge/outputs/generated-prompts.md
 
 Küçük ve tek seferlik `PROMPT_ONLY` çıktılar sadece tekrar kullanılabilir, önemli veya özellikle istenmiş ise kaydedilir.
 
-## 🛡️ Public Güvenlik Kuralları
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f6e1.svg" alt="" aria-hidden="true" width="20"> Public Güvenlik Kuralları
 
 Bu repo public, tekrar kullanılabilir prompt ve workflow kalıpları için tasarlanmıştır. Şunları içermemelidir:
 
@@ -265,14 +265,14 @@ Lokal release kontrolü için:
 node scripts/validate-prompt-lab.mjs
 ```
 
-## 🤝 Katkı
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f91d.svg" alt="" aria-hidden="true" width="20"> Katkı
 
 Katkılar Codex prompt netliğini, güvenliğini, örneklerini, dokümantasyonunu veya kaynaklı workflow bilgisini iyileştirdiğinde değerlidir. Detaylar için [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## 🔐 Güvenlik
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f510.svg" alt="" aria-hidden="true" width="20"> Güvenlik
 
 Güvenlik açığı, sızmış credential, private prompt veya yanlışlıkla ifşa için public issue açmayın. [SECURITY.md](SECURITY.md) dosyasına bakın.
 
-## ⚖️ Lisans
+## <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2696.svg" alt="" aria-hidden="true" width="20"> Lisans
 
 MIT. Detaylar için [LICENSE](LICENSE).
