@@ -1,5 +1,5 @@
 <svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Codex Enterprise Prompt Architect banner</title>
+  <title id="title">Prompt Architect banner</title>
   <desc id="desc">A clean technical banner showing a prompt architecture workflow for Codex.</desc>
   <rect width="1280" height="420" rx="0" fill="#0B1020"/>
   <path d="M0 308C168 238 299 266 438 296C613 334 782 376 1000 287C1118 239 1210 235 1280 249V420H0V308Z" fill="#14213D"/>
@@ -38,7 +38,7 @@
   <path d="M618 122L626 128L618 134" stroke="#94A3B8" stroke-width="2"/>
   <path d="M858 128H892" stroke="#94A3B8" stroke-width="2"/>
   <path d="M888 122L896 128L888 134" stroke="#94A3B8" stroke-width="2"/>
-  <text x="92" y="270" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="800">Codex Enterprise Prompt Architect</text>
+  <text x="92" y="270" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="800">Prompt Architect</text>
   <text x="94" y="314" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24">Structured goals. Safer prompts. Reviewable AI workflows.</text>
   <rect x="92" y="344" width="166" height="38" rx="19" fill="#38BDF8"/>
   <text x="122" y="369" fill="#082F49" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">PLAN MODE</text>

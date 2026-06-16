@@ -20,7 +20,7 @@ No. The repository itself does not call external APIs. Future Codex sessions may
 
 ### Can I use it in any Codex project?
 
-Yes. Copy `.codex/skills/codex-enterprise-prompt-architect/` into the project and ask Codex to use the skill.
+Yes. Copy `.codex/skills/prompt-architect/` into the project and ask Codex to use the skill.
 
 ### Should I use Goal or no Goal?
 
@@ -62,7 +62,7 @@ Hayır. Repo kendi başına dış API çağırmaz. Gelecekteki Codex oturumları
 
 ### Her Codex projesinde kullanılabilir mi?
 
-Evet. `.codex/skills/codex-enterprise-prompt-architect/` klasörünü projeye kopyalayıp Codex'ten bu skill'i kullanmasını isteyin.
+Evet. `.codex/skills/prompt-architect/` klasörünü projeye kopyalayıp Codex'ten bu skill'i kullanmasını isteyin.
 
 ### Goal mı, no-Goal mı kullanmalıyım?
 

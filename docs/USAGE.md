@@ -1,11 +1,11 @@
 # Usage
 
-This page shows the main ways to use Codex Enterprise Prompt Architect. English and Turkish examples are included because many real Codex workflows mix both.
+This page shows the main ways to use Prompt Architect. English and Turkish examples are included because many real Codex workflows mix both.
 
 Skill entrypoint:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/SKILL.md
+.codex/skills/prompt-architect/SKILL.md
 ```
 
 ## English

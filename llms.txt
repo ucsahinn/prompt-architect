@@ -1,0 +1,27 @@
+# Prompt Architect
+
+Prompt Architect is a public Prompt Lab and Codex skill package for reusable prompt patterns, approval-gated workflows, and verification checklists for AI-assisted development.
+
+Primary entrypoints:
+- README.md
+- .codex/skills/prompt-architect/SKILL.md
+- .codex/skills/prompt-architect/response-modes.md
+- knowledge/distilled/prompt-quality-rubric.md
+- knowledge/templates/output-formats.md
+- docs/USAGE.md
+- docs/VALIDATION.md
+- docs/SEO.md
+- docs/GITHUB_SETTINGS.md
+
+Validation:
+- npm run check
+- git diff --check
+- gitleaks detect --redact --no-banner --no-git --verbose
+
+Safety:
+- Do not store secrets, private prompts, customer data, proprietary implementation details, local logs, screenshots, or private URLs.
+- Risky execution prompts must preserve plan-first control, approval gates, and evidence-based final reporting.
+- Publishing, push, release, and GitHub settings changes require explicit human approval.
+
+Legacy identity:
+- codex-enterprise-prompt-architect is the previous name and should appear only in compatibility, history, or redirect notes.

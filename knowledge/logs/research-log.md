@@ -127,7 +127,7 @@ Research stop reason:
 ## 2026-06-14 - Prompt Lab v1.1.0 Source Refresh
 
 Scope:
-- Refresh current source-backed guidance for the public Codex Enterprise Prompt Architect repository.
+- Refresh current source-backed guidance for the public Prompt Architect repository.
 - Keep Codex as the primary target.
 - Use non-Codex sources only when they improve agent-control, prompt evaluation, context engineering, browser QA, public repo quality, or security boundaries.
 

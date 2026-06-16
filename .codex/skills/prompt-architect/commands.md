@@ -1,6 +1,6 @@
 # Commands
 
-Short commands for Codex Enterprise Prompt Architect.
+Short commands for Prompt Architect.
 
 ## Slash-Style Commands
 

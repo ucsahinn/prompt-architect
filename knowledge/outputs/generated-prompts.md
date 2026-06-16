@@ -86,14 +86,14 @@ Follow-up needed: None for this test prompt.
 
 Date: 2026-05-31
 
-User request summary: Create a sample PROMPT_ONLY output from the reusable Codex Enterprise Prompt Architect workflow for a no-goal plan-only dashboard/navbar/theme/browser-QA prompt.
+User request summary: Create a sample PROMPT_ONLY output from the reusable Prompt Architect workflow for a no-goal plan-only dashboard/navbar/theme/browser-QA prompt.
 
 Target agent: Codex
 
 Prompt type: PROMPT_ONLY, no-goal PLAN MODE ONLY
 
 Knowledge used:
-- `.codex/skills/codex-enterprise-prompt-architect.md`
+- `.codex/skills/prompt-architect.md`
 - `knowledge/distilled/response-modes.md`
 - `knowledge/distilled/codex-prompting.md`
 - `knowledge/distilled/codex-workflow-patterns.md`
@@ -121,7 +121,7 @@ Target agent: Codex
 Prompt type: Approved execution after PLAN MODE ONLY + release verification
 
 Knowledge used:
-- `.codex/skills/codex-enterprise-prompt-architect/SKILL.md`
+- `.codex/skills/prompt-architect/SKILL.md`
 - `knowledge/distilled/response-modes.md`
 - `knowledge/distilled/browser-qa-playbook.md`
 - `knowledge/distilled/security-prompting-playbook.md`
@@ -150,16 +150,16 @@ Follow-up needed: After the approved push/release completes, watch the first Git
 
 Date: 2026-05-31
 
-User request summary: Use the formal Codex Enterprise Prompt Architect skill package to generate a PROMPT_ONLY no-goal plan-only Codex prompt for dashboard premiumization, update center simplification, responsive navbar fixes, theme token consistency, and browser QA.
+User request summary: Use the formal Prompt Architect skill package to generate a PROMPT_ONLY no-goal plan-only Codex prompt for dashboard premiumization, update center simplification, responsive navbar fixes, theme token consistency, and browser QA.
 
 Target agent: Codex
 
 Prompt type: PROMPT_ONLY + PLAN_ONLY + no Goal
 
 Knowledge used:
-- `.codex/skills/codex-enterprise-prompt-architect/SKILL.md`
-- `.codex/skills/codex-enterprise-prompt-architect/response-modes.md`
-- `.codex/skills/codex-enterprise-prompt-architect/codex-patterns.md`
+- `.codex/skills/prompt-architect/SKILL.md`
+- `.codex/skills/prompt-architect/response-modes.md`
+- `.codex/skills/prompt-architect/codex-patterns.md`
 - `knowledge/distilled/codex-prompting.md`
 - `knowledge/distilled/codex-workflow-patterns.md`
 - `knowledge/distilled/prompt-quality-rubric.md`
@@ -221,7 +221,7 @@ Target agent: Codex
 Prompt type: No-goal PLAN MODE ONLY + optional Goal + ONAYLANDI - UYGULA + STOP / RECOVER
 
 Knowledge used:
-- `.codex/skills/codex-enterprise-prompt-architect/SKILL.md`
+- `.codex/skills/prompt-architect/SKILL.md`
 - `knowledge/distilled/codex-prompting.md`
 - `knowledge/distilled/codex-workflow-patterns.md`
 - `knowledge/distilled/response-modes.md`

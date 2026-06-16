@@ -1,4 +1,4 @@
-# &#9997; Codex Enterprise Prompt Architect - README completa en español
+# &#9997; Prompt Architect - README completa en español
 
 [🇬🇧](README.md) | [🇩🇪](README.de.md) | [🇪🇸](README.es.md) | [🇧🇷](README.pt-BR.md) | [🇹🇷](README.tr.md) | [🇫🇷](README.fr.md)
 
@@ -14,7 +14,7 @@ Empieza por el README canónico si necesitas la descripción inglesa más actual
 
 |Área | Detalle|
 |--- | ---|
-|Estado | Public repository: ucsahinn/codex-enterprise-prompt-architect|
+|Estado | Public repository: ucsahinn/prompt-architect|
 |Fuente de verdad | [README canónico en inglés](README.md)|
 |Usuarios | Codex users who need implementation-ready prompts.; Maintainers building prompt libraries with clear modes and safety gates.|
 |Validación | Prompt ledger and examples remain internally consistent.; Generated prompts do not include private local data.|

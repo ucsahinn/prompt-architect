@@ -5,13 +5,13 @@
 The formal Codex skill package lives here:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/
+.codex/skills/prompt-architect/
 ```
 
 Entrypoint:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/SKILL.md
+.codex/skills/prompt-architect/SKILL.md
 ```
 
 Supporting files:
@@ -24,8 +24,8 @@ Supporting files:
 Compatibility shims are kept at:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect.md
-.codex/skills/codex-enterprise-prompt-architect-commands.md
+.codex/skills/prompt-architect.md
+.codex/skills/prompt-architect-commands.md
 ```
 
 The deeper Prompt Lab knowledge base lives under `knowledge/`:
@@ -54,13 +54,13 @@ Validation and packaging references:
 Formal Codex skill paketi burada bulunur:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/
+.codex/skills/prompt-architect/
 ```
 
 Entrypoint:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/SKILL.md
+.codex/skills/prompt-architect/SKILL.md
 ```
 
 Destek dosyaları:
@@ -73,8 +73,8 @@ Destek dosyaları:
 Geriye dönük uyumluluk için eski shim dosyaları korunur:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect.md
-.codex/skills/codex-enterprise-prompt-architect-commands.md
+.codex/skills/prompt-architect.md
+.codex/skills/prompt-architect-commands.md
 ```
 
 Daha derin Prompt Lab bilgi tabanı `knowledge/` altındadır:

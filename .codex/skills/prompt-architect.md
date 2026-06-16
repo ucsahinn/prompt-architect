@@ -1,17 +1,17 @@
-# Codex Enterprise Prompt Architect
+# Prompt Architect
 
 Compatibility shim.
 
 The formal Codex skill package lives here:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/
+.codex/skills/prompt-architect/
 ```
 
 Use this entrypoint:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/SKILL.md
+.codex/skills/prompt-architect/SKILL.md
 ```
 
 Supporting files:

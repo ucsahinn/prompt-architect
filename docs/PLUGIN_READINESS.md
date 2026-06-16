@@ -31,7 +31,7 @@ This repository is first a Codex skill and Prompt Lab knowledge base. It should 
 Keep the default distribution as the public skill package:
 
 ```text
-.codex/skills/codex-enterprise-prompt-architect/
+.codex/skills/prompt-architect/
 ```
 
 Document plugin readiness, but do not add plugin manifests until the repository needs bundled installation behavior.

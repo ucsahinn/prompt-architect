@@ -16,11 +16,21 @@ const requiredFiles = [
   "CHANGELOG.md",
   "RELEASE_NOTES.md",
   ".gitignore",
-  ".codex/skills/codex-enterprise-prompt-architect/SKILL.md",
-  ".codex/skills/codex-enterprise-prompt-architect/commands.md",
-  ".codex/skills/codex-enterprise-prompt-architect/response-modes.md",
-  ".codex/skills/codex-enterprise-prompt-architect/codex-patterns.md",
-  ".codex/skills/codex-enterprise-prompt-architect/examples.md",
+  "llms.txt",
+  "package.json",
+  "assets/icon.svg",
+  "assets/banner.svg",
+  "assets/workflow-overview.svg",
+  "assets/social-preview.svg",
+  ".github/CODEOWNERS",
+  ".github/dependabot.yml",
+  ".codex/skills/prompt-architect.md",
+  ".codex/skills/prompt-architect-commands.md",
+  ".codex/skills/prompt-architect/SKILL.md",
+  ".codex/skills/prompt-architect/commands.md",
+  ".codex/skills/prompt-architect/response-modes.md",
+  ".codex/skills/prompt-architect/codex-patterns.md",
+  ".codex/skills/prompt-architect/examples.md",
   "knowledge/distilled/response-modes.md",
   "knowledge/distilled/prompt-quality-rubric.md",
   "knowledge/outputs/generated-prompts.md",
@@ -34,6 +44,8 @@ const requiredFiles = [
   "docs/SOURCE_MAINTENANCE.md",
   "docs/SUBAGENTS.md",
   "docs/PLUGIN_READINESS.md",
+  "docs/SEO.md",
+  "docs/GITHUB_SETTINGS.md",
 ];
 
 const coreModes = [
@@ -87,12 +99,28 @@ function checkReadmeAssets() {
   for (const relPath of ["README.md", "README.tr.md"]) {
     if (!exists(relPath)) continue;
     const content = read(relPath);
-    const matches = [...content.matchAll(/!\[[^\]]*]\((assets\/[^)]+)\)/g)];
+    const markdownAssets = [...content.matchAll(/!\[[^\]]*]\((assets\/[^)]+)\)/g)].map((match) => match[1]);
+    const htmlAssets = [...content.matchAll(/<img\b[^>]*\bsrc="(assets\/[^"]+)"/g)].map((match) => match[1]);
+    const matches = [...new Set([...markdownAssets, ...htmlAssets])];
     if (matches.length === 0) fail(`${relPath} should reference at least one asset under assets/`);
-    for (const match of matches) {
-      if (!exists(match[1])) fail(`${relPath} references missing asset: ${match[1]}`);
+    for (const asset of matches) {
+      if (!exists(asset)) fail(`${relPath} references missing asset: ${asset}`);
     }
   }
+}
+
+function checkSkillPackageIdentity() {
+  const skill = read(".codex/skills/prompt-architect/SKILL.md");
+  const frontmatter = skill.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!frontmatter) {
+    fail("prompt-architect SKILL.md missing YAML frontmatter");
+    return;
+  }
+  const keys = [...frontmatter[1].matchAll(/^([A-Za-z0-9_-]+):/gm)].map((match) => match[1]);
+  for (const key of keys) {
+    if (key !== "name" && key !== "description") fail(`prompt-architect SKILL.md frontmatter has unsupported key: ${key}`);
+  }
+  if (!frontmatter[1].includes("name: prompt-architect")) fail("prompt-architect SKILL.md must use name: prompt-architect");
 }
 
 function checkMarkdownLinks() {
@@ -178,7 +206,7 @@ function checkWorkflowBadgeHonesty() {
 
 function checkModeParity() {
   const files = [
-    ".codex/skills/codex-enterprise-prompt-architect/response-modes.md",
+    ".codex/skills/prompt-architect/response-modes.md",
     "knowledge/distilled/response-modes.md",
   ];
   for (const relPath of files) {
@@ -241,6 +269,7 @@ function checkGeneratedPromptLedger() {
 
 checkRequiredFiles();
 checkReadmeAssets();
+checkSkillPackageIdentity();
 checkMarkdownLinks();
 checkWorkflowBadgeHonesty();
 checkModeParity();

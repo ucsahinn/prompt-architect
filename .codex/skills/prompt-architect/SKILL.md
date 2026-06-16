@@ -1,9 +1,9 @@
 ---
-name: codex-enterprise-prompt-architect
+name: prompt-architect
 description: Generate, improve, audit, and package Codex-focused prompts for plan-first, approval-gated, security-aware AI coding workflows. Use for Codex Goal + Full Prompt, no-Goal PLAN MODE ONLY, APPROVED — EXECUTE, STOP / RECOVER, UI/UX, browser QA, security, refactor/debug, research-backed prompts, prompt audit, and prompt rewrite requests.
 ---
 
-# Codex Enterprise Prompt Architect
+# Prompt Architect
 
 Use this skill to turn user requirements into clear, ready-to-paste Codex prompts. Use the local Prompt Lab knowledge base as the source of truth. Do not start broad research unless the existing knowledge is missing, stale, or low-confidence for the requested prompt.
 

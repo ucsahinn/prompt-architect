@@ -1,6 +1,6 @@
 # Examples
 
-These are copy-pasteable requests for Codex Enterprise Prompt Architect. Replace bracketed text with your project context.
+These are copy-pasteable requests for Prompt Architect. Replace bracketed text with your project context.
 
 ## English Examples
 
