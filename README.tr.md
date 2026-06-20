@@ -26,7 +26,7 @@
 [![Public Safe](https://img.shields.io/badge/public--safe-checklist-7c3aed)](docs/PUBLIC_REPO_CHECKLIST.md)
 
 
-- **Durum:** v1.1.0 public release
+- **Durum:** v1.1.1 public release
 - **Lisans:** MIT
 - **Proje tipi:** Markdown tabanlı Codex skill paketi ve Prompt Lab bilgi tabanı
 - **Not:** Bağımsız bir topluluk/açık kaynak projesidir. OpenAI ile bağlı, onaylı veya sponsorlu değildir.
@@ -203,7 +203,8 @@ Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılı
 |   |-- commands.md
 |   |-- response-modes.md
 |   |-- codex-patterns.md
-|   `-- examples.md
+|   |-- examples.md
+|   `-- knowledge/
 |-- .github/
 |   |-- ISSUE_TEMPLATE/
 |   |-- workflows/
@@ -230,7 +231,8 @@ Codex erken execute etmeye başlarsa veya kapsam dışına çıkarsa kullanılı
 |-- README.md
 |-- README.tr.md
 |-- scripts/
-|   `-- validate-prompt-lab.mjs
+|   |-- validate-prompt-lab.mjs
+|   `-- install-prompt-architect.ps1
 |-- SECURITY.md
 |-- CONTRIBUTING.md
 |-- CHANGELOG.md

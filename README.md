@@ -43,7 +43,7 @@
 [![Prompt Lab Validation](https://github.com/ucsahinn/prompt-architect/actions/workflows/docs-validate.yml/badge.svg)](https://github.com/ucsahinn/prompt-architect/actions/workflows/docs-validate.yml)
 [![Public Safe](https://img.shields.io/badge/public--safe-checklist-7c3aed)](docs/PUBLIC_REPO_CHECKLIST.md)
 
-- **Status:** v1.1.0 public release
+- **Status:** v1.1.1 public release
 - **License:** MIT
 - **Project type:** Markdown-based Codex skill package and Prompt Lab knowledge base
 - **Note:** Independent community project. Not affiliated with, endorsed by, or sponsored by OpenAI.
@@ -222,7 +222,8 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 |   |-- commands.md
 |   |-- response-modes.md
 |   |-- codex-patterns.md
-|   `-- examples.md
+|   |-- examples.md
+|   `-- knowledge/
 |-- .github/
 |   |-- ISSUE_TEMPLATE/
 |   |-- workflows/
@@ -252,7 +253,8 @@ Use when Codex starts editing too early or leaves scope. The recovery prompt sho
 |-- README.tr.md
 |-- package.json
 |-- scripts/
-|   `-- validate-prompt-lab.mjs
+|   |-- validate-prompt-lab.mjs
+|   `-- install-prompt-architect.ps1
 |-- SECURITY.md
 |-- CONTRIBUTING.md
 |-- CHANGELOG.md

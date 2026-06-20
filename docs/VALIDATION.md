@@ -13,11 +13,12 @@ The validator is dependency-free. It checks the repository as a prompt-system pa
 ## What It Checks
 
 - Required public trust files exist.
-- The Codex skill package entrypoint and support files exist.
+- The Codex skill package entrypoint, support files, packaged KB mirror, and installer script exist.
 - `README.md` and `README.tr.md` reference existing assets.
 - Local Markdown file links point to existing files and heading anchors.
 - Workflow badges in both README files point to real workflow files.
 - Core response modes stay aligned between the skill package and the knowledge base.
+- The root `knowledge/` tree and `.codex/skills/prompt-architect/knowledge/` stay byte-for-byte aligned.
 - Source note files include date/confidence/outdated-risk style metadata.
 - Obvious secret-like values are not present.
 - `.playwright-mcp/` local browser artifacts are excluded from source control.

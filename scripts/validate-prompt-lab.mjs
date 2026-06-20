@@ -89,6 +89,22 @@ function walk(dir, files = []) {
   return files;
 }
 
+function walkAbsolute(dir, files = []) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      walkAbsolute(full, files);
+    } else {
+      files.push(full);
+    }
+  }
+  return files;
+}
+
+function sha256(filePath) {
+  return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
+}
+
 function checkRequiredFiles() {
   for (const relPath of requiredFiles) {
     if (!exists(relPath)) fail(`Missing required file: ${relPath}`);
@@ -121,6 +137,47 @@ function checkSkillPackageIdentity() {
     if (key !== "name" && key !== "description") fail(`prompt-architect SKILL.md frontmatter has unsupported key: ${key}`);
   }
   if (!frontmatter[1].includes("name: prompt-architect")) fail("prompt-architect SKILL.md must use name: prompt-architect");
+}
+
+function checkSkillPackageReferences() {
+  const skill = read(".codex/skills/prompt-architect/SKILL.md");
+  const refs = [...skill.matchAll(/`([^`]+)`/g)]
+    .map((match) => match[1])
+    .filter((ref) => ref.startsWith("knowledge/") || ["commands.md", "response-modes.md", "codex-patterns.md", "examples.md"].includes(ref));
+  for (const ref of refs) {
+    if (!fs.existsSync(path.join(skillPackageRoot, ref))) {
+      fail(`prompt-architect SKILL.md references missing packaged file: ${ref}`);
+    }
+  }
+}
+
+function checkPackagedSkillKnowledge() {
+  const sourceKnowledgeRoot = path.join(root, "knowledge");
+  if (!fs.existsSync(packagedKnowledgeRoot)) {
+    fail("prompt-architect packaged skill is missing knowledge/ mirror");
+    return;
+  }
+  const sourceFiles = walkAbsolute(sourceKnowledgeRoot);
+  const packagedFiles = walkAbsolute(packagedKnowledgeRoot);
+  const sourceRelatives = new Set();
+  for (const sourceFile of sourceFiles) {
+    const rel = path.relative(sourceKnowledgeRoot, sourceFile).replaceAll("\\", "/");
+    sourceRelatives.add(rel);
+    const packagedFile = path.join(packagedKnowledgeRoot, rel);
+    if (!fs.existsSync(packagedFile)) {
+      fail(`packaged skill knowledge is missing file: ${rel}`);
+      continue;
+    }
+    if (sha256(sourceFile) !== sha256(packagedFile)) {
+      fail(`packaged skill knowledge drifted from root knowledge: ${rel}`);
+    }
+  }
+  for (const packagedFile of packagedFiles) {
+    const rel = path.relative(packagedKnowledgeRoot, packagedFile).replaceAll("\\", "/");
+    if (!sourceRelatives.has(rel)) {
+      fail(`packaged skill knowledge has extra file not present in root knowledge: ${rel}`);
+    }
+  }
 }
 
 function checkMarkdownLinks() {

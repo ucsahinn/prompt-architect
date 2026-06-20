@@ -4,9 +4,52 @@ Prompt Architect is a Markdown-based Codex skill package. It has no build step a
 
 ## English
 
-### Install The Skill
+### Skill Folder Name
 
-Copy this directory into your Codex project:
+Use the same folder name as the public GitHub repository and skill name:
+
+```text
+prompt-architect
+```
+
+The formal skill package lives at:
+
+```text
+.codex/skills/prompt-architect/
+```
+
+### Install On Windows
+
+Run a dry run first:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-prompt-architect.ps1 -DryRun
+```
+
+Install or update the global skill after review:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-prompt-architect.ps1 -Yes -Force
+```
+
+The installer chooses the first available target root in this order:
+
+1. `$env:AGENTS_HOME`
+2. `$HOME\.agents` when it already exists
+3. `$env:CODEX_HOME`
+4. `$HOME\.codex`
+
+The target is always:
+
+```text
+<target-root>/skills/prompt-architect/
+```
+
+If the target already exists, `-Force` creates a backup before copying files. The installer does not delete user data.
+
+### Copy Into A Project
+
+Copy this directory into a Codex project when you want a repo-local skill:
 
 ```text
 .codex/skills/prompt-architect/
@@ -30,17 +73,18 @@ your-project/
         response-modes.md
         codex-patterns.md
         examples.md
+        knowledge/
 ```
 
-### Optional Prompt Lab Knowledge Base
+### Packaged Prompt Lab Knowledge Base
 
-For deeper templates, source notes, generated prompt examples, and rubrics, also copy:
+The installable skill folder includes:
 
 ```text
-knowledge/
+.codex/skills/prompt-architect/knowledge/
 ```
 
-The skill works as a compact package. The `knowledge/` folder gives future Codex sessions more context.
+That mirror is copied from the root `knowledge/` tree and lets `SKILL.md` references resolve after a global install. Keep the root `knowledge/` tree as the source of truth and run validation after edits.
 
 ### No Build Step
 
@@ -51,10 +95,14 @@ No `npm install`, `pip install`, build, database, server, or API key is required
 Inside this repository, run:
 
 ```powershell
-node scripts/validate-prompt-lab.mjs
+npm run check
 ```
 
-When you copy the skill into another workspace, confirm that `SKILL.md` and the supporting Markdown files are copied together.
+For installer behavior, run:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-prompt-architect.ps1 -DryRun
+```
 
 ### Plugin Packaging
 
@@ -62,9 +110,52 @@ This repository stays a skill package by default. See [PLUGIN_READINESS.md](PLUG
 
 ## Türkçe
 
-### Skill'i Kurma
+### Skill Klasör Adı
 
-Bu klasörü Codex projenize kopyalayın:
+Public GitHub repo adı ve skill adıyla aynı klasör adını kullanın:
+
+```text
+prompt-architect
+```
+
+Formal skill paketi burada bulunur:
+
+```text
+.codex/skills/prompt-architect/
+```
+
+### Windows Kurulumu
+
+Önce dry run çalıştırın:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-prompt-architect.ps1 -DryRun
+```
+
+Kontrolden sonra global skill'i kurun veya güncelleyin:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-prompt-architect.ps1 -Yes -Force
+```
+
+Installer hedef kökü şu sırayla seçer:
+
+1. `$env:AGENTS_HOME`
+2. Zaten varsa `$HOME\.agents`
+3. `$env:CODEX_HOME`
+4. `$HOME\.codex`
+
+Hedef her zaman şudur:
+
+```text
+<target-root>/skills/prompt-architect/
+```
+
+Hedef zaten varsa `-Force` önce yedek alır, sonra dosyaları günceller. Installer kullanıcı verisi silmez.
+
+### Proje İçine Kopyalama
+
+Repo-local skill istiyorsanız bu klasörü Codex projesine kopyalayın:
 
 ```text
 .codex/skills/prompt-architect/
@@ -88,17 +179,18 @@ projeniz/
         response-modes.md
         codex-patterns.md
         examples.md
+        knowledge/
 ```
 
-### Opsiyonel Prompt Lab Bilgi Tabanı
+### Paketlenmiş Prompt Lab Bilgi Tabanı
 
-Daha kapsamlı template, kaynak notu, örnek prompt ve rubrik istiyorsanız şunu da kopyalayın:
+Install edilebilir skill klasörü şunu içerir:
 
 ```text
-knowledge/
+.codex/skills/prompt-architect/knowledge/
 ```
 
-Skill tek başına kullanılabilir. `knowledge/` klasörü daha zengin bağlam sağlar.
+Bu mirror root `knowledge/` ağacından kopyalanır ve global kurulumdan sonra `SKILL.md` içindeki referansların boşa düşmemesini sağlar. Root `knowledge/` ağacını source of truth olarak tutun ve değişiklikten sonra validation çalıştırın.
 
 ### Build Gerekmez
 
@@ -109,10 +201,14 @@ Skill tek başına kullanılabilir. `knowledge/` klasörü daha zengin bağlam s
 Bu repoda şu komutu çalıştırın:
 
 ```powershell
-node scripts/validate-prompt-lab.mjs
+npm run check
 ```
 
-Skill'i başka bir workspace'e kopyaladığınızda `SKILL.md` ve destek Markdown dosyalarının birlikte taşındığını kontrol edin.
+Installer davranışı için:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-prompt-architect.ps1 -DryRun
+```
 
 ### Plugin Paketleme
 

@@ -6,6 +6,22 @@ The format follows Keep a Changelog where practical.
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-06-20
+
+### Added
+
+- Added packaged Prompt Lab knowledge under `.codex/skills/prompt-architect/knowledge/` so the installable skill carries every referenced KB file.
+- Added `scripts/install-prompt-architect.ps1` for Windows-first, backup-before-update global skill installation.
+
+### Changed
+
+- Strengthened validation to compare the packaged skill KB against the root `knowledge/` source tree and fail on missing, extra, or drifted files.
+- Updated release, install, and structure docs for the `prompt-architect` repo identity and packaged KB layout.
+
+### Fixed
+
+- Fixed global installs that copied only the skill Markdown files while leaving `SKILL.md` references to `knowledge/...` unresolved.
+
 ## [1.1.0] - 2026-06-14
 
 ### Added

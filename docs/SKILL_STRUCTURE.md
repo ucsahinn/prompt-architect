@@ -20,6 +20,7 @@ Supporting files:
 - `response-modes.md` - `PROMPT_ONLY`, Goal + Full Prompt, `PLAN MODE ONLY`, `APPROVED — EXECUTE`, research-backed, template, audit, rewrite, instruction-file, and `STOP / RECOVER` modes.
 - `codex-patterns.md` - reusable Codex workflow patterns.
 - `examples.md` - complete examples.
+- `knowledge/` - packaged Prompt Lab KB mirror used by installed global skills.
 
 Compatibility shims are kept at:
 
@@ -28,7 +29,7 @@ Compatibility shims are kept at:
 .codex/skills/prompt-architect-commands.md
 ```
 
-The deeper Prompt Lab knowledge base lives under `knowledge/`:
+The root Prompt Lab knowledge base lives under `knowledge/` and is mirrored into `.codex/skills/prompt-architect/knowledge/` for installation:
 
 - `knowledge/distilled/` - playbooks, rubrics, workflow rules.
 - `knowledge/templates/` - prompt templates and output formats.
@@ -69,6 +70,7 @@ Destek dosyaları:
 - `response-modes.md` - `PROMPT_ONLY`, Goal + Full Prompt, `PLAN MODE ONLY`, `APPROVED — EXECUTE`, research-backed, template, audit, rewrite, instruction-file ve `STOP / RECOVER` modları.
 - `codex-patterns.md` - tekrar kullanılabilir Codex workflow pattern'leri.
 - `examples.md` - tam örnekler.
+- `knowledge/` - global kurulumda kullanılan paketlenmiş Prompt Lab KB mirror ağacı.
 
 Geriye dönük uyumluluk için eski shim dosyaları korunur:
 
@@ -77,7 +79,7 @@ Geriye dönük uyumluluk için eski shim dosyaları korunur:
 .codex/skills/prompt-architect-commands.md
 ```
 
-Daha derin Prompt Lab bilgi tabanı `knowledge/` altındadır:
+Root Prompt Lab bilgi tabanı `knowledge/` altındadır ve kurulum için `.codex/skills/prompt-architect/knowledge/` içine mirror edilir:
 
 - `knowledge/distilled/` - playbook, rubrik ve workflow kuralları.
 - `knowledge/templates/` - prompt template'leri ve output formatları.

@@ -1,52 +1,46 @@
-# Release Notes: v1.1.0
+# Release Notes: v1.1.1
 
-Prompt Architect v1.1.0 turns the repository from a polished prompt-skill showcase into a validation-backed Prompt Lab package. The release keeps the Codex-first mission intact while adding stronger source discipline, safer tool/subagent routing, and a real local/CI quality gate.
+Prompt Architect v1.1.1 is a packaging and install-hardening release. It keeps the public repository name, folder name, and install target aligned as `prompt-architect`, and makes the installable skill carry the Prompt Lab knowledge base it references.
 
 ## Highlights
 
-- Added dependency-free validation at `scripts/validate-prompt-lab.mjs`.
-- Added GitHub Actions workflow at `.github/workflows/docs-validate.yml`.
-- Added `docs/VALIDATION.md`, `docs/SOURCE_MAINTENANCE.md`, `docs/SUBAGENTS.md`, and `docs/PLUGIN_READINESS.md`.
-- Upgraded `README.md` and `README.tr.md` with icon-led command-center navigation and the real validation badge.
-- Expanded the skill package with research-backed, template, AGENTS.md, CLAUDE.md, and Gemini system-instruction routes.
-- Strengthened MCP, browser, account-tool, and subagent safety guidance.
-- Refreshed source notes for current OpenAI/Codex docs, OpenAI tools, OWASP LLM risks, Playwright MCP usage, prompt research, and context-engineering lessons.
-- Added `.playwright-mcp/` to `.gitignore` so local browser artifacts do not become public release noise.
+- Packaged the Prompt Lab KB under `.codex/skills/prompt-architect/knowledge/` so `SKILL.md` references resolve after copying or installing the skill folder.
+- Added `scripts/install-prompt-architect.ps1` for Windows-first global installation with dry-run, explicit `-Yes`, backup-before-update, and no delete step.
+- Strengthened `scripts/validate-prompt-lab.mjs` so it verifies root `knowledge/` and packaged skill `knowledge/` stay byte-for-byte aligned.
+- Updated install, validation, skill-structure, README, changelog, and release notes for the packaged KB layout.
+- Kept the legacy `codex-enterprise-prompt-architect` name only as compatibility/history wording; the active repo and skill package name are `prompt-architect`.
 
 ## Validation
 
 Run locally:
 
 ```powershell
-node scripts/validate-prompt-lab.mjs
+npm run check
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-prompt-architect.ps1 -DryRun
 git diff --check
-gitleaks detect --redact --no-banner --no-git --verbose --source .
+gitleaks detect --redact --no-banner --no-git --verbose
 ```
 
-The validator checks required public files, skill package shape, README assets, local Markdown links, workflow badge honesty, response-mode parity, source-note metadata, generated prompt ledger markers, and obvious secret-like values.
+The validator now checks required public files, skill package shape, README assets, local Markdown links, workflow badge honesty, response-mode parity, source-note metadata, generated prompt ledger markers, obvious secret-like values, and packaged KB parity.
 
 ## Turkish Summary
 
-v1.1.0, repoyu sadece iyi görünen bir prompt-skill vitrini olmaktan çıkarıp doğrulama kapısı olan bir Prompt Lab paketine taşır.
+v1.1.1, Prompt Architect skill kurulumunu sağlamlaştırır. Skill klasörü artık kullandığı Prompt Lab bilgi tabanını da kendi içinde taşır; bu yüzden global kurulumdan sonra `knowledge/...` referansları boşa düşmez.
 
 Öne çıkanlar:
 
-- Lokal validator eklendi.
-- GitHub Actions validation workflow eklendi.
-- Validation, source maintenance, subagent routing ve plugin-readiness dokümanları eklendi.
-- README ve Türkçe README ikonlu komuta merkeziyle daha net hale getirildi.
-- Skill routing; research-backed prompt, template, AGENTS.md, CLAUDE.md ve Gemini system instruction üretimini kapsayacak şekilde genişletildi.
-- MCP, browser tool, account tool ve subagent güvenlik sınırları güçlendirildi.
-- `.playwright-mcp/` local artifact klasörü yanlışlıkla stage edilmesin diye ignore edildi.
+- `.codex/skills/prompt-architect/knowledge/` eklendi.
+- Windows için yedekli ve açık onaylı install script'i eklendi.
+- Validator, root `knowledge/` ile paket içi `knowledge/` arasında eksik/fazla/drift dosya kontrolü yapacak şekilde güçlendirildi.
+- GitHub repo adı, klasör adı ve skill adı `prompt-architect` olarak hizalandı.
 
 ## Known Limitations
 
 - This project is independent and not affiliated with OpenAI.
 - It does not enforce runtime security by itself; it provides safer prompt instructions and validation checks.
-- It does not install through npm, pip, or a package manager.
+- It does not publish to npm because the package is intentionally private.
 - GitHub repository settings still require manual review in the GitHub UI.
-- Prompt quality still depends on the user's project context and engineering review.
 
 ## Previous Release
 
-v1.0.2 improved public repository readiness, bilingual README structure, security documentation, and GitHub contribution routes.
+v1.1.0 turned the repository into a validation-backed Prompt Lab package with CI, source discipline, and expanded response modes.
