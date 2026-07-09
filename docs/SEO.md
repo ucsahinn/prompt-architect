@@ -32,7 +32,7 @@ Prompt Architect: reusable prompt patterns, approval-gated workflows, and verifi
 
 ## Verification After Publication
 
-- Confirm the public repository URL resolves at `https://github.com/ucsahinn/prompt-architect`.
+- Confirm the public repository URL resolves at `https://github.com/vaultekbilisim/prompt-architect`.
 - Confirm the README renders `assets/icon.svg`, `assets/banner.svg`, `assets/workflow-overview.svg`, and `assets/social-preview.svg`.
 - Confirm GitHub About uses the recommended description and topics.
 - Confirm old GitHub URLs redirect if the repository was renamed instead of recreated.
