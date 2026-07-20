@@ -22,7 +22,7 @@ Beginnen Sie mit der kanonischen README, wenn Sie die aktuellste englische Besch
 
 |Bereich | Details|
 |--- | ---|
-|Status | Public repository: vaultekbilisim/prompt-architect|
+|Status | Public repository: ucsahinn/prompt-architect|
 |Wahrheit | [Kanonische englische README](README.md)|
 |Benutzer | Codex users who need implementation-ready prompts.; Maintainers building prompt libraries with clear modes and safety gates.|
 |Prüfung | Prompt ledger and examples remain internally consistent.; Generated prompts do not include private local data.|

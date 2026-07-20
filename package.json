@@ -7,7 +7,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vaultekbilisim/prompt-architect.git"
+    "url": "https://github.com/ucsahinn/prompt-architect.git"
   },
   "engines": {
     "node": ">=18"

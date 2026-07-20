@@ -35,12 +35,12 @@
 </table>
 <!-- bilingual-welcome:end -->
 
-[![Release](https://img.shields.io/github/v/release/vaultekbilisim/prompt-architect?label=release&color=0f766e)](https://github.com/vaultekbilisim/prompt-architect/releases)
+[![Release](https://img.shields.io/github/v/release/ucsahinn/prompt-architect?label=release&color=0f766e)](https://github.com/ucsahinn/prompt-architect/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-111827)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/security-policy-b91c1c)](SECURITY.md)
 [![Docs](https://img.shields.io/badge/docs-ready-2563eb)](docs/USAGE.md)
 [![README languages](https://img.shields.io/badge/README-6%20languages-0f766e)](README.md)
-[![Prompt Lab Validation](https://github.com/vaultekbilisim/prompt-architect/actions/workflows/docs-validate.yml/badge.svg)](https://github.com/vaultekbilisim/prompt-architect/actions/workflows/docs-validate.yml)
+[![Prompt Lab Validation](https://github.com/ucsahinn/prompt-architect/actions/workflows/docs-validate.yml/badge.svg)](https://github.com/ucsahinn/prompt-architect/actions/workflows/docs-validate.yml)
 [![Public Safe](https://img.shields.io/badge/public--safe-checklist-7c3aed)](docs/PUBLIC_REPO_CHECKLIST.md)
 
 - **Status:** v1.1.1 public release
